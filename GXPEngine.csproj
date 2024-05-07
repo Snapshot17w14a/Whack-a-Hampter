@@ -161,6 +161,34 @@
     <Compile Include="..\GXPEngine2023b\GXPEngine\SoLoud\SoloudSoundSystem.cs">
       <Link>GXPEngine\SoLoud\SoloudSoundSystem.cs</Link>
     </Compile>
+    <Compile Include="SceneManager\SceneManager.cs">
+    </Compile>
+    <Compile Include="SceneManager\Scene.cs">
+    </Compile>
+    <Compile Include="Physics\Collider.cs">
+    </Compile>
+    <Compile Include="Physics\CollisionInfo.cs">
+    </Compile>
+    <Compile Include="Physics\PhysicsManager.cs">
+    </Compile>
+    <Compile Include="Physics\Vec2.cs">
+    </Compile>
+    <Compile Include="Physics\Colliders\LineSegmentCollider.cs">
+    </Compile>
+    <Compile Include="Physics\Colliders\LineCollider.cs">
+    </Compile>
+    <Compile Include="Physics\Colliders\CircleCollider.cs">
+    </Compile>
+    <Compile Include="Physics\Colliders\BoxCollider.cs">
+    </Compile>
+    <Compile Include="Components\Arrow.cs">
+    </Compile>
+    <Compile Include="Components\LineSegment.cs">
+    </Compile>
+    <Compile Include="Physics\Shapes\Circle.cs">
+    </Compile>
+    <Compile Include="Physics\Shapes\Line.cs">
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
