@@ -1,5 +1,6 @@
 ﻿using GXPEngine.Physics.Colliders;
 using System.Collections.Generic;
+using GXPEngine.Physics.Shapes;
 using System;
 
 namespace GXPEngine.Physics
@@ -22,7 +23,7 @@ namespace GXPEngine.Physics
                     //collider = new BoxCollider();
                     goto default;
                 case Collider.ColliderType.Circle:
-                    collider = new CircleCollider(parent, new Vec2(parent.x, parent.y), ((Circle)parent).Radius);
+                    collider = new CircleCollider(parent, new Vec2(parent.x, parent.y), ((AnimatedCircle)parent).Radius);
                     break;
                 case Collider.ColliderType.Line:
                     collider = new LineCollider(parent, Vec2.zero, ((Line)parent).StartPosition, ((Line)parent).EndPosition);

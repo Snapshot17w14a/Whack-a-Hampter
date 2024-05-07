@@ -16,6 +16,8 @@ namespace GXPEngine.Physics
 
         protected Vec2 velocity = Vec2.zero;
         
+        public bool LoseVelocityOverTime = false;
+
         public string Tag { get; protected set; } = null;
         public List<string> IgnoredTags { get; protected set; } = new List<string>();
 
@@ -38,6 +40,7 @@ namespace GXPEngine.Physics
             if (addAcceleration) velocity += Acceleration;
             Position += velocity;
             Parent.SetXY(Position.x, Position.y);
+            if (LoseVelocityOverTime) velocity *= 0.98f;
         }
 
         public void Destroy()

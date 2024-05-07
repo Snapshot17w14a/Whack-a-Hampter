@@ -161,6 +161,7 @@
     <Compile Include="..\GXPEngine2023b\GXPEngine\SoLoud\SoloudSoundSystem.cs">
       <Link>GXPEngine\SoLoud\SoloudSoundSystem.cs</Link>
     </Compile>
+    <Compile Include="Physics\Shapes\AnimatedCircle.cs" />
     <Compile Include="SceneManager\SceneManager.cs">
     </Compile>
     <Compile Include="SceneManager\Scene.cs">
@@ -189,6 +190,8 @@
     </Compile>
     <Compile Include="Physics\Shapes\Line.cs">
     </Compile>
+    <Compile Include="Scenes\GameScene.cs" />
+    <Compile Include="Player.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

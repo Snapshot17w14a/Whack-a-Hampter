@@ -153,6 +153,9 @@
         /// <summary>Returns the normal of a given vector/// </summary>
         public static Vec2 Normal(Vec2 vector) => new Vec2(-vector.y, vector.x);
 
+        /// <summary>Returns true if the vector is approximately zero</summary>
+        public static bool IsZero(Vec2 vector, float tolerance = 0.0001f) => IsApporximately(vector.Length(), 0, tolerance);
+
         /// <summary>Returns true if the two floats are approximately equal, within a given tolerance</summary>
         private static bool IsApporximately(float a, float b, float tolerance = 0.0001f) => Mathf.Abs(a - b) < tolerance;
 

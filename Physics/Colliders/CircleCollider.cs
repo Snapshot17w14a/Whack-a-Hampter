@@ -1,18 +1,16 @@
-﻿using System;
-
-namespace GXPEngine.Physics.Colliders
+﻿namespace GXPEngine.Physics.Colliders
 {
     internal class CircleCollider : Collider
     {
         public float Radius { get; private set; }
         private bool _firstCollision = true;
-        private Arrow arrow;
+        //private Arrow arrow;
 
         public CircleCollider(GameObject parent, Vec2 position, float radius) : base(parent, position, ColliderType.Circle)
         {
             Radius = radius;
-            arrow = new Arrow(position, velocity, 10);
-            parent.AddChild(arrow);
+            //arrow = new Arrow(position, velocity, 10);
+            //parent.AddChild(arrow);
         }
 
         public override CollisionInfo GetCollision(Collider other)
@@ -72,9 +70,9 @@ namespace GXPEngine.Physics.Colliders
         {
             Vec2 linevector = other.EndPosition - other.StartPosition;
             Vec2 difference = Position - other.StartPosition;
-            float b = (-velocity).Dot(linevector.Normal());
+            float b = velocity.Dot(linevector.Normal());
             if (b <= 0) return null;
-            float a = difference.Dot(linevector.Normal()) - Radius;
+            float a = difference.Dot(linevector.Normal());
             float t;
             if (a >= 0) t = a / b;
             else if (a <= Radius && a >= -Radius) t = 0;
@@ -94,14 +92,14 @@ namespace GXPEngine.Physics.Colliders
             col.other.OnCollision?.Invoke(this);
             Position = OldPosition + Velocity * col.timeOfImpact;
             velocity.Reflect(col.normal, Bounciness);
-            if (col.other is CircleCollider circle && Velocity.Dot(circle.Velocity) > 0)
-            {
-                Vec2 u = (Velocity * Mass + circle.Velocity * circle.Mass) / (Mass + circle.Mass);
-                velocity -= (1 + Bounciness) * (Velocity - u).Dot(col.normal) * col.normal;
-                // changing own vel twice, not changing other vel...
-                // Also: check whether it's a real collision (relative vel)
-            }
-            if (Mathf.IsApporximately(col.timeOfImpact, 0) && _firstCollision)
+            //if (col.other is CircleCollider circle && Velocity.Dot(circle.Velocity) > 0) // Conservation of momentum has to be fixed here!!! TODO
+            //{
+            //    Vec2 u = (Velocity * Mass + circle.Velocity * circle.Mass) / (Mass + circle.Mass);
+            //    velocity -= (1 + Bounciness) * (Velocity - u).Dot(col.normal) * col.normal;
+            //    // changing own vel twice, not changing other vel...
+            //    // Also: check whether it's a real collision (relative vel)
+            //}
+            if (_firstCollision && Mathf.IsApporximately(col.timeOfImpact, 0))
             {
                 _firstCollision = false;
                 PhysicsManager.CheckForCollision(this, false);

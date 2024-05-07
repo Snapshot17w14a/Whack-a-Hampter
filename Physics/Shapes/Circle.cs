@@ -1,6 +1,4 @@
-﻿using GXPEngine.Physics;
-
-namespace GXPEngine
+﻿namespace GXPEngine.Physics.Shapes
 {
     internal class Circle : Sprite
     {
@@ -13,7 +11,6 @@ namespace GXPEngine
             Radius = radius;
             SetScaleXY(radius * 2 / 64f, radius * 2 / 64f);
             SetOrigin(radius, radius);
-            SetXY(-2048, -2048);
             _collider = PhysicsManager.AddCollider(this, Collider.ColliderType.Circle);
         }
 

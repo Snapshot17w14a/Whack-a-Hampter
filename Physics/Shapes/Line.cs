@@ -1,7 +1,4 @@
-﻿using System;
-using GXPEngine.Physics;
-
-namespace GXPEngine
+﻿namespace GXPEngine.Physics
 {
     internal class Line : GameObject
     {
@@ -10,7 +7,7 @@ namespace GXPEngine
 
         private readonly Collider _collider;
         public Collider Collider => _collider;
-        private LineSegment _line;
+        private readonly LineSegment _line;
 
         public Line(Vec2 startPosition, Vec2 endPosition, bool isSegment = true)
         {
