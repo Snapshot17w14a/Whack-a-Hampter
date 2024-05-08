@@ -33,7 +33,22 @@ namespace GXPEngine
         private void CheckMousePosition()
         {
             Vec2 mouseVector = new Vec2(Input.mouseX, Input.mouseY) - Collider.Position;
-            if (!_isPlayerMoving) shootStrengthArrow.vector = mouseVector.Normalized() * Mathf.Clamp((mouseVector.Length() / 30), 0f, 10f);
+            if (!_isPlayerMoving)
+            {
+                shootStrengthArrow.vector = mouseVector.Normalized() * Mathf.Clamp((mouseVector.Length() / 30), 0f, 10f);
+                if (shootStrengthArrow.vector.Length() > 0 && shootStrengthArrow.vector.Length() <= 5.0f)
+                {
+                    shootStrengthArrow.color = 0xFF00FF00;
+                }
+                else if (shootStrengthArrow.vector.Length() > 5.0f && shootStrengthArrow.vector.Length() <= 9.0f)
+                {
+                    shootStrengthArrow.color = 0xFFFFFF00;
+                }
+                else if (shootStrengthArrow.vector.Length() > 9.0f)
+                {
+                    shootStrengthArrow.color = 0xFFFF0000;
+                }
+            }
             else shootStrengthArrow.vector = Vec2.zero;
             if (Input.GetMouseButtonDown(0) && !_isPlayerMoving) Collider.SetVelocity(mouseVector.Normalized() * Mathf.Clamp((mouseVector.Length() / 10), 0f, 1000f));
         }
@@ -54,9 +69,9 @@ namespace GXPEngine
 
         private void UpdateArrows()
         {
-            velocityArrow.startPoint = Collider.Position;
+            //velocityArrow.startPoint = Collider.Position;
             shootStrengthArrow.startPoint = Collider.Position;
-            velocityArrow.vector = Collider.Velocity;
+            //velocityArrow.vector = Collider.Velocity;
         }
     }
 }
