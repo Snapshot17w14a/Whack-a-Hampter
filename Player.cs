@@ -71,7 +71,7 @@ namespace GXPEngine
         {
             //velocityArrow.startPoint = Collider.Position;
             shootStrengthArrow.startPoint = Collider.Position;
-            //velocityArrow.vector = Collider.Velocity;
+            //velocityArrow.vector = Collider.Velocity
         }
     }
 }
