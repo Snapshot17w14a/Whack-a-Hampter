@@ -1,4 +1,5 @@
 ﻿using System;
+using TiledMapParser;
 using GXPEngine.Physics.Shapes;
 
 namespace GXPEngine
@@ -9,6 +10,7 @@ namespace GXPEngine
         private Arrow velocityArrow;
 
         private bool _isPlayerMoving = false;
+        private Vec2 _position; // Do I need to explain?
 
         public Player() : base(32, "circle.png", 1, 1)
         {
@@ -25,6 +27,7 @@ namespace GXPEngine
             _isPlayerMoving = !Vec2.IsZero(Collider.Velocity, 0.01f);
             CheckMousePosition();
             UpdateArrows();
+            AimTowardsMouse();
         }
 
         private void CheckMousePosition()
@@ -32,7 +35,21 @@ namespace GXPEngine
             Vec2 mouseVector = new Vec2(Input.mouseX, Input.mouseY) - Collider.Position;
             if (!_isPlayerMoving) shootStrengthArrow.vector = mouseVector.Normalized() * Mathf.Clamp((mouseVector.Length() / 30), 0f, 10f);
             else shootStrengthArrow.vector = Vec2.zero;
-            if (Input.GetMouseButtonDown(0) && !_isPlayerMoving) Collider.SetVelocity(mouseVector.Normalized() * Mathf.Clamp((mouseVector.Length() / 30), 0f, 10f));
+            if (Input.GetMouseButtonDown(0) && !_isPlayerMoving) Collider.SetVelocity(mouseVector.Normalized() * Mathf.Clamp((mouseVector.Length() / 10), 0f, 1000f));
+        }
+
+        private void AimTowardsMouse()
+        {
+            if (!_isPlayerMoving)
+            {
+                Vec2 mouse = new Vec2(Input.mouseX, Input.mouseY);
+                Vec2 playerPosition = new Vec2(Collider.Position.x, Collider.Position.y);
+
+                Vec2 mouseDirection = mouse - playerPosition;
+                float angle = mouseDirection.GetAngleDegrees();
+                rotation = angle + 90; // adjusting the angle of the sprite because I am too lazy to open paint.net
+            }
+            
         }
 
         private void UpdateArrows()

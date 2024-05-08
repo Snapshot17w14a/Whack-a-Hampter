@@ -5,3 +5,10 @@ C:\Users\Kevin\OneDrive - Saxion\Documents\SaxionCMGT\projects\FinalApproach\obj
 C:\Users\Kevin\OneDrive - Saxion\Documents\SaxionCMGT\projects\FinalApproach\obj\x86\Debug\GXPEngine.csproj.CoreCompileInputs.cache
 C:\Users\Kevin\OneDrive - Saxion\Documents\SaxionCMGT\projects\FinalApproach\obj\x86\Debug\GXPEngine.exe
 C:\Users\Kevin\OneDrive - Saxion\Documents\SaxionCMGT\projects\FinalApproach\obj\x86\Debug\GXPEngine.pdb
+C:\Users\halox\Desktop\FinalApproach Code\FinalApproach\obj\x86\Debug\GXPEngine.csproj.AssemblyReference.cache
+C:\Users\halox\Desktop\FinalApproach Code\FinalApproach\obj\x86\Debug\GXPEngine.csproj.CoreCompileInputs.cache
+C:\Users\halox\Desktop\FinalApproach Code\FinalApproach\obj\x86\Debug\GXPEngine.exe
+C:\Users\halox\Desktop\FinalApproach Code\FinalApproach\obj\x86\Debug\GXPEngine.pdb
+C:\Users\halox\Desktop\FinalApproach Code\FinalApproach\bin\Debug\GXPEngine.exe.config
+C:\Users\halox\Desktop\FinalApproach Code\FinalApproach\bin\Debug\GXPEngine.exe
+C:\Users\halox\Desktop\FinalApproach Code\FinalApproach\bin\Debug\GXPEngine.pdb

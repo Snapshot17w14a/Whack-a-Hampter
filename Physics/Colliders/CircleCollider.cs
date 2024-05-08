@@ -99,7 +99,7 @@
             //    // changing own vel twice, not changing other vel...
             //    // Also: check whether it's a real collision (relative vel)
             //}
-            if (_firstCollision && Mathf.IsApporximately(col.timeOfImpact, 0))
+            if (_firstCollision && IsApporximately(col.timeOfImpact, 0))
             {
                 _firstCollision = false;
                 PhysicsManager.CheckForCollision(this, false);
@@ -112,6 +112,11 @@
             if(other is CircleCollider circle) return (Position - circle.Position).SquareLength() < (Radius + circle.Radius) * (Radius + circle.Radius);
             if(other is LineCollider line) return (Position - line.StartPosition).Dot((line.EndPosition - line.StartPosition).Normal()) < Radius;
             return false;
+        }
+
+        public static bool IsApporximately(float a, float b, float tolerance = 0.00001f)
+        {
+            return Mathf.Abs(a - b) < tolerance;
         }
     }
 }
