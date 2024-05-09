@@ -8,7 +8,6 @@ namespace GXPEngine
         private Arrow velocityArrow;
 
         private bool _isPlayerMoving = false;
-        private Vec2 _position; // Do I need to explain?
 
         public Player() : base(32, "hamter.png", 1, 1)
         {

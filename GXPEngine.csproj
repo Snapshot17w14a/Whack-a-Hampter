@@ -48,9 +48,7 @@
     <Compile Include="..\GXPEngine2023b\GXPEngine\AddOns\SpriteBatch.cs">
       <Link>GXPEngine\AddOns\SpriteBatch.cs</Link>
     </Compile>
-    <Compile Include="..\GXPEngine2023b\GXPEngine\AddOns\TiledLoader.cs">
-      <Link>GXPEngine\AddOns\TiledLoader.cs</Link>
-    </Compile>
+    <Compile Include="GXPEngine\AddOns\TiledLoader.cs" />
     <Compile Include="..\GXPEngine2023b\GXPEngine\Core\Canvas.cs">
       <Link>GXPEngine\Core\Canvas.cs</Link>
     </Compile>
@@ -136,9 +134,7 @@
     <Compile Include="..\GXPEngine2023b\GXPEngine\AddOns\Settings.cs">
       <Link>GXPEngine\AddOns\Settings.cs</Link>
     </Compile>
-    <Compile Include="..\GXPEngine2023b\GXPEngine\AddOns\TiledMapParser.cs">
-      <Link>GXPEngine\AddOns\TiledMapParser.cs</Link>
-    </Compile>
+    <Compile Include="GXPEngine\AddOns\TiledMapParser.cs" />
     <Compile Include="..\GXPEngine2023b\GXPEngine\AddOns\Window.cs">
       <Link>GXPEngine\AddOns\Window.cs</Link>
     </Compile>

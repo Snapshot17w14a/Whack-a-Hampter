@@ -7,7 +7,7 @@ class MyGame : Game {
 	public MyGame() : base(800, 600, false, false, pPixelArt: true) 
 	{
 		Initialize();
-		SceneManager.LoadScene("GameScene");
+		SceneManager.LoadScene("Test");
 	}
 
 	public static void Main (string[] args)
