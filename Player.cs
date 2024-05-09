@@ -1,5 +1,3 @@
-﻿using System;
-using TiledMapParser;
 using GXPEngine.Physics.Shapes;
 
 namespace GXPEngine
@@ -12,8 +10,10 @@ namespace GXPEngine
         private bool _isPlayerMoving = false;
         private Vec2 _position; // Do I need to explain?
 
-        public Player() : base(32, "circle.png", 1, 1)
+        public Player() : base(32, "hamter.png", 1, 1)
         {
+            SetOrigin(width / 2, height / 2);
+            scale = 2f;
             Collider.SetPosition(new Vec2(game.width / 2, game.height / 2));
             Collider.LoseVelocityOverTime = true;
             velocityArrow = new Arrow(Vec2.zero, Collider.Velocity, 30);

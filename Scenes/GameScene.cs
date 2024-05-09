@@ -9,12 +9,7 @@ namespace GXPEngine.Scenes
         private Player player;
         private List<Line> lines = new List<Line>();
 
-        public GameScene() { }
-
-        public override void UpdateObjects()
-        {
-            // Update all objects in the scene
-        }
+        public GameScene() { LoadTestBackground(); }
 
         public override void OnLoad()
         {
@@ -29,10 +24,25 @@ namespace GXPEngine.Scenes
             foreach (Line line in lines) AddChild(line);
         }
 
+        private void LoadTestBackground()
+        {
+            for (int i = 0; i < 20; i++)
+            {
+                for (int j = 0; j < 20; j++)
+                {
+                    AddChild(new Sprite("BG_T.png", false, false)
+                    {
+                        x = i * 32,
+                        y = j * 32
+                    });
+                }
+
+            }
+        }
+
         public override void OnUnload()
         {
             Game.main.OnBeforeStep -= PhysicsManager.Step;
-            // Unload all objects in the scene
         }
     }
 }

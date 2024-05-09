@@ -12,3 +12,10 @@ C:\Users\halox\Desktop\FinalApproach Code\FinalApproach\obj\x86\Debug\GXPEngine.
 C:\Users\halox\Desktop\FinalApproach Code\FinalApproach\bin\Debug\GXPEngine.exe.config
 C:\Users\halox\Desktop\FinalApproach Code\FinalApproach\bin\Debug\GXPEngine.exe
 C:\Users\halox\Desktop\FinalApproach Code\FinalApproach\bin\Debug\GXPEngine.pdb
+C:\Users\Kevin\Documents\LocalProjects\FinalApproach\bin\Debug\GXPEngine.exe.config
+C:\Users\Kevin\Documents\LocalProjects\FinalApproach\bin\Debug\GXPEngine.exe
+C:\Users\Kevin\Documents\LocalProjects\FinalApproach\bin\Debug\GXPEngine.pdb
+C:\Users\Kevin\Documents\LocalProjects\FinalApproach\obj\x86\Debug\GXPEngine.csproj.AssemblyReference.cache
+C:\Users\Kevin\Documents\LocalProjects\FinalApproach\obj\x86\Debug\GXPEngine.csproj.CoreCompileInputs.cache
+C:\Users\Kevin\Documents\LocalProjects\FinalApproach\obj\x86\Debug\GXPEngine.exe
+C:\Users\Kevin\Documents\LocalProjects\FinalApproach\obj\x86\Debug\GXPEngine.pdb

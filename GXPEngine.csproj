@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ColliderLoader.cs" />
     <Compile Include="MyGame.cs" />
     <Compile Include="..\GXPEngine2023b\GXPEngine\AddOns\Gizmos.cs">
       <Link>GXPEngine\AddOns\Gizmos.cs</Link>
@@ -110,9 +111,7 @@
     <Compile Include="..\GXPEngine2023b\GXPEngine\AnimationSprite.cs">
       <Link>GXPEngine\AnimationSprite.cs</Link>
     </Compile>
-    <Compile Include="..\GXPEngine2023b\GXPEngine\Utils\Mathf.cs">
-      <Link>GXPEngine\Utils\Mathf.cs</Link>
-    </Compile>
+    <Compile Include="GXPEngine\Utils\Mathf.cs" />
     <Compile Include="..\GXPEngine2023b\GXPEngine\Utils\Input.cs">
       <Link>GXPEngine\Utils\Input.cs</Link>
     </Compile>
@@ -192,6 +191,8 @@
     </Compile>
     <Compile Include="Scenes\GameScene.cs" />
     <Compile Include="Player.cs" />
+    <Compile Include="Scenes\TiledTestScene.cs" />
+    <Compile Include="Tile.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

@@ -4,7 +4,7 @@ using GXPEngine.SceneManager;
 
 class MyGame : Game {
 
-	public MyGame() : base(800, 600, false, false) 
+	public MyGame() : base(800, 600, false, false, pPixelArt: true) 
 	{
 		Initialize();
 		SceneManager.LoadScene("GameScene");
@@ -18,5 +18,6 @@ class MyGame : Game {
 	private void Initialize()
 	{
 		SceneManager.AddScene("GameScene", new GameScene());
+		SceneManager.AddScene("Test", new TiledTestScene());
 	}
 }

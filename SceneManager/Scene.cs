@@ -5,12 +5,12 @@
         public Scene() { }
 
         /// <summary>Is called after the update cycle is finished</summary>
-        public abstract void UpdateObjects();
+        public virtual void UpdateObjects() { }
 
         /// <summary>Is called when the scene is loaded</summary>
-        public abstract void OnLoad();
+        public virtual void OnLoad() { }
 
         /// <summary>Is called when the scene is unloaded</summary>
-        public abstract void OnUnload();
+        public virtual void OnUnload() { }
     }
 }
