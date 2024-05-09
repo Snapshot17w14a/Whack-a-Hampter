@@ -35,36 +35,69 @@ namespace GXPEngine
             Vec2 mouseVector = new Vec2(Input.mouseX, Input.mouseY) - Collider.Position;
             if (!_isPlayerMoving)
             {
-                shootStrengthArrow.vector = mouseVector.Normalized() * Mathf.Clamp((mouseVector.Length() / 30), 0f, 10f);
-                if (shootStrengthArrow.vector.Length() > 0 && shootStrengthArrow.vector.Length() <= 5.0f)
+                float maxStrength = 10f;
+                float normalizedLength = Mathf.Clamp(mouseVector.Length() / 30, 0f, maxStrength);
+                shootStrengthArrow.vector = mouseVector.Normalized() * normalizedLength;
+
+                // Define color stops
+                uint startColor = 0xFF00FF00; // Green
+                uint midColor = 0xFFFFFF00; // Yellow
+                uint endColor = 0xFFFF0000; // Red
+
+                // Interpolate colors
+                if (normalizedLength <= 5.0f)
                 {
-                    shootStrengthArrow.color = 0xFF00FF00;
+                    shootStrengthArrow.color = LerpColor(startColor, midColor, normalizedLength / 5.0f);
                 }
-                else if (shootStrengthArrow.vector.Length() > 5.0f && shootStrengthArrow.vector.Length() <= 9.0f)
+                else if (normalizedLength <= 10.0f)
                 {
-                    shootStrengthArrow.color = 0xFFFFFF00;
-                }
-                else if (shootStrengthArrow.vector.Length() > 9.0f)
-                {
-                    shootStrengthArrow.color = 0xFFFF0000;
+                    shootStrengthArrow.color = LerpColor(midColor, endColor, (normalizedLength - 5.0f) / 5.0f);
                 }
             }
-            else shootStrengthArrow.vector = Vec2.zero;
-            if (Input.GetMouseButtonDown(0) && !_isPlayerMoving) Collider.SetVelocity(mouseVector.Normalized() * Mathf.Clamp((mouseVector.Length() / 10), 0f, 1000f));
+            else
+            {
+                shootStrengthArrow.vector = Vec2.zero;
+            }
+
+            if (Input.GetMouseButtonDown(0) && !_isPlayerMoving)
+            {
+                Collider.SetVelocity(mouseVector.Normalized() * Mathf.Clamp((mouseVector.Length() / 10), 0f, 1000f));
+            }
         }
+
+        private uint LerpColor(uint startColor, uint endColor, float t)
+        {
+            byte startR = (byte)((startColor >> 16) & 0xFF);
+            byte startG = (byte)((startColor >> 8) & 0xFF);
+            byte startB = (byte)(startColor & 0xFF);
+
+            byte endR = (byte)((endColor >> 16) & 0xFF);
+            byte endG = (byte)((endColor >> 8) & 0xFF);
+            byte endB = (byte)(endColor & 0xFF);
+
+            byte newR = (byte)(startR + (endR - startR) * t);
+            byte newG = (byte)(startG + (endG - startG) * t);
+            byte newB = (byte)(startB + (endB - startB) * t);
+
+            return (uint)((0xFF << 24) | (newR << 16) | (newG << 8) | newB);
+        }
+
 
         private void AimTowardsMouse()
         {
-            if (!_isPlayerMoving)
+            if (_isPlayerMoving)
+            {
+                float angle = Collider.Velocity.GetAngleDegrees();
+                rotation = angle + 90; // Adjusting for sprite orientation
+            }
+            else
             {
                 Vec2 mouse = new Vec2(Input.mouseX, Input.mouseY);
                 Vec2 playerPosition = new Vec2(Collider.Position.x, Collider.Position.y);
-
                 Vec2 mouseDirection = mouse - playerPosition;
                 float angle = mouseDirection.GetAngleDegrees();
-                rotation = angle + 90; // adjusting the angle of the sprite because I am too lazy to open paint.net
+                rotation = angle + 90; // Adjusting the angle of the sprite
             }
-            
         }
 
         private void UpdateArrows()
