@@ -8,6 +8,7 @@
         private readonly Collider _collider;
         public Collider Collider => _collider;
         private readonly LineSegment _line;
+        public LineSegment LineSegment => _line;
 
         public Line(Vec2 startPosition, Vec2 endPosition, bool isSegment = true)
         {

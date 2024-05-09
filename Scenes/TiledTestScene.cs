@@ -1,15 +1,24 @@
-﻿using GXPEngine.SceneManager;
+﻿using GXPEngine.Physics;
+using GXPEngine.SceneManager;
 using TiledMapParser;
 
 namespace GXPEngine.Scenes
 {
     internal class TiledTestScene : Scene
     {
+        Player player;
+        Line line;
+
         public TiledTestScene() {  }
 
-        public override void OnLoad() => LoadLevel();
+        public override void OnLoad()
+        {
+            Game.main.OnBeforeStep += PhysicsManager.Step;
+            LoadLevel();
+            PhysicsManager.PrintColliders();
+        }
 
-        public override void OnUnload() { }
+        public override void OnUnload() { Game.main.OnBeforeStep -= PhysicsManager.Step; }
 
         public override void UpdateObjects() { }
 
@@ -17,6 +26,8 @@ namespace GXPEngine.Scenes
         {
             TiledLoader loader = new TiledLoader("Maps/exporttest.tmx");
             loader.LoadTileLayers(0);
+            player = new Player();
+            AddChild(player);
         }
     }
 }

@@ -16,7 +16,7 @@ namespace GXPEngine.Physics
         /// <returns>Returns the created collider to be stored by the parent <see cref="GameObject"/></returns>
         public static Collider AddCollider(GameObject parent, Collider.ColliderType collidertype, bool addToList = true)
         {
-            Collider collider = null;
+            Collider collider;
             switch (collidertype)
             {
                 case Collider.ColliderType.Box:
@@ -85,5 +85,8 @@ namespace GXPEngine.Physics
 
         /// <summary>Removes the given collider from the list of simulated and collision checked colliders</summary>
         public static void RemoveCollider(Collider collider) => _colliders.Remove(collider);
+
+        /// <summary>Prints all colliders in the list of simulated and collision checked colliders</summary>
+        public static void PrintColliders() { foreach (Collider collider in _colliders) Console.WriteLine(collider); }
     }
 }

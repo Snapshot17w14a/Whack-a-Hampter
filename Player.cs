@@ -60,7 +60,7 @@ namespace GXPEngine
 
             if (Input.GetMouseButtonDown(0) && !_isPlayerMoving)
             {
-                Collider.SetVelocity(mouseVector.Normalized() * Mathf.Clamp((mouseVector.Length() / 10), 0f, 1000f));
+                Collider.SetVelocity(mouseVector.Normalized() * Mathf.Clamp((mouseVector.Length() / 10), 0f, 100f));
             }
         }
 

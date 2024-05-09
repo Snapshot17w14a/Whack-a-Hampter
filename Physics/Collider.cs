@@ -78,6 +78,13 @@ namespace GXPEngine.Physics
         public abstract void ResolveCollision(CollisionInfo col);
         public abstract bool IsColliding(Collider other);
 
-        public override string ToString() => $"Collider: {Type} at {Position}";
+        public override string ToString()
+        {
+            string toPrint = $"Collider: {Type} at {Position}";
+            if (Type == ColliderType.LineSegment || Type == ColliderType.Line) toPrint += $" from {((Line)Parent).StartPosition} to {((Line)Parent).EndPosition}";
+            if (Tag != null) toPrint += $" with tag {Tag}";
+            if (IgnoredTags.Count > 0) toPrint += $" ignoring tags: {string.Join(", ", IgnoredTags)}";
+            return toPrint;
+        } 
     }
 }

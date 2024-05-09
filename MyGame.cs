@@ -4,10 +4,11 @@ using GXPEngine.SceneManager;
 
 class MyGame : Game {
 
-	public MyGame() : base(800, 600, false, false, pPixelArt: true) 
+	public MyGame() : base(1920, 1280, false, false, pPixelArt: true) 
 	{
 		Initialize();
 		SceneManager.LoadScene("Test");
+		//SceneManager.LoadScene("GameScene");
 	}
 
 	public static void Main (string[] args)
