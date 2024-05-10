@@ -15,6 +15,7 @@ namespace GXPEngine.Scenes
         {
             Game.main.OnBeforeStep += PhysicsManager.Step;
             LoadLevel();
+            ColliderLoader.InstantiateColliders();
             PhysicsManager.PrintColliders();
         }
 
