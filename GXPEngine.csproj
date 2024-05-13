@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ColliderLoader.cs" />
+    <Compile Include="GameData.cs" />
     <Compile Include="MyGame.cs" />
     <Compile Include="..\GXPEngine2023b\GXPEngine\AddOns\Gizmos.cs">
       <Link>GXPEngine\AddOns\Gizmos.cs</Link>
@@ -47,9 +49,7 @@
     <Compile Include="..\GXPEngine2023b\GXPEngine\AddOns\SpriteBatch.cs">
       <Link>GXPEngine\AddOns\SpriteBatch.cs</Link>
     </Compile>
-    <Compile Include="..\GXPEngine2023b\GXPEngine\AddOns\TiledLoader.cs">
-      <Link>GXPEngine\AddOns\TiledLoader.cs</Link>
-    </Compile>
+    <Compile Include="GXPEngine\AddOns\TiledLoader.cs" />
     <Compile Include="..\GXPEngine2023b\GXPEngine\Core\Canvas.cs">
       <Link>GXPEngine\Core\Canvas.cs</Link>
     </Compile>
@@ -110,9 +110,7 @@
     <Compile Include="..\GXPEngine2023b\GXPEngine\AnimationSprite.cs">
       <Link>GXPEngine\AnimationSprite.cs</Link>
     </Compile>
-    <Compile Include="..\GXPEngine2023b\GXPEngine\Utils\Mathf.cs">
-      <Link>GXPEngine\Utils\Mathf.cs</Link>
-    </Compile>
+    <Compile Include="GXPEngine\Utils\Mathf.cs" />
     <Compile Include="..\GXPEngine2023b\GXPEngine\Utils\Input.cs">
       <Link>GXPEngine\Utils\Input.cs</Link>
     </Compile>
@@ -137,9 +135,7 @@
     <Compile Include="..\GXPEngine2023b\GXPEngine\AddOns\Settings.cs">
       <Link>GXPEngine\AddOns\Settings.cs</Link>
     </Compile>
-    <Compile Include="..\GXPEngine2023b\GXPEngine\AddOns\TiledMapParser.cs">
-      <Link>GXPEngine\AddOns\TiledMapParser.cs</Link>
-    </Compile>
+    <Compile Include="GXPEngine\AddOns\TiledMapParser.cs" />
     <Compile Include="..\GXPEngine2023b\GXPEngine\AddOns\Window.cs">
       <Link>GXPEngine\AddOns\Window.cs</Link>
     </Compile>
@@ -161,6 +157,7 @@
     <Compile Include="..\GXPEngine2023b\GXPEngine\SoLoud\SoloudSoundSystem.cs">
       <Link>GXPEngine\SoLoud\SoloudSoundSystem.cs</Link>
     </Compile>
+    <Compile Include="Physics\Shapes\AnimatedCircle.cs" />
     <Compile Include="SceneManager\SceneManager.cs">
     </Compile>
     <Compile Include="SceneManager\Scene.cs">
@@ -189,6 +186,10 @@
     </Compile>
     <Compile Include="Physics\Shapes\Line.cs">
     </Compile>
+    <Compile Include="Scenes\GameScene.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="Scenes\TiledTestScene.cs" />
+    <Compile Include="Tile.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

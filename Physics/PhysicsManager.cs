@@ -1,5 +1,6 @@
 ﻿using GXPEngine.Physics.Colliders;
 using System.Collections.Generic;
+using GXPEngine.Physics.Shapes;
 using System;
 
 namespace GXPEngine.Physics
@@ -15,14 +16,14 @@ namespace GXPEngine.Physics
         /// <returns>Returns the created collider to be stored by the parent <see cref="GameObject"/></returns>
         public static Collider AddCollider(GameObject parent, Collider.ColliderType collidertype, bool addToList = true)
         {
-            Collider collider = null;
+            Collider collider;
             switch (collidertype)
             {
                 case Collider.ColliderType.Box:
                     //collider = new BoxCollider();
                     goto default;
                 case Collider.ColliderType.Circle:
-                    collider = new CircleCollider(parent, new Vec2(parent.x, parent.y), ((Circle)parent).Radius);
+                    collider = new CircleCollider(parent, new Vec2(parent.x, parent.y), ((AnimatedCircle)parent).Radius);
                     break;
                 case Collider.ColliderType.Line:
                     collider = new LineCollider(parent, Vec2.zero, ((Line)parent).StartPosition, ((Line)parent).EndPosition);
@@ -84,5 +85,8 @@ namespace GXPEngine.Physics
 
         /// <summary>Removes the given collider from the list of simulated and collision checked colliders</summary>
         public static void RemoveCollider(Collider collider) => _colliders.Remove(collider);
+
+        /// <summary>Prints all colliders in the list of simulated and collision checked colliders</summary>
+        public static void PrintColliders() { foreach (Collider collider in _colliders) Console.WriteLine(collider); }
     }
 }

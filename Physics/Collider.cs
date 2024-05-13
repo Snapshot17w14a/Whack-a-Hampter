@@ -16,6 +16,8 @@ namespace GXPEngine.Physics
 
         protected Vec2 velocity = Vec2.zero;
         
+        public bool LoseVelocityOverTime = false;
+
         public string Tag { get; protected set; } = null;
         public List<string> IgnoredTags { get; protected set; } = new List<string>();
 
@@ -38,6 +40,7 @@ namespace GXPEngine.Physics
             if (addAcceleration) velocity += Acceleration;
             Position += velocity;
             Parent.SetXY(Position.x, Position.y);
+            if (LoseVelocityOverTime) velocity *= 0.98f;
         }
 
         public void Destroy()
@@ -75,6 +78,13 @@ namespace GXPEngine.Physics
         public abstract void ResolveCollision(CollisionInfo col);
         public abstract bool IsColliding(Collider other);
 
-        public override string ToString() => $"Collider: {Type} at {Position}";
+        public override string ToString()
+        {
+            string toPrint = $"Collider: {Type} at {Position}";
+            if (Type == ColliderType.LineSegment || Type == ColliderType.Line) toPrint += $" from {((Line)Parent).StartPosition} to {((Line)Parent).EndPosition}";
+            if (Tag != null) toPrint += $" with tag {Tag}";
+            if (IgnoredTags.Count > 0) toPrint += $" ignoring tags: {string.Join(", ", IgnoredTags)}";
+            return toPrint;
+        } 
     }
 }

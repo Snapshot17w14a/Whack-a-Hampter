@@ -1,27 +1,16 @@
-﻿using System;
-
-namespace GXPEngine.SceneManager
+﻿namespace GXPEngine.SceneManager
 {
-    internal class Scene : GameObject
+    internal abstract class Scene : GameObject
     {
-        public Scene()
-        {
+        public Scene() { }
 
-        }
+        /// <summary>Is called after the update cycle is finished</summary>
+        public abstract void UpdateObjects();
 
-        public void UpdateObjects()
-        {
-            throw new NotImplementedException();
-        }
+        /// <summary>Is called when the scene is loaded</summary>
+        public abstract void OnLoad();
 
-        public virtual void OnLoad()
-        {
-            throw new NotImplementedException();
-        }
-
-        public virtual void OnUnload()
-        {
-            throw new NotImplementedException();
-        }
+        /// <summary>Is called when the scene is unloaded</summary>
+        public abstract void OnUnload();
     }
 }

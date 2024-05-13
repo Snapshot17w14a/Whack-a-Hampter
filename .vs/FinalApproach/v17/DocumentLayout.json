@@ -1,31 +1,50 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\",
+  "WorkspaceRootPath": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\",
   "Documents": [
     {
-<<<<<<< Updated upstream
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\SceneManager\\SceneManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SceneManager\\SceneManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|c:\\users\\kevin\\documents\\localprojects\\finalapproach\\gamedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:gamedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\Kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\mygame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:mygame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\physics\\shapes\\line.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:physics\\shapes\\line.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\SceneManager\\Scene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SceneManager\\Scene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
-      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\Kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\scenemanager\\scenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\physics\\colliders\\circlecollider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:physics\\colliders\\circlecollider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|c:\\users\\kevin\\documents\\localprojects\\finalapproach\\colliderloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:colliderloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|c:\\users\\kevin\\documents\\localprojects\\finalapproach\\scenemanager\\scenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:scenemanager\\scenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|c:\\users\\kevin\\onedrive - saxion\\documents\\saxioncmgt\\projects\\finalapproach\\scenemanager\\scene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:scenemanager\\scene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\scenes\\tiledtestscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:scenes\\tiledtestscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\Kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\mygame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\mygame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:mygame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
->>>>>>> Stashed changes
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\gxpengine\\addons\\tiledloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:gxpengine\\addons\\tiledloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\physics\\physicsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:physics\\physicsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\physics\\collider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:physics\\collider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,57 +54,150 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-<<<<<<< Updated upstream
-              "DocumentIndex": 2,
-=======
-              "DocumentIndex": 1,
->>>>>>> Stashed changes
-              "Title": "Scene.cs",
-              "DocumentMoniker": "C:\\Users\\Kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\SceneManager\\Scene.cs",
-              "RelativeDocumentMoniker": "SceneManager\\Scene.cs",
-              "ToolTip": "C:\\Users\\Kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\SceneManager\\Scene.cs",
-              "RelativeToolTip": "SceneManager\\Scene.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-<<<<<<< Updated upstream
-              "WhenOpened": "2024-05-07T08:55:55.782Z"
-=======
-              "WhenOpened": "2024-05-07T08:55:55.782Z",
-              "EditorCaption": ""
->>>>>>> Stashed changes
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SceneManager.cs",
-              "DocumentMoniker": "C:\\Users\\Kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\SceneManager\\SceneManager.cs",
-              "RelativeDocumentMoniker": "SceneManager\\SceneManager.cs",
-              "ToolTip": "C:\\Users\\Kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\SceneManager\\SceneManager.cs",
-              "RelativeToolTip": "SceneManager\\SceneManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAJAAAA",
+              "Title": "GameData.cs",
+              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\GameData.cs",
+              "RelativeDocumentMoniker": "GameData.cs",
+              "ToolTip": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\GameData.cs",
+              "RelativeToolTip": "GameData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T08:51:41.818Z",
+              "WhenOpened": "2024-05-13T10:22:23.828Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-<<<<<<< Updated upstream
-              "DocumentIndex": 1,
-=======
-              "DocumentIndex": 2,
->>>>>>> Stashed changes
-              "Title": "MyGame.cs",
-              "DocumentMoniker": "C:\\Users\\Kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\MyGame.cs",
-              "RelativeDocumentMoniker": "MyGame.cs",
-              "ToolTip": "C:\\Users\\Kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\MyGame.cs",
-              "RelativeToolTip": "MyGame.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAXAAAA",
+              "DocumentIndex": 3,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\Player.cs",
+              "RelativeDocumentMoniker": "Player.cs",
+              "ToolTip": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\Player.cs",
+              "RelativeToolTip": "Player.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACwAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T08:28:50.882Z"
+              "WhenOpened": "2024-05-07T17:44:48.726Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SceneManager.cs",
+              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\SceneManager\\SceneManager.cs",
+              "RelativeDocumentMoniker": "SceneManager\\SceneManager.cs",
+              "ToolTip": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\SceneManager\\SceneManager.cs",
+              "RelativeToolTip": "SceneManager\\SceneManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADIAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-13T10:44:50.042Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ColliderLoader.cs",
+              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\ColliderLoader.cs",
+              "RelativeDocumentMoniker": "ColliderLoader.cs",
+              "ToolTip": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\ColliderLoader.cs",
+              "RelativeToolTip": "ColliderLoader.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACgAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T20:54:18.284Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Collider.cs",
+              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\Physics\\Collider.cs",
+              "RelativeDocumentMoniker": "Physics\\Collider.cs",
+              "ToolTip": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\Physics\\Collider.cs",
+              "RelativeToolTip": "Physics\\Collider.cs",
+              "ViewState": "AQIAADYAAAAAAAAAAAAiwFYAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-09T20:05:59.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CircleCollider.cs",
+              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\Physics\\Colliders\\CircleCollider.cs",
+              "RelativeDocumentMoniker": "Physics\\Colliders\\CircleCollider.cs",
+              "ToolTip": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\Physics\\Colliders\\CircleCollider.cs",
+              "RelativeToolTip": "Physics\\Colliders\\CircleCollider.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAABpAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-09T19:52:42.099Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TiledTestScene.cs",
+              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\Scenes\\TiledTestScene.cs",
+              "RelativeDocumentMoniker": "Scenes\\TiledTestScene.cs",
+              "ToolTip": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\Scenes\\TiledTestScene.cs",
+              "RelativeToolTip": "Scenes\\TiledTestScene.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T14:43:23.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Line.cs",
+              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\Physics\\Shapes\\Line.cs",
+              "RelativeDocumentMoniker": "Physics\\Shapes\\Line.cs",
+              "ToolTip": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\Physics\\Shapes\\Line.cs",
+              "RelativeToolTip": "Physics\\Shapes\\Line.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-09T19:29:25.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PhysicsManager.cs",
+              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\Physics\\PhysicsManager.cs",
+              "RelativeDocumentMoniker": "Physics\\PhysicsManager.cs",
+              "ToolTip": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\Physics\\PhysicsManager.cs",
+              "RelativeToolTip": "Physics\\PhysicsManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFkAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-09T19:27:25.647Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TiledLoader.cs",
+              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\GXPEngine\\AddOns\\TiledLoader.cs",
+              "RelativeDocumentMoniker": "GXPEngine\\AddOns\\TiledLoader.cs",
+              "ToolTip": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\GXPEngine\\AddOns\\TiledLoader.cs",
+              "RelativeToolTip": "GXPEngine\\AddOns\\TiledLoader.cs",
+              "ViewState": "AQIAALwBAAAAAAAAAAAnwL8BAABXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-09T17:56:35.145Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MyGame.cs",
+              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\MyGame.cs",
+              "RelativeDocumentMoniker": "MyGame.cs",
+              "ToolTip": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\MyGame.cs",
+              "RelativeToolTip": "MyGame.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAABbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T08:28:50.882Z",
+              "EditorCaption": ""
             }
           ]
         }

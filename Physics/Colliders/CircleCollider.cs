@@ -1,22 +1,22 @@
-﻿using System;
-
-namespace GXPEngine.Physics.Colliders
+﻿namespace GXPEngine.Physics.Colliders
 {
     internal class CircleCollider : Collider
     {
         public float Radius { get; private set; }
         private bool _firstCollision = true;
-        private Arrow arrow;
 
         public CircleCollider(GameObject parent, Vec2 position, float radius) : base(parent, position, ColliderType.Circle)
         {
             Radius = radius;
-            arrow = new Arrow(position, velocity, 10);
-            parent.AddChild(arrow);
         }
 
         public override CollisionInfo GetCollision(Collider other)
         {
+            if(GameData.ShowColliders)
+            {
+                Gizmos.DrawCross(Position.x, Position.y, Radius, color: GameData.ColliderColor, width: 2);
+                Gizmos.DrawPlus(Position.x, Position.y, Radius, color: GameData.ColliderColor, width: 2);
+            }
             if (other is CircleCollider circleCollider) return GetCollision(circleCollider);
             else if (other is LineCollider lineCollider) return GetCollision(lineCollider);
             else if (other is LineSegmentCollider lineSegmentCollider) return GetLineSegmentCollision(lineSegmentCollider);
@@ -72,9 +72,9 @@ namespace GXPEngine.Physics.Colliders
         {
             Vec2 linevector = other.EndPosition - other.StartPosition;
             Vec2 difference = Position - other.StartPosition;
-            float b = (-velocity).Dot(linevector.Normal());
+            float b = velocity.Dot(linevector.Normal());
             if (b <= 0) return null;
-            float a = difference.Dot(linevector.Normal()) - Radius;
+            float a = difference.Dot(linevector.Normal());
             float t;
             if (a >= 0) t = a / b;
             else if (a <= Radius && a >= -Radius) t = 0;
@@ -94,14 +94,14 @@ namespace GXPEngine.Physics.Colliders
             col.other.OnCollision?.Invoke(this);
             Position = OldPosition + Velocity * col.timeOfImpact;
             velocity.Reflect(col.normal, Bounciness);
-            if (col.other is CircleCollider circle && Velocity.Dot(circle.Velocity) > 0)
-            {
-                Vec2 u = (Velocity * Mass + circle.Velocity * circle.Mass) / (Mass + circle.Mass);
-                velocity -= (1 + Bounciness) * (Velocity - u).Dot(col.normal) * col.normal;
-                // changing own vel twice, not changing other vel...
-                // Also: check whether it's a real collision (relative vel)
-            }
-            if (Mathf.IsApporximately(col.timeOfImpact, 0) && _firstCollision)
+            //if (col.other is CircleCollider circle && Velocity.Dot(circle.Velocity) > 0) // Conservation of momentum has to be fixed here!!! TODO
+            //{
+            //    Vec2 u = (Velocity * Mass + circle.Velocity * circle.Mass) / (Mass + circle.Mass);
+            //    velocity -= (1 + Bounciness) * (Velocity - u).Dot(col.normal) * col.normal;
+            //    // changing own vel twice, not changing other vel...
+            //    // Also: check whether it's a real collision (relative vel)
+            //}
+            if (_firstCollision && IsApporximately(col.timeOfImpact, 0))
             {
                 _firstCollision = false;
                 PhysicsManager.CheckForCollision(this, false);
@@ -114,6 +114,11 @@ namespace GXPEngine.Physics.Colliders
             if(other is CircleCollider circle) return (Position - circle.Position).SquareLength() < (Radius + circle.Radius) * (Radius + circle.Radius);
             if(other is LineCollider line) return (Position - line.StartPosition).Dot((line.EndPosition - line.StartPosition).Normal()) < Radius;
             return false;
+        }
+
+        public static bool IsApporximately(float a, float b, float tolerance = 0.00001f)
+        {
+            return Mathf.Abs(a - b) < tolerance;
         }
     }
 }
