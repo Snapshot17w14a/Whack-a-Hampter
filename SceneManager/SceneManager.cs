@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using GXPEngine.Scenes;
 
 namespace GXPEngine.SceneManager
 {
@@ -36,6 +37,24 @@ namespace GXPEngine.SceneManager
             CurrentScene?.OnLoad();
             game.AddChild(CurrentScene);
             game.OnAfterStep += CurrentScene.UpdateObjects;
+        }
+
+        /// <summary>Creates an instance of a scene with the given name and returns it.</summary>
+        public static Scene CreateScene(string sceneName)
+        {
+            Scene createdScene;
+            switch(sceneName)
+            {
+                case "GameScene":
+                    createdScene = new GameScene();
+                    break;
+                case "TiledScene":
+                    createdScene = new TiledTestScene();
+                    break;
+                default:
+                    throw new System.Exception("Scene name incorrect or does not exist");
+            }
+            return createdScene;
         }
 
         /// <summary>Load the scene named "InitialScene"</summary>

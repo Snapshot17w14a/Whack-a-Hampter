@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ColliderLoader.cs" />
+    <Compile Include="GameData.cs" />
     <Compile Include="MyGame.cs" />
     <Compile Include="..\GXPEngine2023b\GXPEngine\AddOns\Gizmos.cs">
       <Link>GXPEngine\AddOns\Gizmos.cs</Link>

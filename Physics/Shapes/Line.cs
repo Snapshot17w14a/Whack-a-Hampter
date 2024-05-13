@@ -14,8 +14,11 @@
         {
             StartPosition = startPosition;
             EndPosition = endPosition;
-            _line = new LineSegment(startPosition, endPosition);
-            AddChild(_line);
+            if (GameData.ShowColliders)
+            {
+                _line = new LineSegment(startPosition, endPosition, GameData.ColliderColor, 2);
+                AddChild(_line);
+            }
             _collider = isSegment ? PhysicsManager.AddCollider(this, Collider.ColliderType.LineSegment) : PhysicsManager.AddCollider(this, Collider.ColliderType.Line);
         }
     }

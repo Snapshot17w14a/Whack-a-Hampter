@@ -4,17 +4,19 @@
     {
         public float Radius { get; private set; }
         private bool _firstCollision = true;
-        //private Arrow arrow;
 
         public CircleCollider(GameObject parent, Vec2 position, float radius) : base(parent, position, ColliderType.Circle)
         {
             Radius = radius;
-            //arrow = new Arrow(position, velocity, 10);
-            //parent.AddChild(arrow);
         }
 
         public override CollisionInfo GetCollision(Collider other)
         {
+            if(GameData.ShowColliders)
+            {
+                Gizmos.DrawCross(Position.x, Position.y, Radius, color: GameData.ColliderColor, width: 2);
+                Gizmos.DrawPlus(Position.x, Position.y, Radius, color: GameData.ColliderColor, width: 2);
+            }
             if (other is CircleCollider circleCollider) return GetCollision(circleCollider);
             else if (other is LineCollider lineCollider) return GetCollision(lineCollider);
             else if (other is LineSegmentCollider lineSegmentCollider) return GetLineSegmentCollision(lineSegmentCollider);

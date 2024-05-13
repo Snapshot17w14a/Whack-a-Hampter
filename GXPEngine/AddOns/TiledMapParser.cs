@@ -146,6 +146,7 @@ namespace TiledMapParser
 
 		public Tile GetTile(uint id)
 		{
+			if (Tiles == null || Tiles.Length == 0) return null;
             foreach (Tile t in Tiles)
 			{
                 if (t.ID == id)

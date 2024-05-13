@@ -7,7 +7,6 @@ namespace GXPEngine.Scenes
     internal class TiledTestScene : Scene
     {
         Player player;
-        Line line;
 
         public TiledTestScene() {  }
 
@@ -25,7 +24,7 @@ namespace GXPEngine.Scenes
 
         private void LoadLevel()
         {
-            TiledLoader loader = new TiledLoader("Maps/exporttest.tmx");
+            TiledLoader loader = new TiledLoader(GameData.TiledSceneMap);
             loader.LoadTileLayers(0);
             player = new Player();
             AddChild(player);

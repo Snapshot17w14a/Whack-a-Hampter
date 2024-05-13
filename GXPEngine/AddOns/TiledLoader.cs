@@ -445,7 +445,7 @@ namespace TiledMapParser {
                     Tile.rotation = TiledUtils.GetRotation(rawTileInfo);
                     Tile.Mirror(TiledUtils.GetMirrorX(rawTileInfo), false);
                     ChangeOrigin(Tile, defaultOriginX, defaultOriginY, 0.5f, 0.5f);
-					if (tileSet.GetTile(rawTileInfo - 1)?.GetStringProperty("collider", "null") != null)
+					if (tileSet.GetTile(rawTileInfo - 1)?.GetStringProperty("collider", null) != null)
 					{
 						ColliderData cd = ColliderLoader.GetOffset(tileSet.GetTile(rawTileInfo - 1).GetStringProperty("collider", "null"), Tile.width, Tile.height);
 						cd.Start += new Vec2(Tile.x, Tile.y);
@@ -456,38 +456,6 @@ namespace TiledMapParser {
                 }
             }
 		}
-
-		//void CustomColliderLoading(int index) //Loading with the custom Tile class and custom colliders
-		//{
-  //          if (map.Layers.Length <= index) return;
-  //          uint[,] tiles = map.Layers[index].GetTileArrayRaw();
-  //          for (int c = 0; c < tiles.GetLength(0); c++)
-  //          {
-  //              for (int r = 0; r < tiles.GetLength(1); r++)
-  //              {
-  //                  if (tiles[c, r] == 0)
-  //                      continue;
-  //                  uint rawTileInfo = tiles[c, r];
-  //                  int frame = TiledUtils.GetTileFrame(rawTileInfo);
-  //                  TileSet tileSet = map.GetTileSet(frame);
-  //                  if (tileSet == null || tileSet.Image == null)
-  //                      throw new Exception("The Tiled map contains unembedded tilesets (.tsx files) - please embed them in the map");
-
-		//			GXPEngine.Tile tile = new GXPEngine.Tile(Path.Combine(_foldername, tileSet.Image.FileName), tileSet.Columns, tileSet.Rows, -1);
-  //                  tile.SetFrame(frame - tileSet.FirstGId);
-  //                  tile.x = c * map.TileWidth;
-  //                  // Adapting to Tiled's weird and inconsistent conventions again:
-  //                  tile.y = r * map.TileHeight - (tile.height - map.TileHeight);
-  //                  ChangeOrigin(tile, 0.5f, 0.5f);
-  //                  tile.rotation = TiledUtils.GetRotation(rawTileInfo);
-  //                  tile.Mirror(TiledUtils.GetMirrorX(rawTileInfo), false);
-  //                  ChangeOrigin(tile, defaultOriginX, defaultOriginY, 0.5f, 0.5f);
-  //                  tile.AddColliders(tileSet.GetTile(rawTileInfo - 1)?.GetStringProperty("collider", "null"));
-		//			tile.SetOrigin(0, 0);
-  //                  rootObject.AddChild(tile);
-  //              }
-  //          }
-  //      }
 
 		void LoadImageLayer(int index) {
 			if (map.ImageLayers.Length<=index) return;
