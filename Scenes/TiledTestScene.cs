@@ -13,8 +13,9 @@ namespace GXPEngine.Scenes
         public override void OnLoad()
         {
             Game.main.OnBeforeStep += PhysicsManager.Step;
+            
             LoadLevel();
-            ColliderLoader.InstantiateColliders();
+            //ColliderLoader.InstantiateColliders();
             PhysicsManager.PrintColliders();
         }
 
@@ -24,8 +25,13 @@ namespace GXPEngine.Scenes
 
         private void LoadLevel()
         {
-            TiledLoader loader = new TiledLoader(GameData.TiledSceneMap);
+            TiledLoader loader = new TiledLoader(GameData.TiledSceneMap, defaultOriginX: 0, defaultOriginY: 0);
+            CustomObjectLoader.Initialize(loader);
             loader.LoadTileLayers(0);
+            loader.autoInstance = true;
+            loader.AddManualType("WindCurrent");
+            loader.LoadObjectGroups(0);
+            CustomObjectLoader.Stop(loader);
             player = new Player();
             AddChild(player);
         }

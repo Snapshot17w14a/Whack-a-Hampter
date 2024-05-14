@@ -1,5 +1,4 @@
 using GXPEngine;
-using GXPEngine.Scenes;
 using GXPEngine.SceneManager;
 
 class MyGame : Game {

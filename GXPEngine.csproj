@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ColliderLoader.cs" />
+    <Compile Include="CustomObjectLoader.cs" />
     <Compile Include="GameData.cs" />
     <Compile Include="MyGame.cs" />
     <Compile Include="..\GXPEngine2023b\GXPEngine\AddOns\Gizmos.cs">
@@ -190,6 +191,7 @@
     <Compile Include="Player.cs" />
     <Compile Include="Scenes\TiledTestScene.cs" />
     <Compile Include="Tile.cs" />
+    <Compile Include="WindCurrent.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

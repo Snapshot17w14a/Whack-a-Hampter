@@ -1,11 +1,10 @@
-using System;
 using GXPEngine.Physics.Shapes;
 
 namespace GXPEngine
 {
     internal class Player : AnimatedCircle
     {
-        private Arrow _shootStrengthArrow;
+        private readonly Arrow _shootStrengthArrow;
 
         private bool _isPlayerMoving = false;
 
@@ -34,7 +33,6 @@ namespace GXPEngine
             {
                 float normalizedLength = Mathf.Clamp(mouseVector.Length() / 30f, 0f, GameData.PlayerMaxHitStrength / (GameData.PlayerMaxHitStrength / 10f));
                 _shootStrengthArrow.vector = mouseVector.Normalized() * normalizedLength;
-                Console.WriteLine($"Mouse vector: {mouseVector.Length()}, normalizedLength vector: {normalizedLength}, arrow vector: {_shootStrengthArrow.vector}");
                 // Interpolate colors
                 _shootStrengthArrow.color = normalizedLength <= 5f ?
                     LerpColor(GameData.ArrowStartColor, GameData.ArrowMedianColor, normalizedLength / 5f) : normalizedLength <= 10f ?
@@ -46,7 +44,6 @@ namespace GXPEngine
             if (Input.GetMouseButtonDown(0) && !_isPlayerMoving)
             {
                 Collider.SetVelocity(mouseVector.Normalized() * GameData.PlayerMaxHitStrength * (Mathf.Clamp(mouseVector.Length() / GameData.PlayerMouseMaxStrengthThreshold, 0, 1)));
-                Console.WriteLine(Collider.Velocity.Length());
             }
         }
 
@@ -70,15 +67,9 @@ namespace GXPEngine
 
         private void AimTowardsMouse()
         {
-            if (_isPlayerMoving)
-            {
-                rotation = Collider.Velocity.GetAngleDegrees() + 90f; // Adjusting for sprite orientation
-            }
-            else
-            {
-                Vec2 mouseDirection = new Vec2(Input.mouseX, Input.mouseY) - new Vec2(Collider.Position.x, Collider.Position.y);
-                rotation = mouseDirection.GetAngleDegrees() + 90f; // Adjusting the angle of the sprite
-            }
+            rotation = _isPlayerMoving ?
+                Collider.Velocity.GetAngleDegrees() + 90f : 
+                (new Vec2(Input.mouseX, Input.mouseY) - new Vec2(Collider.Position.x, Collider.Position.y)).GetAngleDegrees() + 90f;
         }
 
         private void UpdateArrows()
