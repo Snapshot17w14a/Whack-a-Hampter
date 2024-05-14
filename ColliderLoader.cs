@@ -17,9 +17,14 @@ namespace GXPEngine
             if (consolidateColliders)
             {
                 bool modifications = true;
-                do { modifications = ConsolidateColliders(); } while (modifications);
+                do { modifications = ConsolidateColliders(); Console.WriteLine(modifications); } while (modifications);
             }
             _colliderData.ForEach(_colliderData => Console.WriteLine(_colliderData));
+            foreach (ColliderData data in _colliderData)
+            {
+                Line line = new Line(data.Start, data.End);
+                Game.main.AddChild(line);
+            }
         }
 
         private static bool ConsolidateColliders()
@@ -63,12 +68,6 @@ namespace GXPEngine
         {
             var colliders = GetOffset(colliderProperty, sprite);
             foreach (ColliderData data in colliders) AddColliderData(data);
-            InstantiateColliders();
-            foreach (ColliderData data in _colliderData)
-            {
-                Line line = new Line(data.Start, data.End);
-                Game.main.AddChild(line);
-            }
         }
 
         /// <summary>Returns the offset of the collider based on the collider property.</summary>
@@ -87,10 +86,22 @@ namespace GXPEngine
                         colliderData.Add(new ColliderData(new Vec2(sprite.width + sprite.x, sprite.y), new Vec2(sprite.width + sprite.x, sprite.height + sprite.y)));
                         break;
                     case "bottom":
-                        colliderData.Add(new ColliderData(new Vec2(sprite.x, sprite.height + sprite.y), new Vec2(sprite.width + sprite.x, sprite.height + sprite.y)));
+                        colliderData.Add(new ColliderData(new Vec2(sprite.width + sprite.x, sprite.height + sprite.y), new Vec2(sprite.x, sprite.height + sprite.y)));
                         break;
                     case "left":
-                        colliderData.Add(new ColliderData(new Vec2(sprite.x, sprite.y), new Vec2(sprite.x, sprite.height + sprite.y)));
+                        colliderData.Add(new ColliderData(new Vec2(sprite.x, sprite.height + sprite.y), new Vec2(sprite.x, sprite.y)));
+                        break;
+                    case "topleftbottomright":
+                        colliderData.Add(new ColliderData(new Vec2(sprite.x, sprite.y), new Vec2(sprite.width + sprite.x, sprite.height + sprite.y)));
+                        break;
+                    case "toprightbottomleft":
+                        colliderData.Add(new ColliderData(new Vec2(sprite.width + sprite.x, sprite.y), new Vec2(sprite.x, sprite.height + sprite.y)));
+                        break;
+                    case "bottomlefttopright":
+                        colliderData.Add(new ColliderData(new Vec2(sprite.x, sprite.height + sprite.y), new Vec2(sprite.width + sprite.x, sprite.y)));
+                        break;
+                    case "bottomrighttopleft":
+                        colliderData.Add(new ColliderData(new Vec2(sprite.width + sprite.x, sprite.height + sprite.y), new Vec2(sprite.x, sprite.y)));
                         break;
                 }
             }
