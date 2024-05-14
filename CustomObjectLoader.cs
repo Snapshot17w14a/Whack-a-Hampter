@@ -1,5 +1,4 @@
-﻿using GXPEngine.SceneManager;
-using TiledMapParser;
+﻿using TiledMapParser;
 
 namespace GXPEngine
 {
@@ -14,14 +13,16 @@ namespace GXPEngine
             switch(obj.Type)
             {
                 case "WindCurrent":
-                    WindCurrent wind = new WindCurrent(obj.GetFloatProperty("reach", 0f), obj.GetFloatProperty("strength", 0f), obj.GetIntProperty("angle", 0));
+                    WindCurrent wind = new WindCurrent(obj.GetFloatProperty("strength", 0f), obj.GetIntProperty("angle", 0));
                     wind.SetXY(obj.X, obj.Y);
+                    wind.width = (int)(obj.Width);
+                    wind.height = (int)(obj.Height);
                     SceneManager.SceneManager.CurrentScene.AddChild(wind);
                     break;
 
                 case "Player":
                     Player player = new Player(obj.X, obj.Y);
-                    GameData.activePlayer = player;
+                    GameData.ActivePlayer = player;
                     SceneManager.SceneManager.CurrentScene.AddChild(player);
                     break;
             }

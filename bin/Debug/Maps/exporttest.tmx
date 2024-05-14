@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="left-up" width="30" height="20" tilewidth="64" tileheight="64" infinite="0" nextlayerid="3" nextobjectid="2">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="left-up" width="30" height="20" tilewidth="64" tileheight="64" infinite="0" nextlayerid="3" nextobjectid="4">
  <tileset firstgid="1" name="LiftOff_TileSet_Version4" tilewidth="64" tileheight="64" tilecount="54" columns="9">
   <image source="../LiftOff_TileSet_Version4.png" width="576" height="384"/>
   <tile id="2">
@@ -76,6 +76,12 @@
 </data>
  </layer>
  <objectgroup id="2" name="Objects">
-  <object id="1" type="Player" x="307.333" y="286.667" width="64" height="64"/>
+  <object id="2" type="Player" x="320" y="256" width="64" height="64"/>
+  <object id="3" type="WindCurrent" x="256" y="832" width="1408" height="256">
+   <properties>
+    <property name="angle" type="int" value="0"/>
+    <property name="strength" type="float" value="5"/>
+   </properties>
+  </object>
  </objectgroup>
 </map>

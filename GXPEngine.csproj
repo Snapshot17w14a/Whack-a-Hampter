@@ -191,7 +191,7 @@
     <Compile Include="Player.cs" />
     <Compile Include="Scenes\TiledTestScene.cs" />
     <Compile Include="Tile.cs" />
-    <Compile Include="WindCurrent.cs" />
+    <Compile Include="Physics\PhysicsObjects\WindCurrent.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

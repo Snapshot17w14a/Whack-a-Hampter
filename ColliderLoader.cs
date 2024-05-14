@@ -17,7 +17,7 @@ namespace GXPEngine
             if (consolidateColliders)
             {
                 bool modifications = true;
-                do { modifications = ConsolidateColliders(); Console.WriteLine(modifications); } while (modifications);
+                do { modifications = ConsolidateColliders(); } while (modifications);
             }
             _colliderData.ForEach(_colliderData => Console.WriteLine(_colliderData));
             foreach (ColliderData data in _colliderData)

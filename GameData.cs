@@ -2,7 +2,7 @@
 {
     internal static class GameData
     {
-        public static Player activePlayer;
+        public static Player ActivePlayer;
 
         //Player data
         public static readonly uint ArrowStartColor = 0xFF00FF00; // color of the arrow at the start
