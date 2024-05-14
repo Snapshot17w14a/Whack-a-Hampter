@@ -11,6 +11,8 @@
         public static readonly float PlayerMouseMaxStrengthThreshold = 300f; // The mouse vector length at which the player will hit with the maximum hit strength
         public static readonly float PlayerIsZeroThreshold = 0.01f; // Threshold for checking if a vector is zero
 
+        public static readonly float PlayerSpinCycle = 25;
+
         //General data
         public static readonly string SceneToLoad = "TiledScene"; // The scene to load when the game starts
         public static readonly string TiledSceneMap = "Maps/exporttest.tmx"; // The map to load in the TiledScene
