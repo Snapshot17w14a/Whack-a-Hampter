@@ -43,6 +43,8 @@
     <Compile Include="ColliderLoader.cs" />
     <Compile Include="CustomObjectLoader.cs" />
     <Compile Include="GameData.cs" />
+    <Compile Include="GXPEngine\TileData.cs" />
+    <Compile Include="MapManager.cs" />
     <Compile Include="MyGame.cs" />
     <Compile Include="..\GXPEngine2023b\GXPEngine\AddOns\Gizmos.cs">
       <Link>GXPEngine\AddOns\Gizmos.cs</Link>

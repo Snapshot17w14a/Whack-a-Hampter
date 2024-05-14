@@ -21,5 +21,8 @@
 
         public static readonly bool ShowColliders = true; // Show colliders in the scene
         public static readonly uint ColliderColor = 0xFFFF0000; // Color of the colliders
+
+        public static readonly int TileHeight = 64;
+        public static readonly int TileWidth = 64;
     }
 }

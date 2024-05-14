@@ -1,5 +1,7 @@
 using System;
 using GXPEngine.Physics.Shapes;
+using GXPEngine.Scenes;
+using TiledMapParser;
 
 namespace GXPEngine
 {
@@ -31,7 +33,37 @@ namespace GXPEngine
             CheckMousePosition();
             UpdateArrows();
             AimTowardsMouse();
+
+            // Check the current tile's collision type
+            string collisionType = ((TiledTestScene)parent).GetTileCollisionProperty(Collider.Position.x, Collider.Position.y);
+            if (!string.IsNullOrEmpty(collisionType))
+            {
+                HandleTileInteraction(collisionType);
+            }
         }
+
+
+        private Vec2 GetTilePosition(Vec2 position)
+        {
+            int x = (int)(position.x / GameData.TileWidth);
+            int y = (int)(position.y / GameData.TileHeight);
+            return new Vec2(x, y);
+        }
+
+        private void HandleTileInteraction(string collisionType)
+        {
+            switch (collisionType)
+            {
+                case "fire":
+                    Console.WriteLine("fire!");
+                    break;
+                case "ice":
+                    // Handle ice collision
+                    break;
+                    // Add more cases as needed
+            }
+        }
+
 
         private void CheckMousePosition()
         {
