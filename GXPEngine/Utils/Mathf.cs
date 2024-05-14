@@ -210,6 +210,11 @@ namespace GXPEngine
 		{
             return Abs(a - b) < tolerance;
         }
+
+		public static float Map(float value, float from, float to)
+		{
+            return value * (to - from) + from;
+        }
 	}
 }
 

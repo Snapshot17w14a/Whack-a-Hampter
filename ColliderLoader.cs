@@ -74,22 +74,25 @@ namespace GXPEngine
         /// <summary>Returns the offset of the collider based on the collider property.</summary>
         private static List<ColliderData> GetOffset(string colliderProperty, Sprite sprite)
         {
+            string[] strings = colliderProperty.Split(';');
             List<ColliderData> colliderData = new List<ColliderData>();
-            if (colliderProperty.Contains("top"))
+            foreach (string colliderProp in strings)
             {
-                colliderData.Add(new ColliderData(new Vec2(sprite.x, sprite.y), new Vec2(sprite.width + sprite.x, sprite.y)));
-            }
-            if (colliderProperty.Contains("right"))
-            {
-                colliderData.Add(new ColliderData(new Vec2(sprite.width + sprite.x, sprite.y), new Vec2(sprite.width + sprite.x, sprite.height + sprite.y)));
-            }
-            if (colliderProperty.Contains("bottom"))
-            {
-                colliderData.Add(new ColliderData(new Vec2(sprite.x, sprite.height + sprite.y), new Vec2(sprite.width + sprite.x, sprite.height + sprite.y)));
-            }
-            if (colliderProperty.Contains("left"))
-            {
-                colliderData.Add(new ColliderData(new Vec2(sprite.x, sprite.y), new Vec2(sprite.x, sprite.height + sprite.y)));
+                switch(colliderProp)
+                {
+                    case "top":
+                        colliderData.Add(new ColliderData(new Vec2(sprite.x, sprite.y), new Vec2(sprite.width + sprite.x, sprite.y)));
+                        break;
+                    case "right":
+                        colliderData.Add(new ColliderData(new Vec2(sprite.width + sprite.x, sprite.y), new Vec2(sprite.width + sprite.x, sprite.height + sprite.y)));
+                        break;
+                    case "bottom":
+                        colliderData.Add(new ColliderData(new Vec2(sprite.x, sprite.height + sprite.y), new Vec2(sprite.width + sprite.x, sprite.height + sprite.y)));
+                        break;
+                    case "left":
+                        colliderData.Add(new ColliderData(new Vec2(sprite.x, sprite.y), new Vec2(sprite.x, sprite.height + sprite.y)));
+                        break;
+                }
             }
             return colliderData;
         }
