@@ -14,7 +14,7 @@
   </tile>
   <tile id="20">
    <properties>
-    <property name="collider" value="bottom top left right"/>
+    <property name="collider" value="bottom"/>
    </properties>
   </tile>
   <tile id="21">
@@ -50,13 +50,7 @@
 39,31,32,33,33,31,32,33,31,32,33,31,32,33,31,32,33,31,32,33,31,32,33,31,32,33,31,32,33,43
 </data>
  </layer>
- <objectgroup id="2" name="Object Layer 1">
-  <object id="1" type="WindCurrent" x="320" y="256" width="64" height="64">
-   <properties>
-    <property name="angle" type="int" value="135"/>
-    <property name="reach" type="float" value="2"/>
-    <property name="strength" type="float" value="15"/>
-   </properties>
-  </object>
+ <objectgroup id="2" name="Objects">
+  <object id="1" type="Player" x="307.333" y="286.667" width="64" height="64"/>
  </objectgroup>
 </map>

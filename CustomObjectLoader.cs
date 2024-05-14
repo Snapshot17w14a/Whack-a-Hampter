@@ -18,6 +18,12 @@ namespace GXPEngine
                     wind.SetXY(obj.X, obj.Y);
                     SceneManager.SceneManager.CurrentScene.AddChild(wind);
                     break;
+
+                case "Player":
+                    Player player = new Player(obj.X, obj.Y);
+                    GameData.activePlayer = player;
+                    SceneManager.SceneManager.CurrentScene.AddChild(player);
+                    break;
             }
         }
     }

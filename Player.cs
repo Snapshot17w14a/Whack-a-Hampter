@@ -9,11 +9,11 @@ namespace GXPEngine
 
         private bool _isPlayerMoving = false;
 
-        public Player() : base(32, "hampter_shiit.png", 11, 1)
+        public Player(float x = 0, float y = 0) : base(32, "hampter_shiit.png", 11, 1)
         {
             SetOrigin(width / 2, height / 2);
             scale = 2f;
-            Collider.SetPosition(new Vec2(game.width / 2, game.height / 2));
+            Collider.SetPosition(new Vec2(x,y));
             Collider.LoseVelocityOverTime = true;
             _shootStrengthArrow = new Arrow(Vec2.zero, Vec2.zero, 30, pLineWidth: 3);
             AddChild(_shootStrengthArrow);

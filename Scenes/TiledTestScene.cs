@@ -30,10 +30,9 @@ namespace GXPEngine.Scenes
             loader.LoadTileLayers(0);
             loader.autoInstance = true;
             loader.AddManualType("WindCurrent");
+            loader.AddManualType("Player");
             loader.LoadObjectGroups(0);
             CustomObjectLoader.Stop(loader);
-            player = new Player();
-            AddChild(player);
         }
     }
 }
