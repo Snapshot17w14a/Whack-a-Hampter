@@ -22,6 +22,15 @@ namespace GXPEngine.Physics.Colliders
             _endCap = new CircleCollider(parent, endPosition, 0);
         }
 
+        /// <summary>Updates the position of the line segment and end caps, only used if necessary to update the position of the line segment.</summary>
+        public void UpdatePosition(Vec2 startPosition, Vec2 endPosition)
+        {
+            StartPosition = startPosition;
+            EndPosition = endPosition;
+            _startCap.SetPosition(startPosition);
+            _endCap.SetPosition(endPosition);
+        }
+
         public override CollisionInfo GetCollision(Collider other) => throw new Exception("Linesegment collider GetCollision() function should not be called as it is stationary");
 
         public override bool IsColliding(Collider other) => throw new Exception("Linesegment collider IsColliding() function should not be called as it is stationary");

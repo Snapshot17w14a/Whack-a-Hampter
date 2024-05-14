@@ -59,6 +59,9 @@ namespace GXPEngine.Physics
         /// <summary>Set the position of the collider. This also effects the sprite it is attached to.</summary>
         public void SetPosition(Vec2 position) => Position = position;
 
+        /// <summary>Add the provided acceleration to the current acceleration.</summary>
+        public void AddAcceleration(Vec2 acceleration) => Acceleration += acceleration;
+
         /// <summary>Add the provided velocity to the current velocity.</summary>
         public void AddVelocity(Vec2 velocity) => Velocity += velocity;
 

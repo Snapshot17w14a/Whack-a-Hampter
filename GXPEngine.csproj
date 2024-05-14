@@ -158,6 +158,7 @@
     <Compile Include="..\GXPEngine2023b\GXPEngine\SoLoud\SoloudSoundSystem.cs">
       <Link>GXPEngine\SoLoud\SoloudSoundSystem.cs</Link>
     </Compile>
+    <Compile Include="Physics\PhysicsObjectManager.cs" />
     <Compile Include="Physics\Shapes\AnimatedCircle.cs" />
     <Compile Include="SceneManager\SceneManager.cs">
     </Compile>

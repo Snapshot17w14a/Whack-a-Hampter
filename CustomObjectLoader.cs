@@ -1,4 +1,5 @@
 ﻿using TiledMapParser;
+using GXPEngine.Physics;
 
 namespace GXPEngine
 {
@@ -15,8 +16,9 @@ namespace GXPEngine
                 case "WindCurrent":
                     WindCurrent wind = new WindCurrent(obj.GetFloatProperty("strength", 0f), obj.GetIntProperty("angle", 0));
                     wind.SetXY(obj.X, obj.Y);
-                    wind.width = (int)(obj.Width);
-                    wind.height = (int)(obj.Height);
+                    wind.width = (int)obj.Width;
+                    wind.height = (int)obj.Height;
+                    PhysicsObjectManager.AddWindCurrent(wind);
                     SceneManager.SceneManager.CurrentScene.AddChild(wind);
                     break;
 

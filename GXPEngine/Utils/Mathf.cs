@@ -206,15 +206,29 @@ namespace GXPEngine
 			return f < min ? min : (f > max ? max : f);
 		}
 
+		/// <summary>Returns whether the two floats are approximately equal</summary>
 		public static bool IsApporximately(float a, float b, float tolerance = 0.00001f)
 		{
             return Abs(a - b) < tolerance;
         }
 
-		public static float Map(float value, float from, float to)
-		{
-            return value * (to - from) + from;
+		/// <summary>Lerps between two colors by a factor t</summary>
+        public static uint LerpColor(uint startColor, uint endColor, float t)
+        {
+            byte startR = (byte)((startColor >> 16) & 0xFF);
+            byte startG = (byte)((startColor >> 8) & 0xFF);
+            byte startB = (byte)(startColor & 0xFF);
+
+            byte endR = (byte)((endColor >> 16) & 0xFF);
+            byte endG = (byte)((endColor >> 8) & 0xFF);
+            byte endB = (byte)(endColor & 0xFF);
+
+            byte newR = (byte)(startR + (endR - startR) * t);
+            byte newG = (byte)(startG + (endG - startG) * t);
+            byte newB = (byte)(startB + (endB - startB) * t);
+
+            return (uint)((0xFF << 24) | (newR << 16) | (newG << 8) | newB);
         }
-	}
+    }
 }
 

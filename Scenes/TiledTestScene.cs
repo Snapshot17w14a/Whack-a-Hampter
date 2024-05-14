@@ -6,20 +6,23 @@ namespace GXPEngine.Scenes
 {
     internal class TiledTestScene : Scene
     {
-        Player player;
-
         public TiledTestScene() {  }
 
         public override void OnLoad()
         {
             Game.main.OnBeforeStep += PhysicsManager.Step;
+            Game.main.OnBeforeStep += PhysicsObjectManager.Update;
             
             LoadLevel();
             ColliderLoader.InstantiateColliders();
             PhysicsManager.PrintColliders();
         }
 
-        public override void OnUnload() { Game.main.OnBeforeStep -= PhysicsManager.Step; }
+        public override void OnUnload() 
+        { 
+            Game.main.OnBeforeStep -= PhysicsManager.Step;
+            Game.main.OnBeforeStep -= PhysicsObjectManager.Update;
+        }
 
         public override void UpdateObjects() { }
 
@@ -29,8 +32,7 @@ namespace GXPEngine.Scenes
             CustomObjectLoader.Initialize(loader);
             loader.LoadTileLayers(0);
             loader.autoInstance = true;
-            loader.AddManualType("WindCurrent");
-            loader.AddManualType("Player");
+            loader.AddManualType("WindCurrent", "Player");
             loader.LoadObjectGroups(0);
             CustomObjectLoader.Stop(loader);
         }

@@ -80,7 +80,7 @@
   <object id="3" type="WindCurrent" x="256" y="832" width="1408" height="256">
    <properties>
     <property name="angle" type="int" value="0"/>
-    <property name="strength" type="float" value="5"/>
+    <property name="strength" type="float" value="0.5"/>
    </properties>
   </object>
  </objectgroup>
