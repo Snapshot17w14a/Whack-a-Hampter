@@ -16,6 +16,8 @@ namespace GXPEngine
         public static readonly int PlayerSpawnYOffset = -200; // The initial y offset of the player, this is needed for the start animation
         public static readonly int PlayerStartAnimSpeed = 3; // The speed of the start animation in units per frame
 
+        public static readonly int FireSpeed = 3; // The speed of the fire animation in units per frame
+
         //Scene data
         public static uint[,] TileValues;
         public static Dictionary<uint, float> TileSlowdownValues = new Dictionary<uint, float>();

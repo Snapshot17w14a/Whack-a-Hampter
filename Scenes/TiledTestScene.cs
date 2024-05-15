@@ -82,7 +82,7 @@ namespace GXPEngine.Scenes
             CustomObjectLoader.Initialize(loader);
             loader.LoadTileLayers(0);
             loader.autoInstance = true;
-            loader.AddManualType("WindCurrent", "Player");
+            loader.AddManualType("WindCurrent", "Player", "Fire");
             loader.LoadObjectGroups(0);
             Console.WriteLine(GameData.TileValues);
             CustomObjectLoader.Stop(loader);

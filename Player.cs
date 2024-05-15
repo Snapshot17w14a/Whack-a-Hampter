@@ -70,5 +70,10 @@ namespace GXPEngine
             if (GameData.TileSlowdownValues.ContainsKey(currentTile)) Collider.SetSlowdownFactor(GameData.TileSlowdownValues[currentTile]);
             else Collider.SetSlowdownFactor(0.98f);
         }
+
+        public void DeathXD() 
+        {
+            Environment.Exit(0);
+        }
     }
 }
