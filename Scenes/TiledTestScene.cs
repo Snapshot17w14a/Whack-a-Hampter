@@ -79,7 +79,7 @@ namespace GXPEngine.Scenes
             CustomObjectLoader.Initialize(loader);
             loader.LoadTileLayers(0);
             loader.autoInstance = true;
-            loader.AddManualType("WindCurrent", "Player");
+            loader.AddManualType("WindCurrent", "Player", "Windmill");
             loader.LoadObjectGroups(0);
             CustomObjectLoader.Stop(loader);
         }

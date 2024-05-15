@@ -159,6 +159,7 @@
       <Link>GXPEngine\SoLoud\SoloudSoundSystem.cs</Link>
     </Compile>
     <Compile Include="Physics\PhysicsObjectManager.cs" />
+    <Compile Include="Physics\PhysicsObjects\Windmill.cs" />
     <Compile Include="Physics\Shapes\AnimatedCircle.cs" />
     <Compile Include="SceneManager\SceneManager.cs">
     </Compile>

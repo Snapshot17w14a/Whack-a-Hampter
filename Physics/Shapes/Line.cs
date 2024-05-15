@@ -1,4 +1,6 @@
-﻿namespace GXPEngine.Physics
+﻿using GXPEngine.Physics.Colliders;
+
+namespace GXPEngine.Physics
 {
     internal class Line : GameObject
     {
@@ -21,6 +23,11 @@
                 AddChild(_line);
             }
             _collider = isSegment ? PhysicsManager.AddCollider(this, Collider.ColliderType.LineSegment) : PhysicsManager.AddCollider(this, Collider.ColliderType.Line);
+        }
+
+        public void CallCollider(Vec2 _start, Vec2 _end)
+        {
+            ((LineSegmentCollider)_collider).UpdatePosition(StartPosition, EndPosition);
         }
     }
 }
