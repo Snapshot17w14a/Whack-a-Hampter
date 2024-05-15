@@ -60,13 +60,16 @@ namespace GXPEngine.Scenes
             {
                 _animationHand.y += GameData.PlayerStartAnimSpeed;
                 GameData.ActivePlayer.Collider.AddPosition(new Vec2(0, GameData.PlayerStartAnimSpeed));
-                if(_animationHand.y >= _initialPosition.y + (-GameData.PlayerSpawnYOffset)) _isAnimAtHalfway = true;
+                _animationHand.alpha = Mathf.Clamp((_animationHand.y - _initialPosition.y) / (-GameData.PlayerSpawnYOffset), 0, 1);
+                GameData.ActivePlayer.alpha = _animationHand.alpha;
+                if (_animationHand.y >= _initialPosition.y + (-GameData.PlayerSpawnYOffset)) _isAnimAtHalfway = true;
             }
-            else if(_isAnimAtHalfway && _animationHand.y > -8)
+            else if(_isAnimAtHalfway && _animationHand.y >= _initialPosition.y )
             {
                 _animationHand.SetFrame(1);
                 _animationHand.y -= GameData.PlayerStartAnimSpeed;
-                if(_animationHand.y <= -8)
+                _animationHand.alpha = (_animationHand.y - _initialPosition.y) / (-GameData.PlayerSpawnYOffset);
+                if (_animationHand.y <= _initialPosition.y)
                 {
                     _state = SceneState.Playing;
                     GameData.ActivePlayer.Collider.IsActive = true;

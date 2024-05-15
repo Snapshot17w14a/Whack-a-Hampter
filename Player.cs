@@ -65,6 +65,7 @@ namespace GXPEngine
         {
             _shootStrengthArrow.startPoint = Collider.Position;
         }
+
         private void SetLocalSlowdown(Vec2 position)
         {
             var currentTile = GameData.TileValues[(int)(position.x / 64f), (int)(position.y / 64f)];

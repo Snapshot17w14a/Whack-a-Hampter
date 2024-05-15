@@ -86,7 +86,7 @@
 </data>
  </layer>
  <objectgroup id="2" name="Objects">
-  <object id="2" type="Player" x="1344" y="256" width="64" height="64"/>
+  <object id="2" type="Player" x="1344" y="640" width="64" height="64"/>
   <object id="3" type="WindCurrent" x="256" y="832" width="1408" height="256">
    <properties>
     <property name="angle" type="int" value="0"/>
