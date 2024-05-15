@@ -9,28 +9,26 @@ namespace GXPEngine.Physics.PhysicsObjects
 {
     internal class Windmill : Sprite
     {
-        public float Strength { get; private set; }
-        public Vec2 NormalizedDirection { get; private set; }
-
         Line windmillWall;
         
 
-        public Windmill(float strength, float angle) : base("colors.png")
+        public Windmill() : base("colors.png")
         {
-            visible = true;
+            visible = false;
             collider.isTrigger = true;
-            Strength = strength;
-            NormalizedDirection = Vec2.GetUnitVectorDeg(angle);
-            windmillWall = new Line(new Vec2(x + width/2 + 32, y + height/2), new Vec2(x + width / 2 - 32, y + height / 2));
+            windmillWall = new Line(Vec2.zero, Vec2.zero);
             SceneManager.SceneManager.CurrentScene.AddChild(windmillWall);
         }
 
         private void Update()
         {
-            windmillWall.CallCollider(new Vec2(x + width / 2 + 32, y + height / 2), new Vec2(x + width / 2 - 32, y + height / 2));
-
+            SetColliderPosition();
             if (GameData.ShowColliders) Gizmos.DrawRectangle(x + width / 2, y + height / 2, width, height, color: GameData.ColliderColor);
+        }
 
+        private void SetColliderPosition()
+        {
+            windmillWall.CallCollider(new Vec2(x, y + height / 2), new Vec2(x + width, y + height / 2));
         }
     }
 }

@@ -24,7 +24,7 @@ namespace GXPEngine
                     break;
 
                 case "Windmill":
-                    Windmill windmill = new Windmill(obj.GetFloatProperty("strength", 0f), obj.GetIntProperty("angle", 0)) { x = obj.X, y = obj.Y };
+                    Windmill windmill = new Windmill();
                     windmill.SetXY(obj.X, obj.Y);
                     windmill.width = (int)obj.Width;
                     windmill.height = (int)obj.Height;

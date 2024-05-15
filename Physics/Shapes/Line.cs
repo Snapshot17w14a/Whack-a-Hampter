@@ -25,9 +25,11 @@ namespace GXPEngine.Physics
             _collider = isSegment ? PhysicsManager.AddCollider(this, Collider.ColliderType.LineSegment) : PhysicsManager.AddCollider(this, Collider.ColliderType.Line);
         }
 
-        public void CallCollider(Vec2 _start, Vec2 _end)
+        public void CallCollider(Vec2 start, Vec2 end)
         {
-            ((LineSegmentCollider)_collider).UpdatePosition(StartPosition, EndPosition);
+            _line.start = start;
+            _line.end = end;
+            ((LineSegmentCollider)_collider).UpdatePosition(start, end);
         }
     }
 }
