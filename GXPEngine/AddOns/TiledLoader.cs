@@ -427,7 +427,7 @@ namespace TiledMapParser {
                     uint rawTileInfo = tiles[c, r];
                     int frame = TiledUtils.GetTileFrame(rawTileInfo);
                     TileSet tileSet = map.GetTileSet(frame);
-					if (!GameData.TileSlowdownValues.ContainsKey(tiles[c, r])) GameData.TileSlowdownValues.Add(tiles[c, r], tileSet.GetTile(rawTileInfo - (uint)tileSet.FirstGId)?.GetFloatProperty("slowdown", 0.98f) ?? 0.98f);
+					if (!GameData.TileSlowdownValues.ContainsKey(tiles[c, r])) GameData.TileSlowdownValues.Add(tiles[c, r], tileSet.GetTile(rawTileInfo - Convert.ToUInt32(tileSet.FirstGId))?.GetFloatProperty("slowdown", 0.98f) ?? 0.98f);
                     if (tileSet == null || tileSet.Image == null)
                         throw new Exception("The Tiled map contains unembedded tilesets (.tsx files) - please embed them in the map");
 
@@ -446,7 +446,7 @@ namespace TiledMapParser {
                     ChangeOrigin(Tile, defaultOriginX, defaultOriginY, 0.5f, 0.5f);
 					if (tileSet.GetTile(rawTileInfo - 1)?.GetStringProperty("collider", null) != null)
 					{
-						ColliderLoader.AddColliders(tileSet.GetTile(rawTileInfo - (uint)tileSet.FirstGId).GetStringProperty("collider", "null"), Tile);
+						ColliderLoader.AddColliders(tileSet.GetTile(rawTileInfo - Convert.ToUInt32(tileSet.FirstGId)).GetStringProperty("collider", "null"), Tile);
 					}
                     rootObject.AddChild(Tile);
                 }
