@@ -140,8 +140,7 @@
     <Compile Include="..\GXPEngine2023b\GXPEngine\AddOns\Window.cs">
       <Link>GXPEngine\AddOns\Window.cs</Link>
     </Compile>
-    <Compile Include="..\GXPEngine2023b\GXPEngine\EasyDraw.cs">
-      <Link>GXPEngine\EasyDraw.cs</Link>
+    <Compile Include="GXPEngine\EasyDraw.cs">
     </Compile>
     <Compile Include="..\GXPEngine2023b\GXPEngine\Core\Collision.cs">
       <Link>GXPEngine\Core\Collision.cs</Link>
