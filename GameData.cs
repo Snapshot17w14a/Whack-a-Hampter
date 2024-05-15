@@ -22,9 +22,9 @@ namespace GXPEngine
 
         //General data
         public static readonly string SceneToLoad = "TiledScene"; // The scene to load when the game starts
-        public static readonly string TiledSceneMap = "Maps/exporttest.tmx"; // The map to load in the TiledScene
+        public static readonly string TiledSceneMap = "Maps/Level1.tmx"; // The map to load in the TiledScene
 
-        public static readonly bool ShowColliders = false; // Show colliders in the scene
+        public static readonly bool ShowColliders = true; // Show colliders in the scene
         public static readonly uint ColliderColor = 0xFFFF0000; // Color of the colliders
 
         public static Player ActivePlayer;

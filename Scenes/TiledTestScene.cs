@@ -25,7 +25,6 @@ namespace GXPEngine.Scenes
             _animationHand = new AnimationSprite("start_hand.png", 2, 1);
             _animationHand.SetOrigin(_animationHand.width / 2 + 8, _animationHand.height - 8);
             _animationHand.SetXY(GameData.ActivePlayer.Collider.Position.x, GameData.ActivePlayer.Collider.Position.y);
-            _animationHand.scale = 2f;
             _initialPosition = new Vec2(_animationHand.x, _animationHand.y);
             AddChild(_animationHand);
             Game.main.OnBeforeStep += PhysicsManager.Step;

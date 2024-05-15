@@ -444,7 +444,7 @@ namespace TiledMapParser {
                     Tile.rotation = TiledUtils.GetRotation(rawTileInfo);
                     Tile.Mirror(TiledUtils.GetMirrorX(rawTileInfo), false);
                     ChangeOrigin(Tile, defaultOriginX, defaultOriginY, 0.5f, 0.5f);
-					if (tileSet.GetTile(rawTileInfo - 1)?.GetStringProperty("collider", null) != null)
+					if (tileSet.GetTile(rawTileInfo - Convert.ToUInt32(tileSet.FirstGId))?.GetStringProperty("collider", null) != null)
 					{
 						ColliderLoader.AddColliders(tileSet.GetTile(rawTileInfo - Convert.ToUInt32(tileSet.FirstGId)).GetStringProperty("collider", "null"), Tile);
 					}
