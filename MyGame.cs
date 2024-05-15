@@ -1,5 +1,6 @@
-using GXPEngine;
 using GXPEngine.SceneManager;
+using GXPEngine.Scenes;
+using GXPEngine;
 
 class MyGame : Game {
 
@@ -16,6 +17,8 @@ class MyGame : Game {
 
 	private void Initialize()
 	{
-		SceneManager.AddScene(GameData.SceneToLoad, SceneManager.CreateScene(GameData.SceneToLoad));
+		SceneManager.AddScene("Level1", SceneManager.CreateScene(typeof(TiledTestScene), "Maps/Level1.tmx"));
+		SceneManager.AddScene("Level2", SceneManager.CreateScene(typeof(TiledTestScene), "Maps/Level1.tmx"));
+		SceneManager.AddScene("Level3", SceneManager.CreateScene(typeof(TiledTestScene), "Maps/Level1.tmx"));
 	}
 }

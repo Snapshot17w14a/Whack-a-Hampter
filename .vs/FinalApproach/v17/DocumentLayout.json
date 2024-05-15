@@ -8,36 +8,40 @@
       "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:mygame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\gamedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:gamedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\colliderloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:colliderloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|c:\\users\\kevin\\onedrive - saxion\\documents\\saxioncmgt\\projects\\finalapproach\\gxpengine\\addons\\tiledloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:gxpengine\\addons\\tiledloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\customobjectloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:customobjectloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\gxpengine\\utils\\mathf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:gxpengine\\utils\\mathf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\scenes\\tiledtestscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:scenes\\tiledtestscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\colliderloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:colliderloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\gamedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:gamedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\scenemanager\\scenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:scenemanager\\scenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|c:\\users\\kevin\\onedrive - saxion\\documents\\saxioncmgt\\projects\\finalapproach\\gxpengine\\addons\\tiledloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:gxpengine\\addons\\tiledloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\physics\\shapes\\animatedcircle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:physics\\shapes\\animatedcircle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\customobjectloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:customobjectloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\gxpengine\\utils\\mathf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:gxpengine\\utils\\mathf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\physics\\collider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,10 +50,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\physics\\physicsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:physics\\physicsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\scenemanager\\scenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:scenemanager\\scenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\physics\\colliders\\circlecollider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -136,6 +136,7 @@
           "Children": [
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 1,
 =======
           "SelectedChildIndex": 1,
@@ -144,16 +145,23 @@
               "$type": "Document",
               "DocumentIndex": 3,
 >>>>>>> 96b2fba (Added ui framework to the project)
+=======
+              "DocumentIndex": 4,
+>>>>>>> origin/tweakability
               "Title": "GameData.cs",
               "DocumentMoniker": "C:\\Users\\kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\GameData.cs",
               "RelativeDocumentMoniker": "GameData.cs",
               "ToolTip": "C:\\Users\\kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\GameData.cs",
               "RelativeToolTip": "GameData.cs",
 <<<<<<< HEAD
+<<<<<<< HEAD
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA+AAAA",
 =======
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAABLAAAA",
 >>>>>>> 96b2fba (Added ui framework to the project)
+=======
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAkAAAA",
+>>>>>>> origin/tweakability
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-13T10:22:23.828Z",
               "IsPinned": true,
@@ -174,7 +182,11 @@
             {
               "$type": "Document",
 <<<<<<< HEAD
+<<<<<<< HEAD
               "DocumentIndex": 8,
+=======
+              "DocumentIndex": 7,
+>>>>>>> origin/tweakability
               "Title": "AnimatedCircle.cs",
               "DocumentMoniker": "C:\\Users\\kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\Physics\\Shapes\\AnimatedCircle.cs",
               "RelativeDocumentMoniker": "Physics\\Shapes\\AnimatedCircle.cs",
@@ -212,6 +224,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 5,
               "Title": "Button.cs",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\SceneManager\\Interactables\\Button.cs",
@@ -266,16 +279,23 @@
               "$type": "Document",
               "DocumentIndex": 2,
 >>>>>>> 96b2fba (Added ui framework to the project)
+=======
+              "DocumentIndex": 1,
+>>>>>>> origin/tweakability
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\Player.cs",
               "RelativeDocumentMoniker": "Player.cs",
               "ToolTip": "C:\\Users\\kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\Player.cs",
               "RelativeToolTip": "Player.cs",
 <<<<<<< HEAD
+<<<<<<< HEAD
               "ViewState": "AQIAAB0AAAAAAAAAAAAUwEUAAACLAAAA",
 =======
               "ViewState": "AQIAAAEAAAAAAAAAAAAnwEQAAAAMAAAA",
 >>>>>>> 96b2fba (Added ui framework to the project)
+=======
+              "ViewState": "AQIAAB0AAAAAAAAAAAAUwEQAAAAMAAAA",
+>>>>>>> origin/tweakability
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-07T17:44:48.726Z",
               "EditorCaption": ""
@@ -283,10 +303,14 @@
             {
               "$type": "Document",
 <<<<<<< HEAD
+<<<<<<< HEAD
               "DocumentIndex": 4,
 =======
               "DocumentIndex": 8,
 >>>>>>> 96b2fba (Added ui framework to the project)
+=======
+              "DocumentIndex": 8,
+>>>>>>> origin/tweakability
               "Title": "CustomObjectLoader.cs",
               "DocumentMoniker": "C:\\Users\\kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\CustomObjectLoader.cs",
               "RelativeDocumentMoniker": "CustomObjectLoader.cs",
@@ -300,10 +324,14 @@
             {
               "$type": "Document",
 <<<<<<< HEAD
+<<<<<<< HEAD
               "DocumentIndex": 3,
 =======
               "DocumentIndex": 9,
 >>>>>>> 96b2fba (Added ui framework to the project)
+=======
+              "DocumentIndex": 6,
+>>>>>>> origin/tweakability
               "Title": "TiledLoader.cs",
               "DocumentMoniker": "C:\\Users\\kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\GXPEngine\\AddOns\\TiledLoader.cs",
               "RelativeDocumentMoniker": "GXPEngine\\AddOns\\TiledLoader.cs",
@@ -321,13 +349,17 @@
             {
               "$type": "Document",
 <<<<<<< HEAD
+<<<<<<< HEAD
               "DocumentIndex": 7,
+=======
+              "DocumentIndex": 2,
+>>>>>>> origin/tweakability
               "Title": "TiledTestScene.cs",
               "DocumentMoniker": "C:\\Users\\kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\Scenes\\TiledTestScene.cs",
               "RelativeDocumentMoniker": "Scenes\\TiledTestScene.cs",
               "ToolTip": "C:\\Users\\kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\Scenes\\TiledTestScene.cs",
               "RelativeToolTip": "Scenes\\TiledTestScene.cs",
-              "ViewState": "AQIAACYAAAAAAAAAAAAIwFUAAAAmAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFYAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-08T14:43:23.291Z",
               "EditorCaption": ""
@@ -351,10 +383,14 @@
             {
               "$type": "Document",
 <<<<<<< HEAD
+<<<<<<< HEAD
               "DocumentIndex": 10,
 =======
               "DocumentIndex": 11,
 >>>>>>> 96b2fba (Added ui framework to the project)
+=======
+              "DocumentIndex": 11,
+>>>>>>> origin/tweakability
               "Title": "PhysicsManager.cs",
               "DocumentMoniker": "C:\\Users\\kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\Physics\\PhysicsManager.cs",
               "RelativeDocumentMoniker": "Physics\\PhysicsManager.cs",
@@ -368,16 +404,20 @@
             {
               "$type": "Document",
 <<<<<<< HEAD
+<<<<<<< HEAD
               "DocumentIndex": 11,
 =======
               "DocumentIndex": 12,
 >>>>>>> 96b2fba (Added ui framework to the project)
+=======
+              "DocumentIndex": 5,
+>>>>>>> origin/tweakability
               "Title": "SceneManager.cs",
               "DocumentMoniker": "C:\\Users\\kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\SceneManager\\SceneManager.cs",
               "RelativeDocumentMoniker": "SceneManager\\SceneManager.cs",
               "ToolTip": "C:\\Users\\kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\SceneManager\\SceneManager.cs",
               "RelativeToolTip": "SceneManager\\SceneManager.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAIAwwCAAAAAvAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBIAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-13T10:44:50.042Z",
               "EditorCaption": ""
@@ -393,6 +433,7 @@
               "DocumentMoniker": "C:\\Users\\kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\MyGame.cs",
               "RelativeDocumentMoniker": "MyGame.cs",
 <<<<<<< HEAD
+<<<<<<< HEAD
               "ToolTip": "C:\\Users\\kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\MyGame.cs*",
               "RelativeToolTip": "MyGame.cs*",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
@@ -401,6 +442,11 @@
               "RelativeToolTip": "MyGame.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAgAAAA",
 >>>>>>> 96b2fba (Added ui framework to the project)
+=======
+              "ToolTip": "C:\\Users\\kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\MyGame.cs",
+              "RelativeToolTip": "MyGame.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAABfAAAA",
+>>>>>>> origin/tweakability
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-07T08:28:50.882Z",
               "EditorCaption": ""
@@ -408,10 +454,14 @@
             {
               "$type": "Document",
 <<<<<<< HEAD
+<<<<<<< HEAD
               "DocumentIndex": 9,
 =======
               "DocumentIndex": 14,
 >>>>>>> 96b2fba (Added ui framework to the project)
+=======
+              "DocumentIndex": 10,
+>>>>>>> origin/tweakability
               "Title": "Collider.cs",
               "DocumentMoniker": "C:\\Users\\kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\Physics\\Collider.cs",
               "RelativeDocumentMoniker": "Physics\\Collider.cs",
@@ -425,10 +475,14 @@
             {
               "$type": "Document",
 <<<<<<< HEAD
+<<<<<<< HEAD
               "DocumentIndex": 2,
 =======
               "DocumentIndex": 15,
 >>>>>>> 96b2fba (Added ui framework to the project)
+=======
+              "DocumentIndex": 3,
+>>>>>>> origin/tweakability
               "Title": "ColliderLoader.cs",
               "DocumentMoniker": "C:\\Users\\kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\ColliderLoader.cs",
               "RelativeDocumentMoniker": "ColliderLoader.cs",
@@ -442,10 +496,14 @@
             {
               "$type": "Document",
 <<<<<<< HEAD
+<<<<<<< HEAD
               "DocumentIndex": 6,
 =======
               "DocumentIndex": 16,
 >>>>>>> 96b2fba (Added ui framework to the project)
+=======
+              "DocumentIndex": 9,
+>>>>>>> origin/tweakability
               "Title": "Mathf.cs",
               "DocumentMoniker": "C:\\Users\\kevin\\OneDrive - Saxion\\Documents\\SaxionCMGT\\projects\\FinalApproach\\GXPEngine\\Utils\\Mathf.cs",
               "RelativeDocumentMoniker": "GXPEngine\\Utils\\Mathf.cs",

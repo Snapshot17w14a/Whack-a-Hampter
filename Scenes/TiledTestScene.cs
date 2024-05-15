@@ -13,12 +13,18 @@ namespace GXPEngine.Scenes
         private AnimationSprite _animationHand;
         private Vec2 _initialPosition;
         private bool _isAnimAtHalfway = false;
+        private string _levelToLoad;
 
         private UI _ui = new UI(Game.main.width, Game.main.height);
 
         public int targetY = 0;
 
-        public TiledTestScene() {  }
+        public TiledTestScene(string levelToLoad) 
+        {
+            _levelToLoad = levelToLoad;
+        }
+
+        public TiledTestScene() { throw new Exception("Please provide a level to load");}
 
         public override void OnLoad()
         {
@@ -84,7 +90,7 @@ namespace GXPEngine.Scenes
 
         private void LoadLevel()
         {
-            TiledLoader loader = new TiledLoader(GameData.TiledSceneMap, defaultOriginX: 0, defaultOriginY: 0);
+            TiledLoader loader = new TiledLoader(_levelToLoad, defaultOriginX: 0, defaultOriginY: 0);
             CustomObjectLoader.Initialize(loader);
             loader.AddManualType("WindCurrent", "Player", "Fire");
             loader.autoInstance = true;
