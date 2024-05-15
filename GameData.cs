@@ -1,4 +1,6 @@
-﻿namespace GXPEngine
+﻿using System.Collections.Generic;
+
+namespace GXPEngine
 {
     internal static class GameData
     {
@@ -23,6 +25,11 @@
 
         public static readonly int TileHeight = 64;
         public static readonly int TileWidth = 64;
+
+        //Physics objects
+
+        public static readonly float windmillSpinSpeed = 90f;
+        public static readonly float windmillForceMagnitude = 10f;
 
         public static Player ActivePlayer;
     }

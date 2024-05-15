@@ -1,4 +1,5 @@
 using System;
+using GXPEngine.Physics.PhysicsObjects;
 using GXPEngine.Physics.Shapes;
 
 namespace GXPEngine
@@ -43,27 +44,9 @@ namespace GXPEngine
             else _shootStrengthArrow.vector = Vec2.zero;
         }
 
-        private Vec2 GetTilePosition(Vec2 position)
+        private void HandleCollision()
         {
-            int x = (int)(position.x / GameData.TileWidth);
-            int y = (int)(position.y / GameData.TileHeight);
-            return new Vec2(x, y);
-        }
 
-        private void HandleTileInteraction(string collisionType)
-        {
-            switch (collisionType)
-            {
-                case "fire":
-                    Console.WriteLine("fire!");
-                    break;
-                case "ice":
-                    Console.WriteLine("ice!");
-                    break;
-                case "mud":
-                    Console.WriteLine("mud!");
-                    break;
-            }
         }
 
         private void AimTowardsMouse()
