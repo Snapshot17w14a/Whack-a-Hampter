@@ -28,6 +28,15 @@ namespace GXPEngine
                     GameData.ActivePlayer = player;
                     SceneManager.SceneManager.CurrentScene.AddChild(player);
                     break;
+
+                case "Fire":
+                    Fire fire = new Fire();
+                    fire.SetXY(obj.X, obj.Y);
+                    fire.width = (int)obj.Width;
+                    fire.height = (int)obj.Height;
+                    PhysicsObjectManager.AddFire(fire);
+                    SceneManager.SceneManager.CurrentScene.AddChild(fire);
+                    break;
             }
         }
     }
