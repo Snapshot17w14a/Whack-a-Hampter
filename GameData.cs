@@ -9,7 +9,7 @@ namespace GXPEngine
         public static readonly uint ArrowMedianColor = 0xFFFFFF00; // color of the arrow in the middle
         public static readonly uint ArrowEndColor = 0xFFFF0000; // color of the arrow at the end
 
-        public static readonly float PlayerMaxHitStrength = 100f; // Maximum hit strength
+        public static readonly float PlayerMaxHitStrength = 50f; // Maximum hit strength
         public static readonly float PlayerMouseMaxStrengthThreshold = 300f; // Maximum strength when the mouse is at this distance
         public static readonly float PlayerIsZeroThreshold = 0.01f; // Threshold for checking if a vector is zero
 

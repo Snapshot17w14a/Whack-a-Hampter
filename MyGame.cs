@@ -3,7 +3,7 @@ using GXPEngine.SceneManager;
 
 class MyGame : Game {
 
-	public MyGame() : base(1920 / 2, 1280 / 2, false, false, 1280, 720,true) 
+	public MyGame() : base(1920 / 2, 1280 / 2, false, false, 1280, 720, false) 
 	{
 		Initialize();
 		SceneManager.LoadScene(GameData.SceneToLoad);

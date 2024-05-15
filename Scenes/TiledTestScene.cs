@@ -80,12 +80,15 @@ namespace GXPEngine.Scenes
         {
             TiledLoader loader = new TiledLoader(GameData.TiledSceneMap, defaultOriginX: 0, defaultOriginY: 0);
             CustomObjectLoader.Initialize(loader);
-            loader.LoadTileLayers(0);
-            loader.autoInstance = true;
             loader.AddManualType("WindCurrent", "Player", "Fire");
-            loader.LoadObjectGroups(0);
-            Console.WriteLine(GameData.TileValues);
+            loader.autoInstance = true;
+            loader.LoadTileLayers();
+            loader.LoadObjectGroups();
             CustomObjectLoader.Stop(loader);
+            foreach(var asd in GameData.TileSlowdownValues.Keys)
+            {
+                Console.WriteLine(asd + " | " + GameData.TileSlowdownValues[asd]);
+            }
         }
     }
 }
