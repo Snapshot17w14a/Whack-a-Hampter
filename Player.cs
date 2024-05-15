@@ -1,5 +1,5 @@
+using System;
 using GXPEngine.Physics.Shapes;
-using System.Collections.Generic;
 
 namespace GXPEngine
 {
@@ -20,6 +20,7 @@ namespace GXPEngine
 
         private void Update()
         {
+            Console.WriteLine(Collider.Position);
             _isPlayerMoving = !Vec2.IsZero(Collider.Velocity, GameData.PlayerIsZeroThreshold);
             CheckMousePosition();
             UpdateArrows();

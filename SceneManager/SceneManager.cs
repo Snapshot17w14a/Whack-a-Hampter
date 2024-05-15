@@ -31,12 +31,10 @@ namespace GXPEngine.SceneManager
             if (CurrentScene != null)
             {
                 game.RemoveChild(CurrentScene);
-                game.OnAfterStep -= CurrentScene.UpdateObjects;
             }
             CurrentScene = scene;
             CurrentScene?.OnLoad();
             game.AddChild(CurrentScene);
-            game.OnAfterStep += CurrentScene.UpdateObjects;
         }
 
         /// <summary>Creates an instance of a scene with the given name and returns it.</summary>

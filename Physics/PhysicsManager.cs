@@ -40,7 +40,7 @@ namespace GXPEngine.Physics
 
         public static void Step()
         {
-            foreach (Collider collider in _colliders) CheckForCollision(collider);
+            _colliders.ForEach(collider => CheckForCollision(collider));
         }
 
         /// <summary>Check for collision with all other colliders from the perspective of the provided collider</summary>

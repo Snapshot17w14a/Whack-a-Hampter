@@ -44,10 +44,5 @@ namespace GXPEngine.Scenes
         {
             Game.main.OnBeforeStep -= PhysicsManager.Step;
         }
-
-        public override void UpdateObjects()
-        {
-
-        }
     }
 }

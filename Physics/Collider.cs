@@ -17,6 +17,7 @@ namespace GXPEngine.Physics
         protected Vec2 velocity = Vec2.zero;
         
         public bool LoseVelocityOverTime = false;
+        public bool IsActive = true;
 
         public string Tag { get; protected set; } = null;
         public List<string> IgnoredTags { get; protected set; } = new List<string>();
@@ -64,6 +65,9 @@ namespace GXPEngine.Physics
 
         /// <summary>Add the provided velocity to the current velocity.</summary>
         public void AddVelocity(Vec2 velocity) => Velocity += velocity;
+
+        /// <summary>Add the provided position to the current position.</summary>
+        public void AddPosition(Vec2 position) => Position += position;
 
         /// <summary>Set the bounciness coefficient of the collider.</summary>
         public void SetBounciness(float bounciness) => Bounciness = bounciness;

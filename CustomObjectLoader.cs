@@ -23,7 +23,8 @@ namespace GXPEngine
                     break;
 
                 case "Player":
-                    Player player = new Player(obj.X, obj.Y);
+                    Player player = new Player(obj.X, obj.Y + GameData.PlayerSpawnYOffset);
+                    player.Collider.IsActive = false;
                     GameData.ActivePlayer = player;
                     SceneManager.SceneManager.CurrentScene.AddChild(player);
                     break;
