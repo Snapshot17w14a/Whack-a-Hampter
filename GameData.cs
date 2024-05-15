@@ -1,4 +1,6 @@
-﻿namespace GXPEngine
+﻿using System.Collections.Generic;
+
+namespace GXPEngine
 {
     internal static class GameData
     {
@@ -13,6 +15,10 @@
 
         public static readonly int PlayerSpawnYOffset = -200; // The initial y offset of the player, this is needed for the start animation
         public static readonly int PlayerStartAnimSpeed = 3; // The speed of the start animation in units per frame
+
+        //Scene data
+        public static uint[,] TileValues;
+        public static Dictionary<uint, float> TileSlowdownValues = new Dictionary<uint, float>();
 
         //General data
         public static readonly string SceneToLoad = "TiledScene"; // The scene to load when the game starts

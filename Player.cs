@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using GXPEngine.Physics.Shapes;
 
 namespace GXPEngine
@@ -6,7 +7,6 @@ namespace GXPEngine
     internal class Player : AnimatedCircle
     {
         private readonly Arrow _shootStrengthArrow;
-
         private bool _isPlayerMoving = false;
 
         public Player(float x = 0, float y = 0) : base(32, "hampter_shiit.png", 11, 1)
@@ -20,11 +20,15 @@ namespace GXPEngine
 
         private void Update()
         {
-            Console.WriteLine(Collider.Position);
-            _isPlayerMoving = !Vec2.IsZero(Collider.Velocity, GameData.PlayerIsZeroThreshold);
-            CheckMousePosition();
-            UpdateArrows();
-            AimTowardsMouse();
+            if (Collider.IsActive)
+            {
+                Console.WriteLine(Collider.SlowdownFactor);
+                _isPlayerMoving = !Vec2.IsZero(Collider.Velocity, GameData.PlayerIsZeroThreshold);
+                SetLocalSlowdown(Collider.Position);
+                CheckMousePosition();
+                UpdateArrows();
+                AimTowardsMouse();
+            }
         }
 
         private void CheckMousePosition()
@@ -60,6 +64,12 @@ namespace GXPEngine
         private void UpdateArrows()
         {
             _shootStrengthArrow.startPoint = Collider.Position;
+        }
+        private void SetLocalSlowdown(Vec2 position)
+        {
+            var currentTile = GameData.TileValues[(int)(position.x / 64f), (int)(position.y / 64f)];
+            if (GameData.TileSlowdownValues.ContainsKey(currentTile)) Collider.SetSlowdownFactor(GameData.TileSlowdownValues[currentTile]);
+            else Collider.SetSlowdownFactor(0.98f);
         }
     }
 }

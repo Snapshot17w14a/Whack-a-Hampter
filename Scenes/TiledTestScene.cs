@@ -1,4 +1,5 @@
-﻿using GXPEngine.Physics;
+﻿using System;
+using GXPEngine.Physics;
 using GXPEngine.SceneManager;
 using TiledMapParser;
 
@@ -81,6 +82,7 @@ namespace GXPEngine.Scenes
             loader.autoInstance = true;
             loader.AddManualType("WindCurrent", "Player");
             loader.LoadObjectGroups(0);
+            Console.WriteLine(GameData.TileValues);
             CustomObjectLoader.Stop(loader);
         }
     }

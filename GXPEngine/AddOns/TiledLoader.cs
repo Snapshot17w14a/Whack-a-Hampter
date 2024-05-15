@@ -414,15 +414,20 @@ namespace TiledMapParser {
 		void LoadTileLayer(int index) {
             if (map.Layers.Length <= index) return;
             uint[,] tiles = map.Layers[index].GetTileArrayRaw();
+			GameData.TileValues = tiles.Clone() as uint[,];
             for (int c = 0; c < tiles.GetLength(0); c++)
             {
                 for (int r = 0; r < tiles.GetLength(1); r++)
                 {
                     if (tiles[c, r] == 0)
+					{
+						GameData.TileValues[c, r] = 0;
                         continue;
+                    }
                     uint rawTileInfo = tiles[c, r];
                     int frame = TiledUtils.GetTileFrame(rawTileInfo);
                     TileSet tileSet = map.GetTileSet(frame);
+					if (!GameData.TileSlowdownValues.ContainsKey(tiles[c, r])) GameData.TileSlowdownValues.Add(tiles[c, r], tileSet.GetTile(rawTileInfo - 1)?.GetFloatProperty("slowdown", 0.98f) ?? 0.98f);
                     if (tileSet == null || tileSet.Image == null)
                         throw new Exception("The Tiled map contains unembedded tilesets (.tsx files) - please embed them in the map");
 

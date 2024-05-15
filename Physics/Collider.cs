@@ -22,6 +22,7 @@ namespace GXPEngine.Physics
         public string Tag { get; protected set; } = null;
         public List<string> IgnoredTags { get; protected set; } = new List<string>();
 
+        public float SlowdownFactor { get; protected set; } = 0.98f;
         public float Bounciness { get; protected set; } = 0.98f;
         public float Mass { get; protected set; } = 1f;
 
@@ -41,7 +42,7 @@ namespace GXPEngine.Physics
             if (addAcceleration) velocity += Acceleration;
             Position += velocity;
             Parent.SetXY(Position.x, Position.y);
-            if (LoseVelocityOverTime) velocity *= 0.98f;
+            if (LoseVelocityOverTime) velocity *= SlowdownFactor;
         }
 
         public void Destroy()
@@ -59,6 +60,9 @@ namespace GXPEngine.Physics
 
         /// <summary>Set the position of the collider. This also effects the sprite it is attached to.</summary>
         public void SetPosition(Vec2 position) => Position = position;
+
+        /// <summary>Sets the slowdown factor of the collider. This is a value between 0 and 1 that determines how much velocity is lost every frame.</summary>
+        public void SetSlowdownFactor(float factor) => SlowdownFactor = Mathf.Clamp(factor, 0f, 1f);
 
         /// <summary>Add the provided acceleration to the current acceleration.</summary>
         public void AddAcceleration(Vec2 acceleration) => Acceleration += acceleration;
