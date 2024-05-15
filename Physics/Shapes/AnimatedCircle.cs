@@ -10,8 +10,6 @@
         {
             Radius = radius;
             collider.isTrigger = true;
-            //SetScaleXY(radius * 2 / 64f, radius * 2 / 64f);
-            //SetOrigin(radius, radius);
             _collider = PhysicsManager.AddCollider(this, Collider.ColliderType.Circle);
         }
 

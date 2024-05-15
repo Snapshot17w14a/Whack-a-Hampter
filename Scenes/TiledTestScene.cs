@@ -14,6 +14,8 @@ namespace GXPEngine.Scenes
         private Vec2 _initialPosition;
         private bool _isAnimAtHalfway = false;
 
+        private UI _ui = new UI(Game.main.width, Game.main.height);
+
         public int targetY = 0;
 
         public TiledTestScene() {  }
@@ -27,8 +29,12 @@ namespace GXPEngine.Scenes
             _animationHand.SetXY(GameData.ActivePlayer.Collider.Position.x, GameData.ActivePlayer.Collider.Position.y);
             _initialPosition = new Vec2(_animationHand.x, _animationHand.y);
             AddChild(_animationHand);
+            AddChild(_ui);
+            var uiSprite = _ui.Image("gameplay_ui.png", 0, 0);
+            uiSprite.scale = GameData.UIScale;
             Game.main.OnBeforeStep += PhysicsManager.Step;
             Game.main.OnBeforeStep += PhysicsObjectManager.Update;
+            PhysicsManager.PrintColliders();
         }
 
         public override void OnUnload() 

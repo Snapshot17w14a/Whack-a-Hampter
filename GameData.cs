@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace GXPEngine
 {
@@ -19,6 +19,8 @@ namespace GXPEngine
         public static readonly int FireSpeed = 3; // The speed of the fire animation in units per frame
 
         //Scene data
+        public static readonly float UIScale = 0.5f; // The scale of the UI
+
         public static uint[,] TileValues;
         public static Dictionary<uint, float> TileSlowdownValues = new Dictionary<uint, float>();
 

@@ -165,6 +165,9 @@
     </Compile>
     <Compile Include="SceneManager\Scene.cs">
     </Compile>
+    <Compile Include="SceneManager\UI.cs"/>
+    <Compile Include="SceneManager\TextObject.cs"/>
+    <Compile Include="SceneManager\Interactables\Button.cs"/>
     <Compile Include="Physics\Collider.cs">
     </Compile>
     <Compile Include="Physics\CollisionInfo.cs">
