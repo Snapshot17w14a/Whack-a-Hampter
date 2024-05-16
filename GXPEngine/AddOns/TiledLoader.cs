@@ -6,6 +6,7 @@ using System.Drawing.Text;
 using System.IO;
 using System.Collections.Generic;
 using System.Reflection;
+using GXPEngine.Physics;
 
 namespace TiledMapParser {
 	/// <summary>
@@ -415,6 +416,7 @@ namespace TiledMapParser {
             if (map.Layers.Length <= index) return;
             uint[,] tiles = map.Layers[index].GetTileArrayRaw();
 			bool useTileData = map.Layers[index].GetBoolProperty("useTileData", false);
+			bool loadCustomCollider = map.Layers[index].GetBoolProperty("loadCustomColliders", false);
             if (useTileData) GameData.TileValues = tiles.Clone() as uint[,];
             for (int c = 0; c < tiles.GetLength(0); c++)
             {
@@ -424,28 +426,45 @@ namespace TiledMapParser {
                     uint rawTileInfo = tiles[c, r];
                     int frame = TiledUtils.GetTileFrame(rawTileInfo);
                     TileSet tileSet = map.GetTileSet(frame);
-					if (useTileData && !GameData.TileSlowdownValues.ContainsKey(tiles[c, r])) GameData.TileSlowdownValues.Add(rawTileInfo, tileSet.GetTile(rawTileInfo - Convert.ToUInt32(tileSet.FirstGId))?.GetFloatProperty("slowdown", 0.98f) ?? 0.98f);
+					Tile currentTile = tileSet.GetTile(rawTileInfo - 1);
+                    if (useTileData && !GameData.TileSlowdownValues.ContainsKey(tiles[c, r])) GameData.TileSlowdownValues.Add(rawTileInfo, currentTile?.GetFloatProperty("slowdown", 0.98f) ?? 0.98f);
+                    if (useTileData && currentTile != null) Console.WriteLine($"tileid: {rawTileInfo}, slow: {currentTile.GetFloatProperty("slowdown", 0.98f)}, {rawTileInfo - Convert.ToUInt32(tileSet.FirstGId)}");
                     if (tileSet == null || tileSet.Image == null)
                         throw new Exception("The Tiled map contains unembedded tilesets (.tsx files) - please embed them in the map");
-
-                    AnimationSprite Tile = new AnimationSprite(
+					string isTileSpecial = currentTile?.GetStringProperty("special", null);
+                    AnimationSprite toSpawn = new AnimationSprite(
                         Path.Combine(_foldername, tileSet.Image.FileName),
                         tileSet.Columns, tileSet.Rows,
-                        -1, false, addColliders
+                        -1, false, isTileSpecial != null || addColliders
                     );
-                    Tile.SetFrame(frame - tileSet.FirstGId);
-                    Tile.x = c * map.TileWidth;
+                    toSpawn.SetFrame(frame - tileSet.FirstGId);
+                    toSpawn.x = c * map.TileWidth;
                     // Adapting to Tiled's weird and inconsistent conventions again:
-                    Tile.y = r * map.TileHeight - (Tile.height - map.TileHeight);
-                    ChangeOrigin(Tile, 0.5f, 0.5f);
-                    Tile.rotation = TiledUtils.GetRotation(rawTileInfo);
-                    Tile.Mirror(TiledUtils.GetMirrorX(rawTileInfo), false);
-                    ChangeOrigin(Tile, defaultOriginX, defaultOriginY, 0.5f, 0.5f);
-					if (tileSet.GetTile(rawTileInfo - Convert.ToUInt32(tileSet.FirstGId))?.GetStringProperty("collider", null) != null)
+                    toSpawn.y = r * map.TileHeight - (toSpawn.height - map.TileHeight);
+                    ChangeOrigin(toSpawn, 0.5f, 0.5f);
+                    toSpawn.rotation = TiledUtils.GetRotation(rawTileInfo);
+                    toSpawn.Mirror(TiledUtils.GetMirrorX(rawTileInfo), false);
+                    ChangeOrigin(toSpawn, defaultOriginX, defaultOriginY, 0.5f, 0.5f);
+					if (loadCustomCollider && currentTile?.GetStringProperty("collider", null) != null)
 					{
-						ColliderLoader.AddColliders(tileSet.GetTile(rawTileInfo - Convert.ToUInt32(tileSet.FirstGId)).GetStringProperty("collider", "null"), Tile, tileSet.GetTile(rawTileInfo - Convert.ToUInt32(tileSet.FirstGId)).GetBoolProperty("invertCollider"));
+						ColliderLoader.AddColliders(currentTile.GetStringProperty("collider", "null"), toSpawn, currentTile.GetBoolProperty("invertCollider"));
 					}
-                    rootObject.AddChild(Tile);
+					if (isTileSpecial != null)
+					{
+						switch(isTileSpecial)
+						{
+							case "flag":
+								PhysicsObjectManager.SetFlag(toSpawn);
+								break;
+							case "bush":
+								PhysicsObjectManager.AddBush(toSpawn);
+                                break;
+							case "water":
+								PhysicsObjectManager.AddWater(toSpawn);
+                                break;
+                        }
+					}
+                    rootObject.AddChild(toSpawn);
                 }
             }
 		}

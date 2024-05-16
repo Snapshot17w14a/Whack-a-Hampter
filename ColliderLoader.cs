@@ -25,6 +25,7 @@ namespace GXPEngine
                 Line line = new Line(data.Start, data.End);
                 Game.main.AddChild(line);
             }
+            _colliderData.Clear();
         }
 
         private static bool ConsolidateColliders()

@@ -84,6 +84,7 @@ namespace GXPEngine.Physics
 
         /// <summary>Set the tag of the collider. This will add the tag to the ignored tags list.</summary>
         public void SetTag(string tag) => Tag = tag;
+        public void ReflectVelocity(Vec2 normal) => velocity.Reflect(normal, Bounciness);
 
         public abstract CollisionInfo GetCollision(Collider other);
         public abstract void ResolveCollision(CollisionInfo col);

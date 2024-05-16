@@ -70,16 +70,11 @@ namespace GXPEngine.Physics.PhysicsObjects
                     ApplyForceToPlayer(player);
                 }
             }
-            if (!isCollision)
-            {
-                Console.WriteLine("No collision detected.");
-            }
         }
 
         private bool IsCollidingWithPlayer(Line blade, Player player)
         {
             bool collision = LineIntersectsCircle(blade.StartPosition, blade.EndPosition, player.Collider.Position, 32);
-            Console.WriteLine($"Checking collision for blade starting at {blade.StartPosition} to {blade.EndPosition} with player at {player.Collider.Position}: {collision}");
             return collision;
         }
 
@@ -88,7 +83,6 @@ namespace GXPEngine.Physics.PhysicsObjects
             Vec2 forceDirection = Vec2.GetUnitVectorDeg(currentAngle + 90);
             float forceMagnitude = GameData.windmillForceMagnitude;
             player.Collider.AddVelocity(forceDirection * forceMagnitude);
-            Console.WriteLine($"Applying force: {forceDirection * forceMagnitude}");
         }
 
         private bool LineIntersectsCircle(Vec2 lineStart, Vec2 lineEnd, Vec2 circleCenter, float circleRadius)

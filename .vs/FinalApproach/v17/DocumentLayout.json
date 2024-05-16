@@ -3,78 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\",
   "Documents": [
     {
-<<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|c:\\users\\kevin\\documents\\localprojects\\finalapproach\\scenes\\intermediatescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:scenes\\intermediatescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|c:\\users\\kevin\\documents\\localprojects\\finalapproach\\scenes\\transitionscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:scenes\\transitionscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-=======
-      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|c:\\users\\kevin\\documents\\localprojects\\finalapproach\\scenes\\titlescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:scenes\\titlescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|c:\\users\\kevin\\documents\\localprojects\\finalapproach\\gamesoundhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:gamesoundhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
->>>>>>> sound
       "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\gamedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:gamedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\gxpengine\\addons\\tiledloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:gxpengine\\addons\\tiledloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|c:\\users\\kevin\\documents\\localprojects\\finalapproach\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\customobjectloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:customobjectloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\mygame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:mygame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-<<<<<<< HEAD
-=======
-      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|c:\\users\\kevin\\documents\\localprojects\\finalapproach\\physics\\physicsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:physics\\physicsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\gxpengine\\addons\\tiledloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:gxpengine\\addons\\tiledloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\customobjectloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:customobjectloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
->>>>>>> sound
-      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\physics\\physicsobjects\\windmill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:physics\\physicsobjects\\windmill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\scenemanagement\\textobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:scenemanagement\\textobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\scenemanagement\\ui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:scenemanagement\\ui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\scenemanagement\\interactables\\button.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:scenemanagement\\interactables\\button.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\scenes\\tiledscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:scenes\\tiledscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\scenemanagement\\scenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:scenemanagement\\scenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\physics\\physicsobjectmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:physics\\physicsobjectmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\customobjectloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:customobjectloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|c:\\users\\kevin\\documents\\localprojects\\finalapproach\\colliderloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:colliderloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\physics\\physicsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:physics\\physicsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|c:\\users\\kevin\\documents\\localprojects\\finalapproach\\physics\\vec2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|GXPEngine.csproj|solutionrelative:physics\\vec2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -84,29 +50,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-<<<<<<< HEAD
           "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-=======
-          "SelectedChildIndex": 2,
-          "Children": [
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
->>>>>>> sound
               "Title": "GameData.cs",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\GameData.cs",
               "RelativeDocumentMoniker": "GameData.cs",
               "ToolTip": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\GameData.cs",
               "RelativeToolTip": "GameData.cs",
-<<<<<<< HEAD
-              "ViewState": "AQIAABoAAAAAAAAAAAAQwCMAAAA6AAAA",
-=======
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACgAAAAAAAAA",
->>>>>>> sound
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-15T23:40:36.526Z",
               "IsPinned": true,
@@ -114,41 +68,52 @@
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
               "DocumentIndex": 0,
-              "Title": "IntermediateScene.cs",
-              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\Scenes\\IntermediateScene.cs",
-              "RelativeDocumentMoniker": "Scenes\\IntermediateScene.cs",
-              "ToolTip": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\Scenes\\IntermediateScene.cs",
-              "RelativeToolTip": "Scenes\\IntermediateScene.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAhAAAA",
+              "Title": "TransitionScene.cs",
+              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\Scenes\\TransitionScene.cs",
+              "RelativeDocumentMoniker": "Scenes\\TransitionScene.cs",
+              "ToolTip": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\Scenes\\TransitionScene.cs",
+              "RelativeToolTip": "Scenes\\TransitionScene.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T10:38:25.403Z",
-=======
-              "DocumentIndex": 1,
-              "Title": "GameSoundHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\GameSoundHandler.cs",
-              "RelativeDocumentMoniker": "GameSoundHandler.cs",
-              "ToolTip": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\GameSoundHandler.cs",
-              "RelativeToolTip": "GameSoundHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAABMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T10:52:16.732Z",
->>>>>>> sound
+              "WhenOpened": "2024-05-16T17:42:57.275Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 2,
-=======
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
+              "Title": "ColliderLoader.cs",
+              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\ColliderLoader.cs",
+              "RelativeDocumentMoniker": "ColliderLoader.cs",
+              "ToolTip": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\ColliderLoader.cs",
+              "RelativeToolTip": "ColliderLoader.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T17:29:31.014Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Vec2.cs",
+              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\Physics\\Vec2.cs",
+              "RelativeDocumentMoniker": "Physics\\Vec2.cs",
+              "ToolTip": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\Physics\\Vec2.cs",
+              "RelativeToolTip": "Physics\\Vec2.cs",
+              "ViewState": "AQIAAFQAAAAAAAAAAAAEwGUAAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T17:09:35.761Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\Player.cs",
               "RelativeDocumentMoniker": "Player.cs",
               "ToolTip": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\Player.cs",
               "RelativeToolTip": "Player.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAowDcAAAAJAAAA",
+              "ViewState": "AQIAADIAAAAAAAAAAAAwwDcAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-15T23:37:16.119Z",
               "EditorCaption": ""
@@ -156,165 +121,66 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
->>>>>>> sound
-              "Title": "TiledLoader.cs",
-              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\GXPEngine\\AddOns\\TiledLoader.cs",
-              "RelativeDocumentMoniker": "GXPEngine\\AddOns\\TiledLoader.cs",
-              "ToolTip": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\GXPEngine\\AddOns\\TiledLoader.cs",
-              "RelativeToolTip": "GXPEngine\\AddOns\\TiledLoader.cs",
-              "ViewState": "AQIAAFkBAAAAAAAAAAAgwK0BAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-<<<<<<< HEAD
-              "WhenOpened": "2024-05-16T10:10:20.655Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-=======
-              "WhenOpened": "2024-05-16T10:10:20.655Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
->>>>>>> sound
               "Title": "CustomObjectLoader.cs",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\CustomObjectLoader.cs",
               "RelativeDocumentMoniker": "CustomObjectLoader.cs",
               "ToolTip": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\CustomObjectLoader.cs",
               "RelativeToolTip": "CustomObjectLoader.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAABBAAAA",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAowCMAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T10:05:10.917Z"
-            },
-            {
-              "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 6,
-=======
-              "DocumentIndex": 7,
->>>>>>> sound
-              "Title": "Windmill.cs",
-              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\Physics\\PhysicsObjects\\Windmill.cs",
-              "RelativeDocumentMoniker": "Physics\\PhysicsObjects\\Windmill.cs",
-              "ToolTip": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\Physics\\PhysicsObjects\\Windmill.cs",
-              "RelativeToolTip": "Physics\\PhysicsObjects\\Windmill.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T10:04:51.922Z"
-            },
-            {
-              "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 5,
-=======
-              "DocumentIndex": 3,
->>>>>>> sound
-              "Title": "MyGame.cs",
-              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\MyGame.cs",
-              "RelativeDocumentMoniker": "MyGame.cs",
-              "ToolTip": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\MyGame.cs",
-              "RelativeToolTip": "MyGame.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAACAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T00:26:36.214Z",
+              "WhenOpened": "2024-05-16T10:05:10.917Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "TextObject.cs",
-              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\SceneManagement\\TextObject.cs",
-              "RelativeDocumentMoniker": "SceneManagement\\TextObject.cs",
-              "ToolTip": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\SceneManagement\\TextObject.cs",
-              "RelativeToolTip": "SceneManagement\\TextObject.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T00:04:45.277Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UI.cs",
-              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\SceneManagement\\UI.cs",
-              "RelativeDocumentMoniker": "SceneManagement\\UI.cs",
-              "ToolTip": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\SceneManagement\\UI.cs",
-              "RelativeToolTip": "SceneManagement\\UI.cs",
-              "ViewState": "AQIAAH8AAAAAAAAAAIAwwJsAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T23:55:39.392Z"
-            },
-            {
-              "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 9,
-=======
-              "DocumentIndex": 10,
->>>>>>> sound
-              "Title": "Button.cs",
-              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\SceneManagement\\Interactables\\Button.cs",
-              "RelativeDocumentMoniker": "SceneManagement\\Interactables\\Button.cs",
-              "ToolTip": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\SceneManagement\\Interactables\\Button.cs",
-              "RelativeToolTip": "SceneManagement\\Interactables\\Button.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T23:41:42.835Z"
-            },
-            {
-              "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 10,
-=======
-              "DocumentIndex": 11,
->>>>>>> sound
+              "DocumentIndex": 3,
               "Title": "TiledScene.cs",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\Scenes\\TiledScene.cs",
               "RelativeDocumentMoniker": "Scenes\\TiledScene.cs",
               "ToolTip": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\Scenes\\TiledScene.cs",
               "RelativeToolTip": "Scenes\\TiledScene.cs",
-              "ViewState": "AQIAAEEAAAAAAAAAAAAlwG0AAAANAAAA",
+              "ViewState": "AQIAACAAAAAAAAAAAAAwwDEAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T23:38:29.664Z"
+              "WhenOpened": "2024-05-15T23:38:29.664Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 11,
-=======
-              "DocumentIndex": 12,
->>>>>>> sound
-              "Title": "SceneManager.cs",
-              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\SceneManagement\\SceneManager.cs",
-              "RelativeDocumentMoniker": "SceneManagement\\SceneManager.cs",
-              "ToolTip": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\SceneManagement\\SceneManager.cs",
-              "RelativeToolTip": "SceneManagement\\SceneManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAwwC4AAABGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T23:37:29.012Z"
-            },
-            {
-              "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 3,
-              "Title": "Player.cs",
-              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\Player.cs",
-              "RelativeDocumentMoniker": "Player.cs",
-              "ToolTip": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\Player.cs",
-              "RelativeToolTip": "Player.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T23:37:16.119Z",
-=======
               "DocumentIndex": 4,
+              "Title": "PhysicsObjectManager.cs",
+              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\Physics\\PhysicsObjectManager.cs",
+              "RelativeDocumentMoniker": "Physics\\PhysicsObjectManager.cs",
+              "ToolTip": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\Physics\\PhysicsObjectManager.cs",
+              "RelativeToolTip": "Physics\\PhysicsObjectManager.cs",
+              "ViewState": "AQIAADYAAAAAAAAAAAAmwEsAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T11:39:30.441Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TitleScene.cs",
+              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\Scenes\\TitleScene.cs",
+              "RelativeDocumentMoniker": "Scenes\\TitleScene.cs",
+              "ToolTip": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\Scenes\\TitleScene.cs",
+              "RelativeToolTip": "Scenes\\TitleScene.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAUAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T11:28:58.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "PhysicsManager.cs",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\Physics\\PhysicsManager.cs",
               "RelativeDocumentMoniker": "Physics\\PhysicsManager.cs",
               "ToolTip": "C:\\Users\\Kevin\\Documents\\LocalProjects\\FinalApproach\\Physics\\PhysicsManager.cs",
               "RelativeToolTip": "Physics\\PhysicsManager.cs",
-              "ViewState": "AQIAACYAAAAAAAAAAAD4vz8AAAAJAAAA",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAawFkAAABZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T10:58:04.582Z",
->>>>>>> sound
+              "WhenOpened": "2024-05-16T12:12:11.896Z",
               "EditorCaption": ""
             }
           ]

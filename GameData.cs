@@ -13,7 +13,7 @@ namespace GXPEngine
 
         public static readonly float PlayerMaxHitStrength = 50f; // Maximum hit strength
         public static readonly float PlayerMouseMaxStrengthThreshold = 300f; // Maximum strength when the mouse is at this distance
-        public static readonly float PlayerIsZeroThreshold = 1.0f; // Threshold for checking if a vector is zero
+        public static readonly float PlayerIsZeroThreshold = 0.1f; // Threshold for checking if a vector is zero
 
         public static readonly int PlayerSpawnYOffset = -200; // The initial y offset of the player, this is needed for the start animation
         public static readonly int PlayerStartAnimSpeed = 3; // The speed of the start animation in units per frame
@@ -25,8 +25,11 @@ namespace GXPEngine
         //Scene data
         public static readonly float UIScale = 0.5f; // The scale of the UI
 
+        //Dynamic scene data - dont change this
+        public static string NextScene = "Level1"; // The next scene to load
+
         //Level data
-        public static readonly int[] MaxHits = { 15, 0, 0 }; // The maximum amount of hits for each level
+        public static readonly int[] MaxHits = { 4, 0, 0 }; // The maximum amount of hits for each level
 
         //Dynamic level data - dont change this
         public static uint[,] TileValues;
@@ -35,26 +38,27 @@ namespace GXPEngine
         //General data
         public static readonly string SceneToLoad = "Title"; // The scene to load when the game starts
 
+        public static readonly bool ShowMouse = true; // Show the mouse in the scene
         public static readonly bool ShowColliders = true; // Show colliders in the scene
         public static readonly uint ColliderColor = 0xFFFF0000; // Color of the colliders
-        public static readonly bool ShowMouse = true; // Show the mouse in the scene
 
         public static readonly int TileHeight = 64;
         public static readonly int TileWidth = 64;
 
+        public static readonly float BushRequiredVelocity = 20f; // The required velocity to pass a bush
+
         public static readonly GameSoundHandler SoundHandler = new GameSoundHandler();
 
         //Physics objects
-
         public static readonly float windmillSpinSpeed = 90f;
         public static readonly float windmillForceMagnitude = 1f;
 
         public static void Initialize() //This method is called once when the game starts, use it to create scenes and add them to the SceneManager
         {
-            SceneManager.AddScene("Title", SceneManager.CreateScene(typeof(IntermediateScene)));
+            SceneManager.AddScene("Title", SceneManager.CreateScene(typeof(TitleScene)));
             SceneManager.AddScene("Level1", SceneManager.CreateScene(typeof(TiledScene), "Maps/Level1.tmx"));
-            SceneManager.AddScene("Level2", SceneManager.CreateScene(typeof(TiledScene), "Maps/Level1.tmx"));
-            SceneManager.AddScene("Level3", SceneManager.CreateScene(typeof(TiledScene), "Maps/Level1.tmx"));
+            SceneManager.AddScene("Level2", SceneManager.CreateScene(typeof(TiledScene), "Maps/Level2.tmx"));
+            SceneManager.AddScene("Level3", SceneManager.CreateScene(typeof(TiledScene), "Maps/Level3.tmx"));
             SceneManager.PrintScenes();
         }
 

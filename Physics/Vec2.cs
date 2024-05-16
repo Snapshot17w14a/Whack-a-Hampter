@@ -165,6 +165,8 @@
         /// <summary>Returns true if the two floats are approximately equal, within a given tolerance</summary>
         private static bool IsApporximately(float a, float b, float tolerance = 0.0001f) => Mathf.Abs(a - b) < tolerance;
 
+        public static Vec2 ToVec2(Core.Vector2 vector) => new Vec2(vector.x, vector.y);
+
         //* Operators *//
 
         public static Vec2 operator +(Vec2 left, Vec2 right) => new Vec2(left.x + right.x, left.y + right.y);

@@ -40,10 +40,14 @@ namespace GXPEngine.Scenes
             Game.main.OnBeforeStep += PhysicsManager.Step;
             Game.main.OnBeforeStep += PhysicsObjectManager.Update;
             PhysicsManager.PrintColliders();
+            GameData.NextScene = $"Level{_levelId + 1}";
         }
 
         public override void OnUnload() 
-        { 
+        {
+            PhysicsManager.ClearColliders();
+            foreach (var child in GetChildren()) child.Destroy();
+            PhysicsObjectManager.Reset();
             Game.main.OnBeforeStep -= PhysicsManager.Step;
             Game.main.OnBeforeStep -= PhysicsObjectManager.Update;
         }
@@ -112,7 +116,7 @@ namespace GXPEngine.Scenes
 
         private void LoadLevel()
         {
-            TiledLoader loader = new TiledLoader(_levelToLoad, addColliders: false, defaultOriginX: 0, defaultOriginY: 0);
+            TiledLoader loader = new TiledLoader(_levelToLoad, this, false, 0, 0);
             CustomObjectLoader.Initialize(loader);
             loader.AddManualType("WindCurrent", "Player", "Fire", "Windmill");
             loader.autoInstance = true;

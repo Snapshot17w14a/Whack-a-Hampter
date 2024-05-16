@@ -193,9 +193,10 @@
     <Compile Include="Physics\Shapes\Line.cs">
     </Compile>
     <Compile Include="Player.cs" />
-    <Compile Include="Scenes\IntermediateScene.cs" />
+    <Compile Include="Scenes\TitleScene.cs" />
     <Compile Include="Scenes\TiledScene.cs" />
     <Compile Include="GameSoundHandler.cs" />
+    <Compile Include="Scenes\TransitionScene.cs" />
     <Compile Include="Tile.cs" />
     <Compile Include="Physics\PhysicsObjects\WindCurrent.cs" />
   </ItemGroup>

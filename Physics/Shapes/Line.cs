@@ -48,5 +48,11 @@ namespace GXPEngine.Physics
                 Gizmos.DrawCross(EndPosition.x, EndPosition.y, 5, color: GameData.ColliderColor);
             }
         }
+        public override void Destroy()
+        {
+            base.Destroy();
+            _collider.Destroy();
+            _line.Destroy();
+        }
     }
 }

@@ -85,6 +85,12 @@ namespace GXPEngine.Physics
         /// <summary>Removes the given collider from the list of simulated and collision checked colliders</summary>
         public static void RemoveCollider(Collider collider) => _colliders.Remove(collider);
 
+        public static void ClearColliders()
+        {
+            for (int i = _colliders.Count - 1; i >= 0; i--) _colliders[i]?.Parent.Destroy();
+            _colliders.Clear();
+        }
+
         /// <summary>Prints all colliders in the list of simulated and collision checked colliders</summary>
         public static void PrintColliders() { foreach (Collider collider in _colliders) Console.WriteLine(collider); }
     }
