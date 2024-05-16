@@ -20,7 +20,11 @@ namespace GXPEngine
                 do { modifications = ConsolidateColliders(); } while (modifications);
             }
             _colliderData.ForEach(_colliderData => Console.WriteLine(_colliderData));
-            AddColliders();
+            foreach (ColliderData data in _colliderData)
+            {
+                Line line = new Line(data.Start, data.End);
+                Game.main.AddChild(line);
+            }
         }
 
         private static bool ConsolidateColliders()
@@ -60,50 +64,62 @@ namespace GXPEngine
             return false;
         }
 
-        private static void AddColliders()
-        { 
-            foreach (ColliderData data in _colliderData)
-            {
-                Line line = new Line(data.Start, data.End);
-                Game.main.AddChild(line);
-            }
+        public static void AddColliders(string colliderProperty, Sprite sprite, bool swapPoints = false)
+        {
+            var colliders = GetOffset(colliderProperty, sprite, swapPoints);
+            foreach (ColliderData data in colliders) AddColliderData(data);
         }
 
         /// <summary>Returns the offset of the collider based on the collider property.</summary>
-        public static ColliderData GetOffset(string colliderProperty, int width, int height)
+        private static List<ColliderData> GetOffset(string colliderProperty, Sprite sprite, bool swapPoints = false)
         {
-            ColliderData colliderData = new ColliderData(Vec2.zero, Vec2.zero);
-            switch (colliderProperty)
+            string[] strings = colliderProperty.Split(';');
+            List<ColliderData> colliderData = new List<ColliderData>();
+            foreach (string colliderProp in strings)
             {
-                case "top":
-                    colliderData.Start = new Vec2(-width / 2, -height / 2);
-                    colliderData.End = new Vec2(width / 2, -height / 2);
-                    break;
-                case "right":
-                    colliderData.Start = new Vec2(width / 2, -height / 2);
-                    colliderData.End = new Vec2(width / 2, height / 2);
-                    break;
-                case "bottom":
-                    colliderData.Start = new Vec2(width / 2, height / 2);
-                    colliderData.End = new Vec2(-width / 2, height / 2);
-                    break;
-                case "left":
-                    colliderData.Start = new Vec2(-width / 2, height / 2);
-                    colliderData.End = new Vec2(-width / 2, -height / 2);
-                    break;
+                switch(colliderProp)
+                {
+                    case "top":
+                        colliderData.Add(new ColliderData(new Vec2(sprite.x, sprite.y), new Vec2(sprite.width + sprite.x, sprite.y), swapPoints));
+                        break;
+                    case "right":
+                        colliderData.Add(new ColliderData(new Vec2(sprite.width + sprite.x, sprite.y), new Vec2(sprite.width + sprite.x, sprite.height + sprite.y), swapPoints));
+                        break;
+                    case "bottom":
+                        colliderData.Add(new ColliderData(new Vec2(sprite.width + sprite.x, sprite.height + sprite.y), new Vec2(sprite.x, sprite.height + sprite.y), swapPoints));
+                        break;
+                    case "left":
+                        colliderData.Add(new ColliderData(new Vec2(sprite.x, sprite.height + sprite.y), new Vec2(sprite.x, sprite.y), swapPoints));
+                        break;
+                    case "topleftbottomright":
+                        colliderData.Add(new ColliderData(new Vec2(sprite.x, sprite.y), new Vec2(sprite.width + sprite.x, sprite.height + sprite.y), swapPoints));
+                        break;
+                    case "toprightbottomleft":
+                        colliderData.Add(new ColliderData(new Vec2(sprite.width + sprite.x, sprite.y), new Vec2(sprite.x, sprite.height + sprite.y), swapPoints));
+                        break;
+                    case "bottomlefttopright":
+                        colliderData.Add(new ColliderData(new Vec2(sprite.x, sprite.height + sprite.y), new Vec2(sprite.width + sprite.x, sprite.y), swapPoints));
+                        break;
+                    case "bottomrighttopleft":
+                        colliderData.Add(new ColliderData(new Vec2(sprite.width + sprite.x, sprite.height + sprite.y), new Vec2(sprite.x, sprite.y), swapPoints));
+                        break;
+                }
             }
             return colliderData;
         }
-
     }
 
     /// <summary>Collider data struct to store the start and end position of a collider.</summary>
+#pragma warning disable CS0660 // Type defines operator == or operator != but does not override Object.Equals(object o)
+#pragma warning disable CS0661 // Type defines operator == or operator != but does not override Object.GetHashCode()
     struct ColliderData
+#pragma warning restore CS0661 // Type defines operator == or operator != but does not override Object.GetHashCode()
+#pragma warning restore CS0660 // Type defines operator == or operator != but does not override Object.Equals(object o)
     {
-        public ColliderData(Vec2 start, Vec2 end)
+        public ColliderData(Vec2 start, Vec2 end, bool swapPoints = false)
         {
-            Start = start;
-            End = end;
+            Start = swapPoints ? end : start;
+            End = swapPoints ? start : end;
         }
 
         public Vec2 Start;

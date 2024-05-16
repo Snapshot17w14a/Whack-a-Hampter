@@ -6,11 +6,10 @@
         private readonly Collider _collider;
         public Collider Collider => _collider;
 
-        public AnimatedCircle(int radius, string filename, int cols, int rows) : base(filename, cols, rows, addCollider: false)
+        public AnimatedCircle(int radius, string filename, int cols, int rows) : base(filename, cols, rows)
         {
             Radius = radius;
-            SetScaleXY(radius * 2 / 64f, radius * 2 / 64f);
-            SetOrigin(radius, radius);
+            collider.isTrigger = true;
             _collider = PhysicsManager.AddCollider(this, Collider.ColliderType.Circle);
         }
 

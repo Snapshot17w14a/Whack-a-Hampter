@@ -50,7 +50,6 @@ namespace TiledMapParser {
 		/// </summary>
 		public bool highQualityText;
 
-		public delegate void ObjectCreateCallback(Sprite sprite, TiledObject obj);
 		/// <summary>
 		/// This event is fired for each Tiled Object while reading object layers from the Tiled file.
 		/// It is fired whenever an AnimationSprite or text element (EasyDraw) is generated from a Tiled object.
@@ -59,12 +58,12 @@ namespace TiledMapParser {
 		/// in combination with SetPositionRotationScaleOrigin to create your own objects such as a player
 		/// that inherits from Sprite).
 		/// </summary>
-		public event ObjectCreateCallback OnObjectCreated;
+		public Action<Sprite, TiledObject> OnObjectCreated;
 
-		/// <summary>
-		/// Returns the number of tile layers in the loaded map.
-		/// </summary>
-		public int NumTileLayers {
+        /// <summary>
+        /// Returns the number of tile layers in the loaded map.
+        /// </summary>
+        public int NumTileLayers {
 			get {
 				if (map.Layers==null) {
 					return 0;
@@ -121,7 +120,7 @@ namespace TiledMapParser {
 		public TiledLoader(string filename,  
 			GameObject rootObject = null, bool addColliders = true,
 			float defaultOriginX = 0.5f, float defaultOriginY = 0.5f, 
-			bool highQualityText = true, bool autoInstance=false, ObjectCreateCallback callback=null) 
+			bool highQualityText = true, bool autoInstance=false) 
 		{
 
 			_foldername=Path.GetDirectoryName(filename);
@@ -137,9 +136,6 @@ namespace TiledMapParser {
 			this.defaultOriginX = defaultOriginX;
 			this.defaultOriginY = defaultOriginY;
 			this.highQualityText=highQualityText;
-			if (callback!=null) {
-				OnObjectCreated += callback;
-			}
 			_manualObjects=new List<string>();
 			_callingAssembly = Assembly.GetCallingAssembly();
 		}
@@ -349,7 +345,7 @@ namespace TiledMapParser {
 
 				if (_manualObjects.Contains(obj.Type)) {
 					// Don't create an object, just fire the event and let the user create something.
-					//Console.WriteLine("Skipping object because type is in manual list: "+obj);
+					Console.WriteLine("Skipping object because type is in manual list: "+obj);
 				} else if (obj.ImageID>=0) { // Create an AnimationSprite
 					TileSet tileSet = map.GetTileSet(obj.ImageID);
 					if (tileSet==null || tileSet.Image==null)
@@ -411,24 +407,24 @@ namespace TiledMapParser {
 					SetPositionRotationScaleOrigin(newSprite, obj, defaultOriginX, defaultOriginY);
 					rootObject.AddChild(newSprite);
 				}
-				if (OnObjectCreated!=null) {
-					OnObjectCreated(newSprite, obj);
-				}
-			}
+                OnObjectCreated?.Invoke(newSprite, obj);
+            }
 		}
 
 		void LoadTileLayer(int index) {
             if (map.Layers.Length <= index) return;
             uint[,] tiles = map.Layers[index].GetTileArrayRaw();
+			bool useTileData = map.Layers[index].GetBoolProperty("useTileData", false);
+            if (useTileData) GameData.TileValues = tiles.Clone() as uint[,];
             for (int c = 0; c < tiles.GetLength(0); c++)
             {
                 for (int r = 0; r < tiles.GetLength(1); r++)
                 {
-                    if (tiles[c, r] == 0)
-                        continue;
+                    if (tiles[c, r] == 0) continue;
                     uint rawTileInfo = tiles[c, r];
                     int frame = TiledUtils.GetTileFrame(rawTileInfo);
                     TileSet tileSet = map.GetTileSet(frame);
+					if (useTileData && !GameData.TileSlowdownValues.ContainsKey(tiles[c, r])) GameData.TileSlowdownValues.Add(rawTileInfo, tileSet.GetTile(rawTileInfo - Convert.ToUInt32(tileSet.FirstGId))?.GetFloatProperty("slowdown", 0.98f) ?? 0.98f);
                     if (tileSet == null || tileSet.Image == null)
                         throw new Exception("The Tiled map contains unembedded tilesets (.tsx files) - please embed them in the map");
 
@@ -445,12 +441,9 @@ namespace TiledMapParser {
                     Tile.rotation = TiledUtils.GetRotation(rawTileInfo);
                     Tile.Mirror(TiledUtils.GetMirrorX(rawTileInfo), false);
                     ChangeOrigin(Tile, defaultOriginX, defaultOriginY, 0.5f, 0.5f);
-					if (tileSet.GetTile(rawTileInfo - 1)?.GetStringProperty("collider", null) != null)
+					if (tileSet.GetTile(rawTileInfo - Convert.ToUInt32(tileSet.FirstGId))?.GetStringProperty("collider", null) != null)
 					{
-						ColliderData cd = ColliderLoader.GetOffset(tileSet.GetTile(rawTileInfo - 1).GetStringProperty("collider", "null"), Tile.width, Tile.height);
-						cd.Start += new Vec2(Tile.x, Tile.y);
-						cd.End += new Vec2(Tile.x, Tile.y);
-                        ColliderLoader.AddColliderData(cd);
+						ColliderLoader.AddColliders(tileSet.GetTile(rawTileInfo - Convert.ToUInt32(tileSet.FirstGId)).GetStringProperty("collider", "null"), Tile, tileSet.GetTile(rawTileInfo - Convert.ToUInt32(tileSet.FirstGId)).GetBoolProperty("invertCollider"));
 					}
                     rootObject.AddChild(Tile);
                 }

@@ -5,12 +5,18 @@
         public float x;
         public float y;
 
-        public readonly static Vec2 zero = new Vec2(0, 0);
+        public readonly static Vec2 zero = new Vec2(0);
 
         public Vec2(float pX = 0, float pY = 0)
         {
             x = pX;
             y = pY;
+        }
+
+        public Vec2(float value)
+        { 
+            x = value;
+            y = value;
         }
 
         //* Instance methods *//

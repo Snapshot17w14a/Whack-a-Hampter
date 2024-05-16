@@ -40,7 +40,7 @@ namespace GXPEngine.Physics
 
         public static void Step()
         {
-            foreach (Collider collider in _colliders) CheckForCollision(collider);
+            _colliders.ForEach(collider => CheckForCollision(collider));
         }
 
         /// <summary>Check for collision with all other colliders from the perspective of the provided collider</summary>
@@ -67,9 +67,8 @@ namespace GXPEngine.Physics
         private static bool IsTagIgnored(Collider collider, Collider other)
         {
             if (collider.Tag == null || other.Tag == null || collider.IgnoredTags.Count == 0) return false;
-            bool result = false;
-            foreach (string tag in collider.IgnoredTags) if (other.Tag == tag) result = true;
-            return result;
+            foreach (string tag in collider.IgnoredTags) if (other.Tag == tag) return true;
+            return false;
         }
 
         /// <summary>Returns a list of colliders the given collider is overlapping with</summary>
