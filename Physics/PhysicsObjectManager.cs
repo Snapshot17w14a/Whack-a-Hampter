@@ -41,6 +41,7 @@ namespace GXPEngine.Physics
             {
                 if (!fire.HitTest(GameData.ActivePlayer)) continue;
                 GameData.ActivePlayer.ResetPosition();
+                GameData.SoundHandler.PlaySound("FireSFX");
                 break;
             }
         }

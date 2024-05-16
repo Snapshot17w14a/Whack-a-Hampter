@@ -56,7 +56,7 @@
   </tile>
   <tile id="43">
    <properties>
-    <property name="slowdown" type="float" value="0.5"/>
+    <property name="slowdown" type="float" value="0.8"/>
    </properties>
   </tile>
   <tile id="46">

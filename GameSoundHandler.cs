@@ -1,67 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GXPEngine
 {
     internal class GameSoundHandler
     {
-        private SoundChannel background_music;
-        private SoundChannel Bush;
-        private SoundChannel Fire;
-        private SoundChannel HitHampter;
-        private SoundChannel HitWall;
-        private SoundChannel LevelPass;
-        private SoundChannel MenuSelect;
-        private SoundChannel Mud;
-        // private SoundChannel Putt;
-        private SoundChannel Water;
+        private readonly Dictionary<string, Sound> _sounds = new Dictionary<string, Sound>();
 
-        public void PlayBGM()
+        public GameSoundHandler()
         {
-            background_music = new Sound("Sound/BGM.wav", true, true).Play();
+            _sounds.Add("BGM", new Sound("Sound/BGM.wav", true, true));
+            _sounds.Add("BushSFX", new Sound("Sound/Bush.wav", false, false));
+            _sounds.Add("FireSFX", new Sound("Sound/Fire.wav", false, false));
+            _sounds.Add("HitHampter", new Sound("Sound/HitHampter.wav", false, false));
+            _sounds.Add("HitWall", new Sound("Sound/HitWall.wav", false, false));
+            _sounds.Add("LevelPass", new Sound("Sound/LevelPass.wav", false, false));
+            _sounds.Add("MenuSelect", new Sound("Sound/MenuSelect.wav", false, false));
+            _sounds.Add("MudSFX", new Sound("Sound/Mud.wav", false, false));
+            _sounds.Add("WaterSFX", new Sound("Sound/Water.wav", false, false));
         }
 
-        public void BushSFX()
+        public void PlaySound(string soundName, uint channelId = 1)
         {
-            Bush = new Sound("Sound/Bush.wav", false, false).Play();
-        }
-
-        public void FireSFX()
-        {
-            Fire = new Sound("Sound/Fire.wav", false, false).Play();
-        }
-
-        public void HitHampterSFX()
-        {
-            HitHampter = new Sound("Sound/HitHamptere.wav", false, false).Play();
-        }
-
-        public void HitWallSFX()
-        {
-            HitWall = new Sound("Sound/HitWall.wav", false, false).Play();
-        }
-
-        public void LevelPassSFX()
-        {
-            LevelPass = new Sound("Sound/LevelPass.wav", false, false).Play();
-        }
-
-        public void MenuSelectSFX()
-        {
-            MenuSelect = new Sound("Sound/MenuSelect.wav", false, false).Play();
-        }
-
-        public void MudSFX()
-        {
-            Mud = new Sound("Sound/Mud.wav", false, false).Play();
-        }
-
-        public void WaterSFX()
-        {
-            Water = new Sound("Sound/Water.wav", false, false).Play();
+            if (_sounds.ContainsKey(soundName))
+            {
+                _sounds[soundName].Play(false, channelId);
+            }
+            else
+            {
+                Console.WriteLine("Sound not found: " + soundName);
+            }
         }
     }
 }
