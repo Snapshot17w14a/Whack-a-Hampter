@@ -92,6 +92,6 @@ namespace GXPEngine.Physics
             if (Tag != null) toPrint += $" with tag {Tag}";
             if (IgnoredTags.Count > 0) toPrint += $" ignoring tags: {string.Join(", ", IgnoredTags)}";
             return toPrint;
-        } 
+        }
     }
 }

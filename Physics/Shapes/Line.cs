@@ -27,9 +27,15 @@ namespace GXPEngine.Physics
 
         public void CallCollider(Vec2 start, Vec2 end)
         {
-            _line.start = start;
-            _line.end = end;
+            StartPosition = start;
+            EndPosition = end;
+            if (GameData.ShowColliders)
+            {
+                _line.start = start;
+                _line.end = end;
+            }
             ((LineSegmentCollider)_collider).UpdatePosition(start, end);
         }
+
     }
 }

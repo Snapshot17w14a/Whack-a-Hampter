@@ -29,7 +29,7 @@ namespace GXPEngine
         //Physics objects
 
         public static readonly float windmillSpinSpeed = 90f;
-        public static readonly float windmillForceMagnitude = 10f;
+        public static readonly float windmillForceMagnitude = 1f;
 
         public static Player ActivePlayer;
     }

@@ -1,11 +1,12 @@
 ﻿using System;
 using GXPEngine.SceneManager;
+using GXPEngine.Physics.PhysicsObjects;
 
 namespace GXPEngine.Physics.PhysicsObjects
 {
     internal class Windmill : Sprite
     {
-        Line windmillWall;
+        Line[] windmillBlades;
         float rotationSpeed = -GameData.windmillSpinSpeed; // Negative for clockwise rotation
         float currentAngle = 0f;
 
@@ -13,8 +14,17 @@ namespace GXPEngine.Physics.PhysicsObjects
         {
             visible = false;
             collider.isTrigger = true;
-            windmillWall = new Line(Vec2.zero, Vec2.zero);
-            SceneManager.SceneManager.CurrentScene.AddChild(windmillWall);
+            InitializeBlades();
+        }
+
+        private void InitializeBlades()
+        {
+            windmillBlades = new Line[4]; // Adjust number of blades here
+            for (int i = 0; i < windmillBlades.Length; i++)
+            {
+                windmillBlades[i] = new Line(Vec2.zero, Vec2.zero);
+                SceneManager.SceneManager.CurrentScene.AddChild(windmillBlades[i]);
+            }
         }
 
         private void Update()
@@ -32,28 +42,50 @@ namespace GXPEngine.Physics.PhysicsObjects
 
             Vec2 centerPoint = new Vec2(x + width / 2, y + height / 2);
             float radius = width / 2;
-            Vec2 endPoint = centerPoint + Vec2.GetUnitVectorDeg(currentAngle) * radius;
 
-            windmillWall.CallCollider(centerPoint, endPoint);
+            for (int i = 0; i < windmillBlades.Length; i++)
+            {
+                float bladeAngle = currentAngle + i * 90; // 90 degrees apart for each blade
+                bladeAngle %= 360; // Ensure angle is within 0-360 range
+                Vec2 endPoint = centerPoint + Vec2.GetUnitVectorDeg(bladeAngle) * radius;
+                windmillBlades[i].CallCollider(centerPoint, endPoint);
+            }
         }
+
 
         private void CheckCollisionWithPlayer()
         {
             Player player = SceneManager.SceneManager.CurrentScene.FindObjectOfType<Player>();
-            if (player != null && IsCollidingWithPlayer(player))
+            bool isCollision = false;
+            foreach (var blade in windmillBlades)
             {
-                ApplyForceToPlayer(player);
+                if (player != null && IsCollidingWithPlayer(blade, player))
+                {
+                    isCollision = true;
+                    ApplyForceToPlayer(player);
+                }
+            }
+            if (!isCollision)
+            {
+                Console.WriteLine("No collision detected.");
             }
         }
 
-        private bool IsCollidingWithPlayer(Player player)
+        private bool IsCollidingWithPlayer(Line blade, Player player)
         {
-            Vec2 centerPoint = new Vec2(x + width / 2, y + height / 2);
-            float radius = width / 2;
-            Vec2 endPoint = centerPoint + Vec2.GetUnitVectorDeg(currentAngle) * radius;
-
-            return LineIntersectsCircle(centerPoint, endPoint, player.Collider.Position, 32);
+            bool collision = LineIntersectsCircle(blade.StartPosition, blade.EndPosition, player.Collider.Position, 32);
+            Console.WriteLine($"Checking collision for blade starting at {blade.StartPosition} to {blade.EndPosition} with player at {player.Collider.Position}: {collision}");
+            return collision;
         }
+
+        private void ApplyForceToPlayer(Player player)
+        {
+            Vec2 forceDirection = Vec2.GetUnitVectorDeg(currentAngle + 90);
+            float forceMagnitude = GameData.windmillForceMagnitude;
+            player.Collider.AddVelocity(forceDirection * forceMagnitude);
+            Console.WriteLine($"Applying force: {forceDirection * forceMagnitude}");
+        }
+
 
         private bool LineIntersectsCircle(Vec2 lineStart, Vec2 lineEnd, Vec2 circleCenter, float circleRadius)
         {
@@ -83,13 +115,6 @@ namespace GXPEngine.Physics.PhysicsObjects
                 }
                 return false;
             }
-        }
-
-        private void ApplyForceToPlayer(Player player)
-        {
-            Vec2 forceDirection = Vec2.GetUnitVectorDeg(currentAngle + 90);
-            float forceMagnitude = GameData.windmillForceMagnitude;
-            player.Collider.AddVelocity(forceDirection * forceMagnitude);
         }
     }
 }
