@@ -10,9 +10,12 @@ namespace GXPEngine.Physics.PhysicsObjects
         float rotationSpeed = -GameData.windmillSpinSpeed; // Negative for clockwise rotation
         float currentAngle = 0f;
 
-        public Windmill() : base("colors.png")
+        public Windmill() : base("windmill_2.png")
         {
-            visible = false;
+            SetOrigin(width / 2, height / 2); // Set the origin to the center of the sprite
+            x += width / 2; // Offset position to the right
+            y += height / 2; // Offset position down
+            visible = true;
             collider.isTrigger = true;
             InitializeBlades();
         }
@@ -32,7 +35,7 @@ namespace GXPEngine.Physics.PhysicsObjects
             float deltaTime = Time.deltaTime;
             RotateWindmill(deltaTime);
             CheckCollisionWithPlayer();
-            if (GameData.ShowColliders) Gizmos.DrawRectangle(x + width / 2, y + height / 2, width, height, color: GameData.ColliderColor);
+            if (GameData.ShowColliders) Gizmos.DrawRectangle(x, y, width, height, color: GameData.ColliderColor);
         }
 
         private void RotateWindmill(float deltaTime)
@@ -40,7 +43,11 @@ namespace GXPEngine.Physics.PhysicsObjects
             currentAngle += rotationSpeed * deltaTime / 1000;
             currentAngle %= 360;
 
-            Vec2 centerPoint = new Vec2(x + width / 2, y + height / 2);
+            // Update the rotation of the Windmill sprite itself
+            rotation += rotationSpeed * deltaTime / 1000;
+            rotation %= 360;
+
+            Vec2 centerPoint = new Vec2(x, y);
             float radius = width / 2;
 
             for (int i = 0; i < windmillBlades.Length; i++)
@@ -51,7 +58,6 @@ namespace GXPEngine.Physics.PhysicsObjects
                 windmillBlades[i].CallCollider(centerPoint, endPoint);
             }
         }
-
 
         private void CheckCollisionWithPlayer()
         {
@@ -85,7 +91,6 @@ namespace GXPEngine.Physics.PhysicsObjects
             player.Collider.AddVelocity(forceDirection * forceMagnitude);
             Console.WriteLine($"Applying force: {forceDirection * forceMagnitude}");
         }
-
 
         private bool LineIntersectsCircle(Vec2 lineStart, Vec2 lineEnd, Vec2 circleCenter, float circleRadius)
         {
