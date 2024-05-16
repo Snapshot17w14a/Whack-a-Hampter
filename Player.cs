@@ -8,6 +8,7 @@ namespace GXPEngine
     {
         private readonly Arrow _shootStrengthArrow;
         private bool _isPlayerMoving = false;
+        private bool _wasSFXPlayed = false;
         private Vec2 _hitPosition;
 
         public Player(float x = 0, float y = 0) : base(16, "hampter_shiit.png", 11, 1)
@@ -45,15 +46,11 @@ namespace GXPEngine
                 {
                     Collider.SetVelocity(mouseVector.Normalized() * (GameData.PlayerMaxHitStrength * strength));
                     _hitPosition = Collider.Position;
+                    GameData.SoundHandler.PlaySound("HitHampter");
                     ((TiledScene)SceneManager.CurrentScene).hitCount++;
                 }
             }
             else _shootStrengthArrow.vector = Vec2.zero;
-        }
-
-        private void HandleCollision()
-        {
-
         }
 
         private void AimTowardsMouse()
@@ -78,8 +75,10 @@ namespace GXPEngine
         private void SetLocalSlowdown(Vec2 position)
         {
             var currentTile = GameData.TileValues[Mathf.Clamp((int)(position.x / 32f), 0, GameData.TileValues.GetLength(0) - 1), Mathf.Clamp((int)(position.y / 32f), 0, GameData.TileValues.GetLength(1) - 1)];
-            if (GameData.TileSlowdownValues.ContainsKey(currentTile)) Collider.SetSlowdownFactor(GameData.TileSlowdownValues[currentTile]);
-            else Collider.SetSlowdownFactor(0.98f);
+            Collider.SetSlowdownFactor(GameData.TileSlowdownValues.ContainsKey(currentTile) ? GameData.TileSlowdownValues[currentTile] : 0.98f);
+            if(!_wasSFXPlayed && Collider.SlowdownFactor == 0.8f) { GameData.SoundHandler.PlaySound("MudSFX"); _wasSFXPlayed = true; }
+            else if(!_wasSFXPlayed && Collider.SlowdownFactor == 0.5f) { GameData.SoundHandler.PlaySound("WaterSFX"); _wasSFXPlayed = true; }
+            else if (_wasSFXPlayed && Collider.SlowdownFactor == 0.98f) _wasSFXPlayed = false;
         }
 
         public void ResetPosition() 

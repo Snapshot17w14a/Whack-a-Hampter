@@ -13,12 +13,13 @@ class MyGame : Game {
 		_mouse.SetOrigin(_mouse.width / 2, _mouse.height / 2);
 		ShowMouse(GameData.ShowMouse);
 		SceneManager.LoadScene(GameData.SceneToLoad);
-	}
+		GameData.SoundHandler.PlaySound("BGM", 2);
+    }
 
 	public static void Main (string[] args)
 	{
 		new MyGame().Start();
-	}
+    }
 
 	private void Update()
 	{

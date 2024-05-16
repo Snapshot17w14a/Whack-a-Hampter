@@ -42,6 +42,8 @@ namespace GXPEngine
         public static readonly int TileHeight = 64;
         public static readonly int TileWidth = 64;
 
+        public static readonly GameSoundHandler SoundHandler = new GameSoundHandler();
+
         //Physics objects
 
         public static readonly float windmillSpinSpeed = 90f;

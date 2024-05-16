@@ -195,6 +195,7 @@
     <Compile Include="Player.cs" />
     <Compile Include="Scenes\IntermediateScene.cs" />
     <Compile Include="Scenes\TiledScene.cs" />
+    <Compile Include="GameSoundHandler.cs" />
     <Compile Include="Tile.cs" />
     <Compile Include="Physics\PhysicsObjects\WindCurrent.cs" />
   </ItemGroup>
