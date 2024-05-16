@@ -60,8 +60,7 @@
     <Compile Include="..\GXPEngine2023b\GXPEngine\GameObject.cs">
       <Link>GXPEngine\GameObject.cs</Link>
     </Compile>
-    <Compile Include="..\GXPEngine2023b\GXPEngine\Sound.cs">
-      <Link>GXPEngine\Sound.cs</Link>
+    <Compile Include="GXPEngine\Sound.cs">
     </Compile>
     <Compile Include="..\GXPEngine2023b\GXPEngine\SoundChannel.cs">
       <Link>GXPEngine\SoundChannel.cs</Link>
@@ -78,8 +77,7 @@
     <Compile Include="..\GXPEngine2023b\GXPEngine\Core\Collider.cs">
       <Link>GXPEngine\Core\Collider.cs</Link>
     </Compile>
-    <Compile Include="..\GXPEngine2023b\GXPEngine\Core\GLContext.cs">
-      <Link>GXPEngine\Core\GLContext.cs</Link>
+    <Compile Include="GXPEngine\Core\GLContext.cs">
     </Compile>
     <Compile Include="..\GXPEngine2023b\GXPEngine\Core\Rectangle.cs">
       <Link>GXPEngine\Core\Rectangle.cs</Link>
