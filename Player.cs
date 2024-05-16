@@ -1,6 +1,7 @@
 using GXPEngine.SceneManagement;
 using GXPEngine.Physics.Shapes;
 using GXPEngine.Scenes;
+using System;
 
 namespace GXPEngine
 {
@@ -9,7 +10,7 @@ namespace GXPEngine
         private readonly Arrow _shootStrengthArrow;
         private bool _isPlayerMoving = false;
         private bool _wasSFXPlayed = false;
-        private Vec2 _hitPosition;
+        private Vec2 _startPosition;
 
         public Player(float x = 0, float y = 0) : base(16, "hampter_shiit.png", 11, 1)
         {
@@ -17,6 +18,8 @@ namespace GXPEngine
             Collider.SetPosition(new Vec2(x, y));
             Collider.LoseVelocityOverTime = true;
             AddChild(_shootStrengthArrow = new Arrow(Collider.Position, Vec2.zero, 1, pLineWidth: 3));
+            _startPosition = new Vec2(x, y - GameData.PlayerSpawnYOffset);
+            Collider.OnCollision += (collider) => GameData.SoundHandler.PlaySound("HitWall");
         }
 
         private void Update()
@@ -25,6 +28,7 @@ namespace GXPEngine
             {
                 _isPlayerMoving = !Vec2.IsZero(Collider.Velocity, GameData.PlayerIsZeroThreshold);
                 SetLocalSlowdown(Collider.Position);
+                //CheckWindmillCollision();
                 CheckMousePosition();
                 UpdateArrows();
                 AimTowardsMouse();
@@ -45,7 +49,6 @@ namespace GXPEngine
                 if (Input.GetMouseButtonDown(0))
                 {
                     Collider.SetVelocity(mouseVector.Normalized() * (GameData.PlayerMaxHitStrength * strength));
-                    _hitPosition = Collider.Position;
                     GameData.SoundHandler.PlaySound("HitHampter");
                     ((TiledScene)SceneManager.CurrentScene).hitCount++;
                 }
@@ -81,9 +84,21 @@ namespace GXPEngine
             else if (_wasSFXPlayed && Collider.SlowdownFactor == 0.98f) _wasSFXPlayed = false;
         }
 
+        //private void CheckWindmillCollision()
+        //{
+        //    foreach (var blade in GameData.WindmillBlades)
+        //    {
+        //        var data = Collider.GetCollision(blade);
+        //        Console.WriteLine(data);
+        //        if (data == null) continue;
+        //        Collider.ReflectVelocity(data.normal);
+        //        Collider.AddVelocity(Collider.Forward * GameData.windmillForceMagnitude);
+        //    }
+        //}
+
         public void ResetPosition() 
         {
-            Collider.SetPosition(_hitPosition);
+            Collider.SetPosition(_startPosition);
             Collider.SetVelocity(Vec2.zero);
         }
     }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="left-up" width="30" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="5" nextobjectid="4">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="left-up" width="30" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="5" nextobjectid="5">
  <tileset firstgid="1" name="Backyard" tilewidth="32" tileheight="32" tilecount="81" columns="9">
   <image source="../BackyardTilemap.png" width="288" height="288"/>
   <tile id="19">
@@ -166,5 +166,6 @@
  <objectgroup id="3" name="Object Layer 1">
   <object id="1" type="Player" x="128" y="288" width="32" height="32"/>
   <object id="3" type="Windmill" x="576" y="512" width="133.2" height="129.2"/>
+  <object id="4" type="Windmill" x="176.067" y="336.067" width="133.2" height="129.2"/>
  </objectgroup>
 </map>

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using GXPEngine.SceneManagement;
+using GXPEngine.Scenes;
 
 namespace GXPEngine.Physics
 {
@@ -26,11 +27,12 @@ namespace GXPEngine.Physics
         /// <summary>Call every frame to update the wind currents and apply the wind force to the player</summary>
         public static void Update()
         {
-            if(_flag.HitTest(GameData.ActivePlayer))
+            if(_flag.HitTest(GameData.ActivePlayer) && GameData.ActivePlayer.Collider.IsActive)
             {
                 GameData.ActivePlayer.Collider.IsActive = false;
                 GameData.ActivePlayer.Collider.SetVelocity(Vec2.zero);
-                SceneManager.LoadScene(GameData.NextScene);
+                GameData.SoundHandler.PlaySound("LevelPass");
+                ((TiledScene)SceneManager.CurrentScene).HitFlag();
             }
 
             if (!_isPlayerInWindCurrent)
@@ -63,13 +65,22 @@ namespace GXPEngine.Physics
             {
                 if (GameData.ActivePlayer.collider.TimeOfImpact(bush.collider, GameData.ActivePlayer.Collider.Velocity.x, GameData.ActivePlayer.Collider.Velocity.y, out Core.Vector2 normal) > 1) continue;
                 if (GameData.ActivePlayer.Collider.Velocity.Length() >= GameData.BushRequiredVelocity) continue;
-                else GameData.ActivePlayer.Collider.ReflectVelocity(Vec2.ToVec2(normal));
+                else
+                {
+                    GameData.ActivePlayer.Collider.ReflectVelocity(Vec2.ToVec2(normal));
+                    GameData.SoundHandler.PlaySound("BushSFX");
+                }
             }
 
             foreach (var waterTile in _waterTiles)
             {
                 if (!waterTile.HitTest(GameData.ActivePlayer)) continue;
-                else if (Vec2.IsZero(GameData.ActivePlayer.Collider.Velocity, GameData.PlayerIsZeroThreshold)) GameData.ActivePlayer.ResetPosition();
+                else if (Vec2.IsZero(GameData.ActivePlayer.Collider.Velocity, GameData.PlayerIsZeroThreshold))
+                {
+                    GameData.ActivePlayer.ResetPosition();
+                    ((TiledScene)SceneManager.CurrentScene).hitCount = 0;
+                    GameData.SoundHandler.PlaySound("WaterSFX");
+                }
             }
         }
 

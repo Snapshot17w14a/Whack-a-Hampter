@@ -11,8 +11,8 @@ namespace GXPEngine.Physics.Colliders
         public Vec2 StartPosition { get; protected set; }
 
 
-        private CircleCollider _startCap;
-        private CircleCollider _endCap;
+        private readonly CircleCollider _startCap;
+        private readonly CircleCollider _endCap;
 
         public LineSegmentCollider(GameObject parent, Vec2 position, Vec2 startPosition, Vec2 endPosition) : base(parent, position, ColliderType.LineSegment)
         {
@@ -29,6 +29,20 @@ namespace GXPEngine.Physics.Colliders
             EndPosition = endPosition;
             _startCap.SetPosition(startPosition);
             _endCap.SetPosition(endPosition);
+        }
+
+        public override void AddIgnoredTag(string tag)
+        {
+            base.AddIgnoredTag(tag);
+            _startCap.AddIgnoredTag(tag);
+            _endCap.AddIgnoredTag(tag);
+        }
+
+        public override void SetTag(string tag)
+        {
+            base.SetTag(tag);
+            _startCap.SetTag(tag);
+            _endCap.SetTag(tag);
         }
 
         public override CollisionInfo GetCollision(Collider other) => throw new Exception("Linesegment collider GetCollision() function should not be called as it is stationary");

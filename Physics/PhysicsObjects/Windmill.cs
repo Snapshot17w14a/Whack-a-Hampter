@@ -1,11 +1,12 @@
 ﻿using System;
+using GXPEngine.Physics.Colliders;
 using GXPEngine.SceneManagement;
 
 namespace GXPEngine.Physics.PhysicsObjects
 {
     internal class Windmill : Sprite
     {
-        Line[] windmillBlades;
+        Line[] windmillBlades = new Line[4];
         float rotationSpeed = -GameData.windmillSpinSpeed; // Negative for clockwise rotation
         float currentAngle = 0f;
 
@@ -21,18 +22,18 @@ namespace GXPEngine.Physics.PhysicsObjects
 
         private void InitializeBlades()
         {
-            windmillBlades = new Line[4]; // Adjust number of blades here
             for (int i = 0; i < windmillBlades.Length; i++)
             {
-                windmillBlades[i] = new Line(Vec2.zero, Vec2.zero);
+                var line = new Line(Vec2.zero, Vec2.zero, addToList: false);
+                windmillBlades[i] = line;
+                //GameData.WindmillBlades.Add((LineSegmentCollider)line.Collider);
                 SceneManager.CurrentScene.AddChild(windmillBlades[i]);
             }
         }
 
         private void Update()
         {
-            float deltaTime = Time.deltaTime;
-            RotateWindmill(deltaTime);
+            RotateWindmill(Time.deltaTime);
             CheckCollisionWithPlayer();
             if (GameData.ShowColliders) Gizmos.DrawRectangle(x, y, width, height, color: GameData.ColliderColor);
         }
@@ -61,12 +62,10 @@ namespace GXPEngine.Physics.PhysicsObjects
         private void CheckCollisionWithPlayer()
         {
             Player player = SceneManager.CurrentScene.FindObjectOfType<Player>();
-            bool isCollision = false;
             foreach (var blade in windmillBlades)
             {
                 if (player != null && IsCollidingWithPlayer(blade, player))
                 {
-                    isCollision = true;
                     ApplyForceToPlayer(player);
                 }
             }
@@ -107,11 +106,7 @@ namespace GXPEngine.Physics.PhysicsObjects
                 float t1 = (-b - discriminant) / (2 * a);
                 float t2 = (-b + discriminant) / (2 * a);
 
-                if (t1 >= 0 && t1 <= 1 || t2 >= 0 && t2 <= 1)
-                {
-                    return true;
-                }
-                return false;
+                return t1 >= 0 && t1 <= 1 || t2 >= 0 && t2 <= 1;
             }
         }
     }

@@ -13,6 +13,7 @@ namespace GXPEngine.Physics
         public Vec2 OldPosition { get; protected set; } = Vec2.zero;
         public Vec2 Position { get; protected set; } = Vec2.zero;
         public Vec2 Velocity { get => velocity; protected set => velocity = value; }
+        public Vec2 Forward => velocity.Normalized();
 
         protected Vec2 velocity = Vec2.zero;
         
@@ -80,10 +81,10 @@ namespace GXPEngine.Physics
         public void SetMass(float mass) => Mass = mass;
 
         /// <summary>Add a tag to the list of ignored tags.</summary>
-        public void AddIgnoredTag(string tag) => IgnoredTags.Add(tag);
+        public virtual void AddIgnoredTag(string tag) => IgnoredTags.Add(tag);
 
         /// <summary>Set the tag of the collider. This will add the tag to the ignored tags list.</summary>
-        public void SetTag(string tag) => Tag = tag;
+        public virtual void SetTag(string tag) => Tag = tag;
         public void ReflectVelocity(Vec2 normal) => velocity.Reflect(normal, Bounciness);
 
         public abstract CollisionInfo GetCollision(Collider other);

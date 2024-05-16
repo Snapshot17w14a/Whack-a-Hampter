@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using GXPEngine.Physics.Colliders;
 using GXPEngine.SceneManagement;
 using GXPEngine.Scenes;
 
@@ -24,6 +25,8 @@ namespace GXPEngine
 
         //Scene data
         public static readonly float UIScale = 0.5f; // The scale of the UI
+        public static readonly float FadeSpeed = 4f; // The speed of the fade in/out effect
+        public static readonly float TransitionWaitTime = 2f; // The time to wait before transitioning to the next scene in seconds
 
         //Dynamic scene data - dont change this
         public static string NextScene = "Level1"; // The next scene to load
@@ -50,15 +53,19 @@ namespace GXPEngine
         public static readonly GameSoundHandler SoundHandler = new GameSoundHandler();
 
         //Physics objects
+        //public static readonly List<LineSegmentCollider> WindmillBlades = new List<LineSegmentCollider>();
         public static readonly float windmillSpinSpeed = 90f;
-        public static readonly float windmillForceMagnitude = 1f;
+        public static readonly float windmillForceMagnitude = 0.2f;
 
         public static void Initialize() //This method is called once when the game starts, use it to create scenes and add them to the SceneManager
         {
             SceneManager.AddScene("Title", SceneManager.CreateScene(typeof(TitleScene)));
             SceneManager.AddScene("Level1", SceneManager.CreateScene(typeof(TiledScene), "Maps/Level1.tmx"));
             SceneManager.AddScene("Level2", SceneManager.CreateScene(typeof(TiledScene), "Maps/Level2.tmx"));
-            SceneManager.AddScene("Level3", SceneManager.CreateScene(typeof(TiledScene), "Maps/Level3.tmx"));
+            SceneManager.AddScene("Level3", SceneManager.CreateScene(typeof(TiledScene), "Maps/Level3.tmx", "Title"));
+            SceneManager.AddScene("TransitionLevel1", SceneManager.CreateScene(typeof(TransitionScene), "Level2"));
+            SceneManager.AddScene("TransitionLevel2", SceneManager.CreateScene(typeof(TransitionScene), "Level3"));
+            SceneManager.AddScene("TransitionLevel3", SceneManager.CreateScene(typeof(TransitionScene), "Title"));
             SceneManager.PrintScenes();
         }
 

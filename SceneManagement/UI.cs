@@ -11,7 +11,7 @@ namespace GXPEngine.SceneManagement
         private Alignment _verticalAlignment;
 
         public EasyDraw Canvas { get; }
-        private Color ClearColor { get; set; } = Color.Transparent;
+        public Color ClearColor { get; private set; } = Color.Transparent;
         public List<TextObject> TextObjects { get; private set; } = new List<TextObject>();
         private List<Button> Buttons { get; } = new List<Button>();
         public bool IsFadePlaying { get; private set; } = true;
@@ -21,7 +21,7 @@ namespace GXPEngine.SceneManagement
         public EasyDraw Overlay { get; private set; }
         private Font TextObjectFont { get; set; }
 
-        ///<summary>Add method to be called every frame for the scene</summary>
+        ///<summary>Add method to be called every frame by the scene</summary>
         public Action SceneUpdate;
 
         public enum Alignment
@@ -139,7 +139,7 @@ namespace GXPEngine.SceneManagement
         /// <param name="green">The green value of the color from 0-255</param>
         /// <param name="blue">The blue value of the color from 0-255</param>
         /// <param name="alpha">The alpha value of the color from 0-255</param>
-        public void SetCanvasClearColor(int red, int green, int blue, int alpha) => ClearColor = Color.FromArgb(alpha, red, green, blue);
+        public void SetCanvasClearColor(int red, int green, int blue, int alpha) => ClearColor = Color.FromArgb(Mathf.Clamp(alpha, 0, 255), red, green, blue);
 
         public void SetTextObjectFont(string fontName, int size, FontStyle fontStyle = FontStyle.Regular) => TextObjectFont = Utils.LoadFont(fontName, size, fontStyle);
 
@@ -174,6 +174,8 @@ namespace GXPEngine.SceneManagement
             Overlay?.Destroy();
             Overlay = null;
         }
+
+        public void SetAlpha(int alpha) => Canvas.alpha = alpha;
 
         private void SetCanvasAlignment()
         {
