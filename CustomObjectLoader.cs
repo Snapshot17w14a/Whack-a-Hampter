@@ -1,6 +1,7 @@
 ﻿using TiledMapParser;
 using GXPEngine.Physics;
 using GXPEngine.Physics.PhysicsObjects;
+using GXPEngine.SceneManagement;
 
 namespace GXPEngine
 {
@@ -20,7 +21,7 @@ namespace GXPEngine
                     wind.width = (int)obj.Width;
                     wind.height = (int)obj.Height;
                     PhysicsObjectManager.AddWindCurrent(wind);
-                    SceneManagement.SceneManager.CurrentScene.AddChild(wind);
+                    SceneManager.CurrentScene.AddChild(wind);
                     break;
 
                 case "Windmill":
@@ -28,14 +29,14 @@ namespace GXPEngine
                     windmill.SetXY(obj.X, obj.Y);
                     windmill.width = (int)obj.Width;
                     windmill.height = (int)obj.Height;
-                    SceneManager.SceneManager.CurrentScene.AddChild(windmill);
+                    SceneManager.CurrentScene.AddChild(windmill);
                     break;
 
                 case "Player":
                     Player player = new Player(obj.X, obj.Y + GameData.PlayerSpawnYOffset);
                     player.Collider.IsActive = false;
                     GameData.ActivePlayer = player;
-                    SceneManagement.SceneManager.CurrentScene.AddChild(player);
+                    SceneManager.CurrentScene.AddChild(player);
                     break;
 
                 case "Fire":
@@ -44,7 +45,7 @@ namespace GXPEngine
                     fire.width = (int)obj.Width;
                     fire.height = (int)obj.Height;
                     PhysicsObjectManager.AddFire(fire);
-                    SceneManagement.SceneManager.CurrentScene.AddChild(fire);
+                    SceneManager.CurrentScene.AddChild(fire);
                     break;
             }
         }

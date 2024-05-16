@@ -114,7 +114,7 @@ namespace GXPEngine.Scenes
         {
             TiledLoader loader = new TiledLoader(_levelToLoad, addColliders: false, defaultOriginX: 0, defaultOriginY: 0);
             CustomObjectLoader.Initialize(loader);
-            loader.AddManualType("WindCurrent", "Player", "Fire");
+            loader.AddManualType("WindCurrent", "Player", "Fire", "Windmill");
             loader.autoInstance = true;
             loader.LoadTileLayers();
             loader.LoadObjectGroups();

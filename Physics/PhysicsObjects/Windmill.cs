@@ -1,6 +1,5 @@
 ﻿using System;
-using GXPEngine.SceneManager;
-using GXPEngine.Physics.PhysicsObjects;
+using GXPEngine.SceneManagement;
 
 namespace GXPEngine.Physics.PhysicsObjects
 {
@@ -26,7 +25,7 @@ namespace GXPEngine.Physics.PhysicsObjects
             for (int i = 0; i < windmillBlades.Length; i++)
             {
                 windmillBlades[i] = new Line(Vec2.zero, Vec2.zero);
-                SceneManager.SceneManager.CurrentScene.AddChild(windmillBlades[i]);
+                SceneManager.CurrentScene.AddChild(windmillBlades[i]);
             }
         }
 
@@ -61,7 +60,7 @@ namespace GXPEngine.Physics.PhysicsObjects
 
         private void CheckCollisionWithPlayer()
         {
-            Player player = SceneManager.SceneManager.CurrentScene.FindObjectOfType<Player>();
+            Player player = SceneManager.CurrentScene.FindObjectOfType<Player>();
             bool isCollision = false;
             foreach (var blade in windmillBlades)
             {

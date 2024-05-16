@@ -47,7 +47,6 @@ namespace GXPEngine
         public static readonly float windmillSpinSpeed = 90f;
         public static readonly float windmillForceMagnitude = 1f;
 
-        public static Player ActivePlayer;
         public static void Initialize() //This method is called once when the game starts, use it to create scenes and add them to the SceneManager
         {
             SceneManager.AddScene("Level1", SceneManager.CreateScene(typeof(TiledScene), "Maps/Level1.tmx"));
