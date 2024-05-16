@@ -56,6 +56,7 @@ namespace GXPEngine.Physics
                 if (other != collider)
                 {
                     if(IsTagIgnored(collider, other)) continue;
+                    Game.main.HitWallSFX();
                     CollisionInfo collisionInfo = collider.GetCollision(other);
                     if (earliestCollision == null || (collisionInfo != null && earliestCollision.timeOfImpact > collisionInfo.timeOfImpact)) earliestCollision = collisionInfo;
                 }

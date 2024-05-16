@@ -48,6 +48,7 @@ namespace GXPEngine
                     Collider.SetVelocity(mouseVector.Normalized() * (GameData.PlayerMaxHitStrength * strength));
                     _hitPosition = Collider.Position;
                     ((TiledScene)SceneManager.CurrentScene).hitCount++;
+                    ((MyGame)game).HitHampterSFX();
                 }
             }
             else _shootStrengthArrow.vector = Vec2.zero;
@@ -80,8 +81,14 @@ namespace GXPEngine
         private void SetLocalSlowdown(Vec2 position)
         {
             var currentTile = GameData.TileValues[Mathf.Clamp((int)(position.x / 32f), 0, GameData.TileValues.GetLength(0) - 1), Mathf.Clamp((int)(position.y / 32f), 0, GameData.TileValues.GetLength(1) - 1)];
-            if (GameData.TileSlowdownValues.ContainsKey(currentTile)) Collider.SetSlowdownFactor(GameData.TileSlowdownValues[currentTile]);
-            else Collider.SetSlowdownFactor(0.98f);
+            if (GameData.TileSlowdownValues.ContainsKey(currentTile)) {
+                Collider.SetSlowdownFactor(GameData.TileSlowdownValues[currentTile]);
+            }
+            else
+            {
+                Collider.SetSlowdownFactor(0.98f);
+                ((MyGame)game).MudSFX();
+            }
         }
 
         public void ResetPosition() 
