@@ -1,3 +1,5 @@
+using System;
+using GXPEngine.Physics.PhysicsObjects;
 using GXPEngine.SceneManagement;
 using GXPEngine.Physics.Shapes;
 using GXPEngine.Scenes;
@@ -49,6 +51,11 @@ namespace GXPEngine
                 }
             }
             else _shootStrengthArrow.vector = Vec2.zero;
+        }
+
+        private void HandleCollision()
+        {
+
         }
 
         private void AimTowardsMouse()

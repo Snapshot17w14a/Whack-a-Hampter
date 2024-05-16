@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -158,6 +158,7 @@
       <Link>GXPEngine\SoLoud\SoloudSoundSystem.cs</Link>
     </Compile>
     <Compile Include="Physics\PhysicsObjectManager.cs" />
+    <Compile Include="Physics\PhysicsObjects\Windmill.cs" />
     <Compile Include="Physics\PhysicsObjects\Fire.cs" />
     <Compile Include="Physics\Shapes\AnimatedCircle.cs" />
     <Compile Include="SceneManagement\SceneManager.cs">

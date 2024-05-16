@@ -1,5 +1,6 @@
 ﻿using TiledMapParser;
 using GXPEngine.Physics;
+using GXPEngine.Physics.PhysicsObjects;
 
 namespace GXPEngine
 {
@@ -20,6 +21,14 @@ namespace GXPEngine
                     wind.height = (int)obj.Height;
                     PhysicsObjectManager.AddWindCurrent(wind);
                     SceneManagement.SceneManager.CurrentScene.AddChild(wind);
+                    break;
+
+                case "Windmill":
+                    Windmill windmill = new Windmill();
+                    windmill.SetXY(obj.X, obj.Y);
+                    windmill.width = (int)obj.Width;
+                    windmill.height = (int)obj.Height;
+                    SceneManager.SceneManager.CurrentScene.AddChild(windmill);
                     break;
 
                 case "Player":
