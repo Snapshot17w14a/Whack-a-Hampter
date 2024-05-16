@@ -40,7 +40,7 @@ namespace GXPEngine.Physics
             foreach (var fire in _fires)
             {
                 if (!fire.HitTest(GameData.ActivePlayer)) continue;
-                GameData.ActivePlayer.DeathXD();
+                GameData.ActivePlayer.ResetPosition();
                 break;
             }
         }

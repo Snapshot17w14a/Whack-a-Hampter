@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GXPEngine.SceneManager.Interactables
+namespace GXPEngine.SceneManagement.Interactables
 {
     internal class Button : Sprite
     {

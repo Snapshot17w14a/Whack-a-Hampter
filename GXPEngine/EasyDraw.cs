@@ -366,7 +366,7 @@ namespace GXPEngine
 		}
 
         /// <summary>
-        /// Returns the width and height in pixels of a string, when rendered with the current font.
+        /// Returns the width and height in pixels of a string, when rendered with the given font.
         /// </summary>
         /// <param name="text">input string</param>
         /// <param name="width">width in pixels</param>

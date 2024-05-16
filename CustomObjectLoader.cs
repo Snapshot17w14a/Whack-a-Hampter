@@ -19,14 +19,14 @@ namespace GXPEngine
                     wind.width = (int)obj.Width;
                     wind.height = (int)obj.Height;
                     PhysicsObjectManager.AddWindCurrent(wind);
-                    SceneManager.SceneManager.CurrentScene.AddChild(wind);
+                    SceneManagement.SceneManager.CurrentScene.AddChild(wind);
                     break;
 
                 case "Player":
                     Player player = new Player(obj.X, obj.Y + GameData.PlayerSpawnYOffset);
                     player.Collider.IsActive = false;
                     GameData.ActivePlayer = player;
-                    SceneManager.SceneManager.CurrentScene.AddChild(player);
+                    SceneManagement.SceneManager.CurrentScene.AddChild(player);
                     break;
 
                 case "Fire":
@@ -35,7 +35,7 @@ namespace GXPEngine
                     fire.width = (int)obj.Width;
                     fire.height = (int)obj.Height;
                     PhysicsObjectManager.AddFire(fire);
-                    SceneManager.SceneManager.CurrentScene.AddChild(fire);
+                    SceneManagement.SceneManager.CurrentScene.AddChild(fire);
                     break;
             }
         }

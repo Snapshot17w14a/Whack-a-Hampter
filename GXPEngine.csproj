@@ -160,13 +160,13 @@
     <Compile Include="Physics\PhysicsObjectManager.cs" />
     <Compile Include="Physics\PhysicsObjects\Fire.cs" />
     <Compile Include="Physics\Shapes\AnimatedCircle.cs" />
-    <Compile Include="SceneManager\SceneManager.cs">
+    <Compile Include="SceneManagement\SceneManager.cs">
     </Compile>
-    <Compile Include="SceneManager\Scene.cs">
+    <Compile Include="SceneManagement\Scene.cs">
     </Compile>
-    <Compile Include="SceneManager\UI.cs"/>
-    <Compile Include="SceneManager\TextObject.cs"/>
-    <Compile Include="SceneManager\Interactables\Button.cs"/>
+    <Compile Include="SceneManagement\UI.cs" />
+    <Compile Include="SceneManagement\TextObject.cs" />
+    <Compile Include="SceneManagement\Interactables\Button.cs" />
     <Compile Include="Physics\Collider.cs">
     </Compile>
     <Compile Include="Physics\CollisionInfo.cs">
@@ -191,9 +191,8 @@
     </Compile>
     <Compile Include="Physics\Shapes\Line.cs">
     </Compile>
-    <Compile Include="Scenes\GameScene.cs" />
     <Compile Include="Player.cs" />
-    <Compile Include="Scenes\TiledTestScene.cs" />
+    <Compile Include="Scenes\TiledScene.cs" />
     <Compile Include="Tile.cs" />
     <Compile Include="Physics\PhysicsObjects\WindCurrent.cs" />
   </ItemGroup>

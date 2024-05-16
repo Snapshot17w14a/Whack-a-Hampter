@@ -1,6 +1,6 @@
-using System;
-using System.Collections.Generic;
+using GXPEngine.SceneManagement;
 using GXPEngine.Physics.Shapes;
+using GXPEngine.Scenes;
 
 namespace GXPEngine
 {
@@ -8,6 +8,7 @@ namespace GXPEngine
     {
         private readonly Arrow _shootStrengthArrow;
         private bool _isPlayerMoving = false;
+        private Vec2 _hitPosition;
 
         public Player(float x = 0, float y = 0) : base(16, "hampter_shiit.png", 11, 1)
         {
@@ -40,7 +41,12 @@ namespace GXPEngine
                     Mathf.LerpColor(GameData.ArrowStartColor, GameData.ArrowMedianColor, strength * 2) : strength <= 1f ?
                     Mathf.LerpColor(GameData.ArrowMedianColor, GameData.ArrowEndColor, (strength - 0.5f) * 2) :
                     0xffffffff;
-                if(Input.GetMouseButtonDown(0)) Collider.SetVelocity(mouseVector.Normalized() * (GameData.PlayerMaxHitStrength * strength));
+                if (Input.GetMouseButtonDown(0))
+                {
+                    Collider.SetVelocity(mouseVector.Normalized() * (GameData.PlayerMaxHitStrength * strength));
+                    _hitPosition = Collider.Position;
+                    ((TiledScene)SceneManager.CurrentScene).hitCount++;
+                }
             }
             else _shootStrengthArrow.vector = Vec2.zero;
         }
@@ -71,9 +77,10 @@ namespace GXPEngine
             else Collider.SetSlowdownFactor(0.98f);
         }
 
-        public void DeathXD() 
+        public void ResetPosition() 
         {
-            Environment.Exit(0);
+            Collider.SetPosition(_hitPosition);
+            Collider.SetVelocity(Vec2.zero);
         }
     }
 }

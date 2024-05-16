@@ -1,9 +1,9 @@
-﻿using GXPEngine.SceneManager.Interactables;
+﻿using GXPEngine.SceneManagement.Interactables;
 using System.Collections.Generic;
 using System.Drawing;
 using System;
 
-namespace GXPEngine.SceneManager
+namespace GXPEngine.SceneManagement
 {
     internal class UI : GameObject
     {
@@ -30,6 +30,7 @@ namespace GXPEngine.SceneManager
             CENTER,
             MAX
         }
+
         public UI(int width, int height)
         {
             AddChild(Canvas = new EasyDraw(width, height));
@@ -140,12 +141,21 @@ namespace GXPEngine.SceneManager
         /// <param name="alpha">The alpha value of the color from 0-255</param>
         public void SetCanvasClearColor(int red, int green, int blue, int alpha) => ClearColor = Color.FromArgb(alpha, red, green, blue);
 
-        public void SetTextObjectFont(string fontName, int size) => TextObjectFont = Utils.LoadFont(fontName, size);
+        public void SetTextObjectFont(string fontName, int size, FontStyle fontStyle = FontStyle.Regular) => TextObjectFont = Utils.LoadFont(fontName, size, fontStyle);
 
-        public TextObject TextObject(string text, int x, int y, Color col)
+        public TextObject TextObject(string text, int x, int y, Color col, Font font = null)
         {
             Canvas.TextDimensions(text, out float width, out float height, TextObjectFont);
-            var obj = new TextObject(text, Canvas.HorizontalTextAlign, Canvas.VerticalShapeAlign, (int)width, (int)height, TextObjectFont, col) { x = x, y = y};
+            var obj = new TextObject(text, Canvas.HorizontalTextAlign, Canvas.VerticalShapeAlign, (int)width, (int)height, font ?? TextObjectFont, col) { x = x, y = y};
+            TextObjects.Add(obj);
+            AddChild(obj);
+            SceneUpdate += obj.Draw;
+            return obj;
+        }
+
+        public TextObject TextObject(string text, int x, int y, Color col, int width, int height, Font font = null)
+        {
+            var obj = new TextObject(text, Canvas.HorizontalTextAlign, Canvas.VerticalShapeAlign, width, height, font ?? TextObjectFont, col) { x = x, y = y };
             TextObjects.Add(obj);
             AddChild(obj);
             SceneUpdate += obj.Draw;

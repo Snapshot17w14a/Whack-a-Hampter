@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using GXPEngine.SceneManagement;
+using GXPEngine.Scenes;
 
 namespace GXPEngine
 {
@@ -18,19 +20,37 @@ namespace GXPEngine
 
         public static readonly float FireSpeed = 0.1f; // The speed of the fire animation in units per frame
 
+        public static Player ActivePlayer;
+
         //Scene data
         public static readonly float UIScale = 0.5f; // The scale of the UI
 
+        //Level data
+        public static readonly int[] MaxHits = { 15, 0, 0 }; // The maximum amount of hits for each level
+
+        //Dynamic level data - dont change this
         public static uint[,] TileValues;
         public static Dictionary<uint, float> TileSlowdownValues = new Dictionary<uint, float>();
 
         //General data
         public static readonly string SceneToLoad = "Level1"; // The scene to load when the game starts
-        public static readonly string TiledSceneMap = "Maps/Level1.tmx"; // The map to load in the TiledScene
 
-        public static readonly bool ShowColliders = true; // Show colliders in the scene
+        public static readonly bool ShowColliders = false; // Show colliders in the scene
         public static readonly uint ColliderColor = 0xFFFF0000; // Color of the colliders
+        public static readonly bool ShowMouse = true; // Show the mouse in the scene
 
-        public static Player ActivePlayer;
+        public static void Initialize() //This method is called once when the game starts, use it to create scenes and add them to the SceneManager
+        {
+            SceneManager.AddScene("Level1", SceneManager.CreateScene(typeof(TiledScene), "Maps/Level1.tmx"));
+            SceneManager.AddScene("Level2", SceneManager.CreateScene(typeof(TiledScene), "Maps/Level1.tmx"));
+            SceneManager.AddScene("Level3", SceneManager.CreateScene(typeof(TiledScene), "Maps/Level1.tmx"));
+            SceneManager.PrintScenes();
+        }
+
+        public static void ResetLevelData()
+        {
+            TileValues = null;
+            TileSlowdownValues.Clear();
+        }
     }
 }

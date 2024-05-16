@@ -27,8 +27,11 @@
 
         void Update()
         {
-            Gizmos.DrawCross(StartPosition.x, StartPosition.y, 5, color: GameData.ColliderColor);
-            Gizmos.DrawCross(EndPosition.x, EndPosition.y, 5, color: GameData.ColliderColor);
+            if (GameData.ShowColliders)
+            {
+                Gizmos.DrawCross(StartPosition.x, StartPosition.y, 5, color: GameData.ColliderColor);
+                Gizmos.DrawCross(EndPosition.x, EndPosition.y, 5, color: GameData.ColliderColor);
+            }
         }
     }
 }

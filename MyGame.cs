@@ -1,12 +1,17 @@
-using GXPEngine.SceneManager;
+using GXPEngine.SceneManagement;
 using GXPEngine.Scenes;
 using GXPEngine;
 
 class MyGame : Game {
 
+	private Sprite _mouse;
+
 	public MyGame() : base(960, 640, false, false, 1280, 720,true) 
 	{
-		Initialize();
+		GameData.Initialize();
+		AddChild(_mouse = new Sprite("mouse.png"));
+		_mouse.SetOrigin(_mouse.width / 2, _mouse.height / 2);
+		ShowMouse(GameData.ShowMouse);
 		SceneManager.LoadScene(GameData.SceneToLoad);
 	}
 
@@ -15,10 +20,9 @@ class MyGame : Game {
 		new MyGame().Start();
 	}
 
-	private void Initialize()
+	private void Update()
 	{
-		SceneManager.AddScene("Level1", SceneManager.CreateScene(typeof(TiledTestScene), "Maps/Level1.tmx"));
-		SceneManager.AddScene("Level2", SceneManager.CreateScene(typeof(TiledTestScene), "Maps/Level1.tmx"));
-		SceneManager.AddScene("Level3", SceneManager.CreateScene(typeof(TiledTestScene), "Maps/Level1.tmx"));
+		SetChildIndex(_mouse, GetChildCount() - 1);
+		_mouse.SetXY(Input.mouseX, Input.mouseY);
 	}
 }
