@@ -1,5 +1,3 @@
-using System;
-using GXPEngine.Physics.PhysicsObjects;
 using GXPEngine.SceneManagement;
 using GXPEngine.Physics.Shapes;
 using GXPEngine.Scenes;

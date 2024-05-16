@@ -33,7 +33,7 @@ namespace GXPEngine
         public static Dictionary<uint, float> TileSlowdownValues = new Dictionary<uint, float>();
 
         //General data
-        public static readonly string SceneToLoad = "Level1"; // The scene to load when the game starts
+        public static readonly string SceneToLoad = "Title"; // The scene to load when the game starts
 
         public static readonly bool ShowColliders = true; // Show colliders in the scene
         public static readonly uint ColliderColor = 0xFFFF0000; // Color of the colliders
@@ -49,6 +49,7 @@ namespace GXPEngine
 
         public static void Initialize() //This method is called once when the game starts, use it to create scenes and add them to the SceneManager
         {
+            SceneManager.AddScene("Title", SceneManager.CreateScene(typeof(IntermediateScene)));
             SceneManager.AddScene("Level1", SceneManager.CreateScene(typeof(TiledScene), "Maps/Level1.tmx"));
             SceneManager.AddScene("Level2", SceneManager.CreateScene(typeof(TiledScene), "Maps/Level1.tmx"));
             SceneManager.AddScene("Level3", SceneManager.CreateScene(typeof(TiledScene), "Maps/Level1.tmx"));
