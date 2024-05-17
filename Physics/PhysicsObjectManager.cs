@@ -57,6 +57,7 @@ namespace GXPEngine.Physics
             {
                 if (!fire.HitTest(GameData.ActivePlayer)) continue;
                 GameData.ActivePlayer.ResetPosition();
+                ((TiledScene)SceneManager.CurrentScene).hitCount = 0;
                 GameData.SoundHandler.PlaySound("FireSFX");
                 break;
             }
