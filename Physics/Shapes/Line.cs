@@ -32,7 +32,7 @@ namespace GXPEngine.Physics
         {
             base.Destroy();
             _collider.Destroy();
-            _line.Destroy();
+            //_line.Destroy();
         }
-    }
+    }
 }

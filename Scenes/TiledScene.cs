@@ -49,7 +49,7 @@ namespace GXPEngine.Scenes
             Game.main.OnBeforeStep += PhysicsManager.Step;
             Game.main.OnBeforeStep += PhysicsObjectManager.Update;
             PhysicsManager.PrintColliders();
-            GameData.NextScene = _nextScene ?? $"TransitionLevel{_levelId + 1}";
+            GameData.NextScene = _nextScene ?? $"TransitionLevel{_levelId}";
         }
 
         public override void OnUnload() 

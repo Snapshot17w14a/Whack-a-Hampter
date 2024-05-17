@@ -32,7 +32,7 @@ namespace GXPEngine
         public static string NextScene = "Level1"; // The next scene to load
 
         //Level data
-        public static readonly int[] MaxHits = { 4, 0, 0 }; // The maximum amount of hits for each level
+        public static readonly int[] MaxHits = { 4, 6, 15 }; // The maximum amount of hits for each level
 
         //Dynamic level data - dont change this
         public static uint[,] TileValues;
@@ -41,8 +41,8 @@ namespace GXPEngine
         //General data
         public static readonly string SceneToLoad = "Title"; // The scene to load when the game starts
 
-        public static readonly bool ShowMouse = true; // Show the mouse in the scene
-        public static readonly bool ShowColliders = true; // Show colliders in the scene
+        public static readonly bool ShowMouse = false; // Show the mouse in the scene
+        public static readonly bool ShowColliders = false; // Show colliders in the scene
         public static readonly uint ColliderColor = 0xFFFF0000; // Color of the colliders
 
         public static readonly int TileHeight = 64;
